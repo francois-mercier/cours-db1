@@ -1,0 +1,1516 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../chapitre_03/">
+      
+      
+        <link rel="next" href="../chapitre_05/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.1">
+    
+    
+      
+        <title>Chapitre 4 - Cours Bases de donn&eacute;es 1</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.45e1311d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="brown" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#base-de-donnees-1" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="Cours Bases de donn&amp;eacute;es 1" class="md-header__button md-logo" aria-label="Cours Bases de donn&eacute;es 1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0s224 35.8 224 80zm-54.8 134.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432v-85.9z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cours Bases de donn&eacute;es 1
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapitre 4
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="brown" data-md-color-accent="orange"  aria-label="Passer en mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer en mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="brown" data-md-color-accent="orange"  aria-label="Passer en mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer en mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../chapitre_01/" class="md-tabs__link">
+          
+  
+  Notes de cours
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../exercices/exercice_01/" class="md-tabs__link">
+          
+  
+  Exercices
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Cours Bases de donn&amp;eacute;es 1" class="md-nav__button md-logo" aria-label="Cours Bases de donn&eacute;es 1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0s224 35.8 224 80zm-54.8 134.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432v-85.9z"/></svg>
+
+    </a>
+    Cours Bases de donn&eacute;es 1
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accueil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Notes de cours
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Notes de cours
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre_01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre_02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre_03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 4
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre_05/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Exercices
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Exercices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exercices réguliers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Exercices réguliers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/exercice_01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercice 01 - Test123
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exercices bonus
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Exercices bonus
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/bonus/bonus_01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bonus 01 - Test123
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<style>
+  section {
+    font-family: 'Trebuchet ms', serif !important;
+    height: 720px;
+    width: 1080px;
+    padding: 70px 80px 70px 80px;
+  }
+  h1 {
+    margin : 0.5em 0 1em 0;
+    color: #780006;
+    font-size : 40pt;
+    position: absolute;
+    top: 70px;
+  }
+  p, h2 {
+    color: #333
+    font-size: 24pt;
+  }
+  img[alt~="center"] {
+    display: block;
+    margin: 20px auto;
+  }
+  blockquote {
+    border-left: 8px solid #333; 
+    border-right: 8px solid #333;
+    text-align: center; 
+  }
+
+
+  section::after {
+    content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+    color : #000;
+    bottom: -2px;
+  }
+
+
+</style>
+<!-- _paginate: false -->
+
+<h1 id="base-de-donnees-1">Base de données 1</h1>
+<p><strong>Chapitre 4 - Assurer l'intégrité et la confidentialité des données</strong></p>
+<p>Base de données 1
+420-2B4-VI
+Hiver 2022
+Durée approximative : 6 heures — 3 périodes </p>
+<hr />
+<h1 id="contenu">Contenu</h1>
+<ol>
+<li><a href="#3">Contraintes d’intégrité</a></li>
+<li><a href="#29">Cryptage</a></li>
+<li><a href="#53">Gestion des accès</a></li>
+</ol>
+<hr />
+<h1 id="contraintes-dintegrite">Contraintes d’intégrité</h1>
+<p>Clé primaire, clé étrangère et valeur par défaut
+Cascade
+Clé unique
+NULL
+CHECK
+Atelier</p>
+<hr />
+<h1 id="contraintes-dintegrite_1">Contraintes d’intégrité</h1>
+<p>Une contrainte d’intégrité est une condition à vérifier sur un enregistrement afin de maintenir son intégrité (qu'elle contienne une valeur qui a un sens).</p>
+<p>Généralement, une contrainte d’intégrité a pour effet de restreindre les valeurs possibles d’une colonne.</p>
+<hr />
+<h1 id="cle-primaire-cle-etrangere-et-valeur-par-defaut">Clé primaire, clé étrangère et valeur par défaut</h1>
+<p>Les contraintes clé primaire, clé étrangère et valeur par défaut ont déjà été couvertes.</p>
+<p>On a pu voir que certaines sont spécifiées directement dans la déclaration d’une colonne (<strong>DEFAULT</strong>, <strong>PRIMARY KEY</strong>), tandis que d’autres sont spécifiés sur leur ligne à part (<strong>FOREIGN KEY</strong>, <strong>PRIMARY KEY</strong>).</p>
+<p>Ajouter un enregistrement ne respectant pas la contrainte, déclenche une erreur.</p>
+<hr />
+<h1 id="rappel-des-contraintes">Rappel des contraintes</h1>
+<p>Clé primaire : <strong>PRIMARY KEY</strong>
+Force la valeur à être unique et est utilisé pour trouver rapidement un enregistrement. Permet l’utilisation par une clé étrangère. Une seule clé primaire permise par table.</p>
+<p>Clé étrangère : <strong>FOREIGN KEY</strong>
+Référence un enregistrement d’une autre table. Garanti que l’enregistrement existe.</p>
+<hr />
+<h1 id="rappel-des-contraintes_1">Rappel des contraintes</h1>
+<p>Valeur par défaut : <strong>DEFAULT</strong>
+Spécifie la valeur utilisée lorsqu’un enregistrement est créé et qu’aucune valeur n’est spécifiée. Si aucune valeur par défaut n’est indiquée, <strong>NULL</strong> est utilisée.</p>
+<hr />
+<h1 id="cascade">Cascade</h1>
+<p>Jusqu’à présent le code suivant provoque une erreur.</p>
+<pre><code class="language-mysql">DELETE FROM Enseignant
+    WHERE id_enseignant = 1;
+</code></pre>
+<p>Parce que la table Programme contient une clé étrangère vers Enseignant et elle pointerait sur rien si l'enseignant est supprimé.</p>
+<p><center></p>
+<p><img alt="width:9000px" src="../images/4_programme_enseignant.png" /></p>
+<p></center></p>
+<hr />
+<h1 id="cascade_1">Cascade</h1>
+<p>La stratégie cascade permet de supprimer tous les enregistrements sont référencés, donc qui pose problème.</p>
+<p>Par exemple, ici tous les cours associés aux professeurs seraient également supprimés.</p>
+<pre><code class="language-mysql">FOREIGN KEY (colonne) REFERENCES Nom_table(colonne) ON DELETE CASCADE
+</code></pre>
+<hr />
+<h1 id="exercice-4-1">Exercice 4-1</h1>
+<p>À partir du diagramme Ecole.pdf, identifiez les enregistrements de quelles tables seraient supprimés si toutes les clés étrangères utilisent la stratégie Cascade et que l'on supprime une session.</p>
+<hr />
+<h1 id="cascade_2">Cascade</h1>
+<p>La mise à jour en cascade permet de modifier la valeur d’une clé primaire et de mettre à jour simultanément toutes les clés étrangères (conserver l’intégrité).</p>
+<p>Utile seulement si la clé primaire n’est pas un identifiant autoincrémenté.</p>
+<pre><code>FOREIGN KEY (colonne) REFERENCES Nom_table(colonne) ON UPDATE CASCADE
+</code></pre>
+<hr />
+<h1 id="cle-unique">Clé unique</h1>
+<p>Une clé unique est une façon de préciser qu’une valeur ou un groupe de valeur sont uniques dans la table.</p>
+<p>La clé primaire est un type particulier de clé unique.</p>
+<p><strong>ATTENTION</strong> : contrairement à une clé primaire, une clé unique peut être nulle et plusieurs enregistrements peuvent être nuls.</p>
+<hr />
+<h1 id="cle-unique_1">Clé unique</h1>
+<p>Pour indiquer qu’une colonne est unique, on place le mot-clé unique après le nom de la colonne.</p>
+<pre><code class="language-mysql">CREATE TABLE Programme (  
+    code CHAR(6) PRIMARY KEY,
+    nom VARCHAR(255) UNIQUE,
+    responsable NUMERIC(4),
+    ...
+);
+</code></pre>
+<p><center></p>
+<p><img alt="height:200px" src="../images/4_programme.png" /></p>
+<p></center></p>
+<hr />
+<h1 id="cle-unique_2">Clé unique</h1>
+<p>Pour indiquer une clé unique portant sur plusieurs colonnes, on utilise la syntaxe suivante.</p>
+<div>
+<div style="width: 55%; display: inline-block; margin-right:20px;">
+
+
+
+<pre><code class="language-mysql">CONSTRAINT nom UNIQUE (colonne1, colonne2...)
+</code></pre>
+
+
+
+
+<pre><code class="language-mysql">CREATE TABLE Session (
+    id_session INTEGER 
+      PRIMARY KEY AUTO_INCREMENT,
+    semestre ENUM('Automne', 'Hiver'),
+    annee YEAR,
+    debut_session DATE,
+    fin_session DATE,    
+    CONSTRAINT semestre_annee_unique 
+      UNIQUE (semestre, annee));
+</code></pre>
+
+
+
+</div>
+<div style="display:inline-block; vertical-align:top;">
+
+
+<center>
+
+
+![height:250px](images/4_session.png)
+
+
+</center>
+
+
+</div>
+</div>
+
+<hr />
+<h1 id="nullite">Nullité</h1>
+<p>À l’exception des clés primaires, toutes les colonnes peuvent prendre la valeur nulle.</p>
+<p>On peut empêcher la présence de valeur nulle dans une colonne en ajoutant <strong>NOT NULL</strong> après le type.</p>
+<hr />
+<h1 id="nullite_1">Nullité</h1>
+<div>
+<div style="width: 50%; display: inline-block; margin-right:20px;">
+
+
+Pour éviter des professeurs dont le nom est **NULL**, on ajoute
+**| NN** après le type sur le diagramme.
+
+
+
+<pre><code class="language-mysql">CREATE TABLE Etudiant (
+    code NUMERIC(7) PRIMARY KEY,
+    nom VARCHAR(255) NOT NULL
+    ...
+);
+</code></pre>
+
+
+
+</div>
+<div style="display:inline-block; vertical-align:top;">
+
+
+<center>
+
+
+![height:200px](images/4_etudiant.png)
+
+
+</center>
+
+
+</div>
+</div>
+
+<hr />
+<h1 id="exercice-4-2">Exercice 4-2</h1>
+<p>Modifiez le script de création de la base de données ecole pour inclure les contraintes suivantes :</p>
+<p>A) Deux programmes ne peuvent pas porter le même nom
+B) Chaque programme doit toujours avoir un professeur responsable
+C) Un même numéro de groupe ne peut pas être affecté au même cours à la même session (il y a un seul groupe 1 de BD1 à la session H22)
+D) Si l'on supprime une Évaluation, on veut supprimer toutes les Evaluation_etudiant associées.</p>
+<hr />
+<h1 id="check">Check</h1>
+<p>La contrainte <strong>CHECK</strong> permet de vérifier que les valeurs suivent une certaine condition. On insère cette contrainte directement dans la définition de la table.</p>
+<pre><code class="language-mysql">CREATE TABLE Nom_table (
+    colonne TYPE,
+    ...
+    CONSTRAINT nom_contrainte CHECK (condition));
+</code></pre>
+<hr />
+<h1 id="check_1">Check</h1>
+<div>
+<div style="width: 50%; display: inline-block; margin-right:20px;">
+
+
+Exemple : les pondérations des évaluations doivent être entre 0 et 100.
+
+
+
+<pre><code class="language-mysql">CREATE TABLE Evaluation (
+  id_evaluation INTEGER 
+    PRIMARY KEY AUTO_INCREMENT
+  ...
+  ponderation NUMERIC(5,2),
+  ...
+  CONSTRAINT note_0_a_100 
+    CHECK (ponderation BETWEEN 0 AND 100));
+</code></pre>
+
+
+
+</div>
+<div style="display:inline-block; vertical-align:top;">
+
+
+<center>
+
+
+![height:225px](images/4_evaluation.png)
+
+
+</center>
+
+
+</div>
+</div>
+
+<hr />
+<h1 id="exercice-4-3">Exercice 4-3</h1>
+<p>Insérez une vérification pour vous assurer que :
+A) La note obtenue à une évaluation est positive
+B) L'ancienneté d'un enseignant est entre 0 et 50
+C) Les sigles des cours sont dans le format suivant (A est lettre majuscule, # est un entier) : ###-#A#-AA</p>
+<hr />
+<h1 id="que-peut-contenir-un-check">Que peut contenir un CHECK</h1>
+<p>Certaines colonnes ne peuvent pas faire l’objet d’un CHECK dont:</p>
+<ul>
+<li>Colonne avec l’attribut AUTO_INCREMENT</li>
+<li>Colonne avec référence d’action (CASCADE).</li>
+</ul>
+<hr />
+<h1 id="que-peut-contenir-un-check_1">Que peut contenir un CHECK</h1>
+<p>On ne peut pas non plus appeler les éléments suivants dans un CHECK :</p>
+<ul>
+<li>Fonction non native ou procédure stockée</li>
+<li>Variable</li>
+<li>Requête</li>
+<li>Fonction non déterministe comme NOW()</li>
+</ul>
+<hr />
+<h1 id="que-peut-contenir-un-check_2">Que peut contenir un CHECK</h1>
+<p>Finalement, un CHECK peut contenir les éléments suivants :</p>
+<ul>
+<li>Opérateur arithmétique</li>
+<li>Opérateur de comparaison</li>
+<li>Fonction déterministe (count, avg, year, …)</li>
+<li>Comparaison / opération sur plusieurs colonnes d’une même table.</li>
+</ul>
+<hr />
+<h1 id="tricher-et-eviter-les-check">Tricher et éviter les CHECK</h1>
+<p>À l’occasion, on peut vouloir insérer une valeur qui ne respecte pas une condition en raison d’un élément spécial.</p>
+<p>On peut utiliser alors les requêtes spéciales avec la clause <strong>IGNORE</strong> :</p>
+<pre><code class="language-mysql">INSERT IGNORE INTO ...
+UPDATE IGNORE ...
+LOAD DATA INFILE 'nom' IGNORE INTO TABLE ...
+</code></pre>
+<p>Comme toute vérification, il faut une bonne raison pour l’éviter !</p>
+<hr />
+<h1 id="exercice-4-4">Exercice 4-4</h1>
+<p>Implémentez, lorsque possible, les vérifications suivantes. Expliquez pourquoi lorsque vous ne pouvez pas les implémenter.</p>
+<p>A) Le nom des documents remis n'excède pas 64 caractères (fonction CHAR_LENGTH ?)
+B) La note d’un étudiant n’excède jamais la pondération de l'évaluation
+C) La durée d'une session n'excède pas 17 semaines
+D) Pour une évaluation, tous les étudiants reçoivent une note
+E) Tous les documents sont remis à la date du jour (si je le dépose le 15 mars, alors la valeur dans date_remise est le 15 mars)</p>
+<hr />
+<h1 id="modifier-les-tables-pour-ajouter-ou-retirer-des-contraintes">Modifier les tables pour ajouter ou retirer des contraintes</h1>
+<p>On peut modifier les tables pour ajouter ou supprimer des contraintes</p>
+<pre><code class="language-mysql">ALTER TABLE Nom_table
+  ADD CONSTRAINT nom TYPE_CONTRAINTE (contrainte)
+
+
+ALTER TABLE Nom_table
+  DROP [PRIMARY KEY | FOREIGN KEY | CHECK] nom
+</code></pre>
+<hr />
+<h1 id="ajouter-une-contrainte">Ajouter une contrainte</h1>
+<h3 id="ajouter-une-cle-primaire">Ajouter une clé primaire</h3>
+<pre><code class="language-mysql">ALTER TABLE Evaluation
+  ADD CONSTRAINT evaluation_pk PRIMARY KEY (id_evaluation);
+</code></pre>
+<h3 id="ajouter-un-check">Ajouter un CHECK</h3>
+<pre><code class="language-mysql">ALTER TABLE Evaluation_etudiant 
+  ADD CONSTRAINT note_0_a_100 CHECK (note BETWEEN 0 AND 100);
+</code></pre>
+<hr />
+<h1 id="supprimer-une-contrainte">Supprimer une contrainte</h1>
+<h3 id="supprimer-une-cle-primaire">Supprimer une clé primaire</h3>
+<pre><code class="language-mysql">ALTER TABLE Evaluation
+  DROP PRIMARY KEY;
+</code></pre>
+<h3 id="supprimer-un-check">Supprimer un CHECK</h3>
+<pre><code class="language-mysql">ALTER TABLE Evaluation_etudiant
+  DROP CHECK note_0_a_100;
+</code></pre>
+<hr />
+<h1 id="cryptage">Cryptage</h1>
+<p>Techniques de cryptage et hashage
+Cryptage à clé symétrique
+Cryptage de la BD</p>
+<hr />
+<h1 id="cryptage-et-hashage">Cryptage et hashage</h1>
+<p>Quelle est la distinction entre le cryptage et le hashage ?</p>
+<p><strong>Cryptage</strong> : transformation des données à l’aide d’une donnée secrète appelée clé</p>
+<p><strong>Hashage</strong> : transformation non inversible à l’aide d’un algorithme</p>
+<p>Doc : https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html</p>
+<hr />
+<h1 id="hashage">Hashage</h1>
+<p>Une fonction de hashage accepte généralement une seule chaîne en entrée et retourne une valeur correspondant à l’entrée (appelé <em>hash</em>).</p>
+<p>La fonction peut produire un <em>hash</em> unique pour chaque entrée (fonction injective) ou permettre à plusieurs entrées de partager le même <em>hash</em>. Le deuxième cas est celui le plus rencontré.</p>
+<p>Il faut évidemment évaluer le risque de collision de <em>hash</em> (partage de valeur). Pour le <em>hash</em> de Git, ce risque est estimé à environ $1 \times 10^{-48}$, soit de tirer au hasard un atome sur la Terre. </p>
+<hr />
+<h1 id="hashage_1">Hashage</h1>
+<p>Les fonctions utilisables par MySQL (et d'autres langages) sont</p>
+<table>
+<thead>
+<tr>
+<th>Fonction</th>
+<th>Longueur du hash</th>
+<th>Type de colonne</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MD5</td>
+<td>128 bits</td>
+<td>CHAR(32)</td>
+</tr>
+<tr>
+<td>SHA</td>
+<td>160 bits</td>
+<td>CHAR(40)</td>
+</tr>
+<tr>
+<td>SHA2</td>
+<td>variable</td>
+<td>CHAR(56) à CHAR(128)</td>
+</tr>
+</tbody>
+</table>
+<p>Elles retournent toutes un hash en hexadécimal. On peut le convertir en binaire en utilisant la fonction <strong>UNHEX</strong>().</p>
+<hr />
+<h1 id="sha2">SHA2</h1>
+<p>La fonction SHA2 permet d’utiliser divers algorithmes. Les algorithmes sont SHA-224, SHA-256, SHA-384 et SHA-512.</p>
+<p>L’algorithme retourne un nombre de bits égal au nombre après le SHA (par exemple SHA-256 retourne un nombre binaire de 256 bits).</p>
+<p>Le standard est d’utiliser au moins 256 bits. On voit souvent 256 et 512 être utilisés.</p>
+<hr />
+<h1 id="hasher-avec-sha2">Hasher avec SHA2</h1>
+<p>L’utilisateur veut enregistrer un mot de passe 'tarte123'. Pour le hasher avec SHA-256 avant de l’intégrer à la BD on utilise :</p>
+<pre><code class="language-mysql">INSERT INTO Utilisateur (nom, mot_de_passe)
+    VALUES ('Patissier21', SHA2('tarte123', 256));
+</code></pre>
+<hr />
+<h1 id="resultat-de-sha2">Résultat de SHA2</h1>
+<p>La requête </p>
+<pre><code class="language-mysql">SELECT * FROM Utilisateur;
+</code></pre>
+<p>retourne</p>
+<pre><code>| nom           | mot_de_passe                                                     |
+------------------------------------------------------------------------------------
+| patissier21   | b2c4b81704855df00cff57312d46ec28254e2f69f526cc61da5f2df20c43d075 |
+| jardiner14    | b48cea174391677879618ace9ea78531f5a0d18551de187ee76eb3190624ef35 |
+...
+</code></pre>
+<hr />
+<h1 id="pour-et-contre-du-hashage">Pour et contre du hashage ?</h1>
+<p>Avantages :
+* Plus rapide qu’un cryptage
+* Espace mémoire constant
+* Impossible à inverser</p>
+<p>Désavantage :
+* Impossible d’avoir accès à la donnée originale</p>
+<hr />
+<h1 id="quand-utiliser-le-hashage">Quand utiliser le hashage</h1>
+<ul>
+<li>Pour les données que nous n’avons pas besoin de consulter</li>
+<li>Vérification d’intégrité de fichier ou de transport (checksum) </li>
+</ul>
+<hr />
+<h1 id="fonction-de-sha256">Fonction de SHA256</h1>
+<p>https://qvault.io/cryptography/how-sha-2-works-step-by-step-sha-256/#:~:text=SHA%2D2%20is%20an%20algorithm,is%20the%20output%20size%2C%20256.</p>
+<ol>
+<li>Convertir en binaire</li>
+<li>Ajouter un 1</li>
+<li>Allonger avec des 0 à la fin pour obtenir un multiple de 512 moins 64 bits</li>
+<li>Ajouter la longueur de l'entrée originale en binaire sur 64 bits.</li>
+</ol>
+<hr />
+<h1 id="exemple">Exemple</h1>
+<ol>
+<li>Allo -&gt; <strong>01100001 01101100 01101100 01101111</strong></li>
+<li>01100001 01101100 01101100 01101111 <strong>1</strong></li>
+<li>01100001 01101100 01101100 01101111 1<strong>000000 00000000 00000000 
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000</strong></li>
+</ol>
+<hr />
+<ol>
+<li>01100001 01101100 01101100 01101111 1000000 00000000 00000000 00000000
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+   <strong>00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000100</strong></li>
+</ol>
+<hr />
+<ol>
+<li>Initialisation des 8 constantes de hash qui sont la représentation binaire des 32 premiers bits de la partie fractionnaire des racines des 8 premiers nombres premiers (2, 3, 5, 7, 11, 13, 17, 19)</li>
+</ol>
+<h3 id="exemple_1">Exemple</h3>
+<p>Racine de 2 = 1.41421356237
+Partie fractionnaire = 41421356237
+En binaire = 1101010000010011110011001100111</p>
+<hr />
+<ol>
+<li>
+<p>Initialisation des 64 constantes d'arrondissement qui sont la représentation binaire des 32 premiers bits de la partie fractionnaire des racines cubiques des 64 premiers nombres premiers (2, 3, 5, 7, 11, 13, 17, 19 - 311)</p>
+</li>
+<li>
+<p>Création de <em>chunk</em> (segment) de 512 bits de long</p>
+</li>
+<li>Création du message pour chaque <em>chunk</em> </li>
+<li>Compression du message en utilisant les constantes établies et concaténation du résultat.</li>
+</ol>
+<hr />
+<h1 id="cryptage_1">Cryptage</h1>
+<p>Une fonction de cryptage transforme une chaîne avec les données d’une chaîne secrète appelée « clé ».</p>
+<p>Texte clair + clé 🡺 texte crypté
+Texte crypté + clé 🡺 texte clair </p>
+<p>On appelle cryptage à clé symétrique lorsque la clé servant à crypter et à décrypter est la même.</p>
+<p>Voir Illustration - Hashage et cryptage </p>
+<hr />
+<h1 id="securite-du-cryptage-symetrique">Sécurité du cryptage symétrique</h1>
+<p>La sécurité d’un cryptage à clé symétrique repose sur 2 facteurs :</p>
+<ul>
+<li>Le secret de la clé</li>
+<li>La longueur de la clé</li>
+</ul>
+<hr />
+<h1 id="algorithme-aes">Algorithme AES</h1>
+<p>Le Advance Encryption Standard (AES) est la méthode de cryptage symétrique la plus utilisée aujourd’hui.</p>
+<p>Les données sont cryptées par bloc de 128 bits. La clé peut faire 128, 192 ou 256 bits.</p>
+<p>Il effectue plusieurs étapes de permutation / substitution</p>
+<hr />
+<h1 id="crypter-avec-mysql">Crypter avec MySQL</h1>
+<p>Pour crypter, on utilise la fonction <strong>AES_ENCRYPT</strong>. Son premier argument est le texte à crypter et le second la clé secrète. La clé doit avoir entre 128 et 256 bits.</p>
+<pre><code class="language-mysql">INSERT INTO Utilisateur (nom, carte_credit)
+  VALUES ('Patissier21', AES_ENCRYPT('1234123412341234',  
+  UNHEX('F3229A0B371ED2D9441B830D21A390C3')));
+</code></pre>
+<p>On place le résultat dans un BLOB.</p>
+<hr />
+<h1 id="fonction-unhex">Fonction UNHEX</h1>
+<p>La fonction <strong>UNHEX</strong> convertit une chaîne de valeurs hexadécimale en sa représentation sous forme de chaîne de caractères.</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th>Mot</th>
+<th>HEX(<em>mot</em>)</th>
+<th>CAST(UNHEX(<em>hex</em>) AS CHAR)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>41</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Allo</td>
+<td>416C6C6F</td>
+<td>Allo</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<hr />
+<h1 id="decrypter-avec-mysql">Décrypter avec MySQL</h1>
+<p>Pour décrypter, on utilise la fonction <strong>AES_DECRYPT</strong>. Le premier argument est la valeur à décrypter, le second la clé secrète.</p>
+<pre><code class="language-mysql">SELECT nom, CAST(AES_DECRYPT(carte_credit,   
+  UNHEX('F3229A0B371ED2D9441B830D21A390C3’)) AS CHAR)
+  AS carte_credit FROM Utilisateur;
+</code></pre>
+<p>Le résultat du décryptage.</p>
+<pre><code class="language-console">| nom           | carte_credit     |
+------------------------------------
+| patissier21   | 1234123412341234 |
+| jardiner14    | 9876987698769876 |
+</code></pre>
+<p>Si la mauvaise clé est passée, alors la valeur NULL est retounée (et non le résultat du décryptage avec la mauvaise clé !)</p>
+<hr />
+<h1 id="phrase-secrete">Phrase secrète</h1>
+<p>Plutôt que d’utiliser une clé binaire, on peut utiliser une phrase secrète comme mot de passe. La clé est cependant limitée à 256 caractères. Comment fait-on ?</p>
+<ul>
+<li>On peut hasher la phrase secrète pour obtenir une chaîne de la bonne longueur !</li>
+</ul>
+<hr />
+<h1 id="phrase-secrete_1">Phrase secrète</h1>
+<pre><code class="language-mysql"># Insertion
+INSERT INTO Utilisateur (nom, carte_credit) 
+  VALUES ('Patissier21', AES_ENCRYPT('1234123412341234',
+                           UNHEX(SHA2('secret', 256))));
+
+
+# Lecture
+SELECT nom, 
+  CAST(AES_DECRYPT(carte_credit, UNHEX(SHA2('secret', 256))) AS CHAR) AS 'Carte credit'
+  FROM Utilisateur;
+</code></pre>
+<hr />
+<h1 id="cryptage-de-la-bd">Cryptage de la BD</h1>
+<p>L’engin de stockage de données InnoDB permet de crypter l’ensemble d’une table ou de la BD. Via un plug-in.</p>
+<p>Ces manipulations ne sont pas vues en classe.</p>
+<p>https://dev.mysql.com/doc/refman/8.0/en/innodb-data-encryption.html</p>
+<hr />
+<h1 id="exercice-4-5">Exercice 4-5</h1>
+<p>On crée la table de renseignements personnels suivant :
+1. Nom
+2. Mot de passe
+3. Le contenu du certificat de naissance
+4. Une chaîne authentifiant le contenu du certificat de naissance
+5. Numéro de compte en banque
+6. Date de naissance</p>
+<p>Ajoutez les informations d’une personne fictive en cryptant ou hashant les données selon la situation.</p>
+<p>Affichez ensuite ces informations</p>
+<hr />
+<h1 id="gestion-des-acces">Gestion des accès</h1>
+<p>CRUD des utilisateurs
+Conférer et révoquer des privilèges
+Créer des rôles</p>
+<hr />
+<h1 id="pourquoi-gerer-les-roles">Pourquoi gérer les rôles</h1>
+<p>On développe un site web avec les contraintes de sécurité suivantes.</p>
+<ul>
+<li>Les programmeurs peuvent modifier des tables, des déclencheurs et des enregistrements. </li>
+<li>L’administrateur de la BD peut ajouter des utilisateurs et accomplir toutes les opérations des développeurs</li>
+<li>Les visiteurs peuvent uniquement ajouter, modifier, supprimer ou lire des enregistrements.</li>
+</ul>
+<p>De cette façon, si un mot de passe utilisé dans le site web est volé, l’accès à la BD est limité. </p>
+<hr />
+<h1 id="crud-des-utilisateurs">CRUD des utilisateurs</h1>
+<p>Pour ajouter un nouvel utilisateur, on utilise la syntaxe suivante:</p>
+<pre><code class="language-mysql">CREATE USER nom IDENTIFIED BY mot_de_passe;
+</code></pre>
+<p>Exemple:</p>
+<pre><code class="language-mysql">CREATE USER visiteur IDENTIFIED BY '12345’;
+</code></pre>
+<p>Il existe toujours un utilisateur de base : root@localhost</p>
+<hr />
+<h1 id="modifier-un-utilisateur">Modifier un utilisateur</h1>
+<p>Pour changer un mot de passe, la requête est:</p>
+<pre><code class="language-mysql">ALTER USER nom IDENTIFIED BY nouveau_mot_de_passe;
+</code></pre>
+<p>Exemple:</p>
+<pre><code class="language-mysql">ALTER USER visiteur IDENTIFIED BY '54321';
+</code></pre>
+<hr />
+<h1 id="modifier-un-utilisateur_1">Modifier un utilisateur</h1>
+<p>Pour renommer un utilisateur, la requête est :</p>
+<pre><code class="language-mysql">RENAME USER ancien_nom TO nouveau_nom;
+</code></pre>
+<p>Exemple :</p>
+<pre><code class="language-mysql">RENAME USER visiteur TO visiteurs;
+</code></pre>
+<hr />
+<h1 id="supprimer-un-utilisateur">Supprimer un utilisateur</h1>
+<p>Pour retirer un utilisateur, on utilise la requête:</p>
+<pre><code class="language-mysql">DROP USER nom;
+</code></pre>
+<p>Exemple :</p>
+<pre><code class="language-mysql">DROP USER visiteurs;
+</code></pre>
+<hr />
+<h1 id="niveaux-de-privilege">Niveaux de privilège</h1>
+<p>Les niveaux de privilèges accordent certains droits d’accès pour modifier des parties de la BD. Les niveaux (non exhaustif) sont</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ALL (tout)</td>
+<td>DELETE</td>
+<td>REFERENCES (crée des clés étrangères)</td>
+</tr>
+<tr>
+<td>ALTER</td>
+<td>DROP</td>
+<td>SELECT</td>
+</tr>
+<tr>
+<td>CREATE</td>
+<td>DROP ROLE</td>
+<td>SHOW DATABASES</td>
+</tr>
+<tr>
+<td>CREATE ROLE</td>
+<td>EXECUTE (routines)</td>
+<td>TRIGGER</td>
+</tr>
+<tr>
+<td>CREATE ROUTINE</td>
+<td>FILE</td>
+<td>UPDATE</td>
+</tr>
+<tr>
+<td>CREATE USER</td>
+<td>INSERT</td>
+<td>USAGE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="conferer-un-privilege">Conférer un privilège</h1>
+<p>Pour assigner un privilège à un rôle, on utilise une requête GRANT.</p>
+<pre><code>GRANT priviliege1, privilege2 ON [* | table] TO nom_utilisateur;
+</code></pre>
+<hr />
+<h1 id="conferer-un-privilege_1">Conférer un privilège</h1>
+<p>On ajoute le privilège de lecture sur toutes les tables de la base de données ecole aux visiteurs.</p>
+<pre><code class="language-mysql">USE Ecole;
+GRANT SELECT ON * TO 'visiteurs’;
+</code></pre>
+<p>Pour ajouter le privilège d’écriture et de modification sur la table Etudiant</p>
+<pre><code class="language-mysql">GRANT INSERT, UPDATE ON Etudiant TO 'visiteurs';
+</code></pre>
+<hr />
+<h1 id="revoquer-un-privilege">Révoquer un privilège</h1>
+<p>La requête de retrait de privilège est REVOKE.</p>
+<pre><code class="language-mysql">REVOKE priviliege1, privilege2 ON [* | table] 
+  FROM nom_utilisateur;
+</code></pre>
+<p>Par exemple, on révoque le privilège d’ajout des visiteurs sur la table Etudiant.</p>
+<pre><code class="language-mysql">REVOKE UPDATE ON Etudiant FROM ‘visiteurs’;
+</code></pre>
+<hr />
+<h1 id="determiner-lutilisateur-connecte">Déterminer l'utilisateur connecté</h1>
+<p>La fonction USER() retourne l’utilisateur actuellement connecté à la base de données.</p>
+<p>Exemple:</p>
+<pre><code class="language-mysql">SELECT USER();
+</code></pre>
+<pre><code>| USER()         |
+|----------------|
+| root@localhost |
+</code></pre>
+<hr />
+<h1 id="exercice-4-7">Exercice 4 – 7</h1>
+<p>Créez un nouvel utilisateur qui possède tous les privilèges.</p>
+<p>Déconnectez-vous en fermant Workbench et reconnectez-vous avec le nouvel utilisateur.</p>
+<hr />
+<h1 id="les-roles">Les rôles</h1>
+<p>Que faire si on a 8 programmeurs qui ont chacun leur accès distinct (nom et mot de passe), mais qui doivent tous avoir le même niveau de privilège.</p>
+<p>Imaginez qu’on ajoute une table. Doit-on modifier les accès de tous les utilisateurs ?</p>
+<p>Ça serait plus simple d’avoir une structure contenant les privilèges.</p>
+<hr />
+<h1 id="les-roles_1">Les rôles</h1>
+<p>Un rôle est une liste d’accès. Plutôt que de définir les accès par utilisateur, on peut leur assigner un rôle. </p>
+<p>Donc tous les utilisateurs avec les mêmes privilèges d’accès auront le même rôle.</p>
+<p>Cela facilite grandement le changement de privilèges.</p>
+<hr />
+<h1 id="definir-un-role">Définir un rôle</h1>
+<p>On utilise CREATE ROLE pour créer un nouveau rôle et DROP ROLE pour le supprimer.</p>
+<p>Il n'y a pas de requête pour changer le nom d'un rôle.</p>
+<pre><code class="language-mysql">CREATE ROLE nom_role;
+DROP ROLE nom_role;
+</code></pre>
+<hr />
+<h1 id="conferer-ou-revoquer-un-privilege-a-un-role">Conférer ou révoquer un privilège à un rôle</h1>
+<p>On remplace le nom d’utilisateur dans la requête GRANT ou REVOKE par le nom du rôle.</p>
+<pre><code class="language-mysql">GRANT privilege ON [*| Nom table] TO nom_role;
+REVOKE privilege ON [* | Nom table] FROM nom_role;
+</code></pre>
+<p>Par exemple, on permet au programmeur de créer des tables et des clés étrangères.</p>
+<pre><code class="language-mysql">GRANT CREATE TABLE, REFERENCES ON * TO programmeur;
+</code></pre>
+<hr />
+<h1 id="assigner-un-role-a-un-utilisateur">Assigner un rôle à un utilisateur</h1>
+<p>On peut affecter un rôle directement à la création</p>
+<pre><code class="language-mysql">CREATE USER nom IDENTIFIED BY mot de passe
+  DEFAULT ROLE role1, role2...;
+</code></pre>
+<p>Exemple:</p>
+<pre><code class="language-mysql">CREATE USER alice IDENTIFIED BY 'chat'
+  DEFAULT ROLE programmeur ;
+</code></pre>
+<hr />
+<h1 id="modifier-le-role-affecte-un-utilisateur">Modifier le rôle affecté un utilisateur</h1>
+<p>On peut modifier les rôles avec</p>
+<pre><code class="language-mysql">GRANT role1, role2 ... TO utilisateur1, utilisateur2...
+
+REVOKE role FROM utilisateur;
+</code></pre>
+<hr />
+<h1 id="autres-fonctions-utiles-pour-la-gestion-des-roles">Autres fonctions utiles pour la gestion des rôles</h1>
+<p>Afficher l'utilisateur connecté</p>
+<pre><code class="language-mysql">USER() 
+</code></pre>
+<p>Afficher tous les rôles de l’utilisateur connecté</p>
+<pre><code class="language-mysql">CURRENT_ROLE()
+</code></pre>
+<p>Afficher les privilèges</p>
+<pre><code class="language-mysql">SHOW GRANTS FOR role | utilisateur
+</code></pre>
+<hr />
+<h1 id="exercice-4-8">Exercice 4-8</h1>
+<p>Créer un rôle enseignant qui peut modifier les tables Évaluation et Évaluation_etudiant ainsi qu’un rôle responsable qui peut changer la table Cours, Inscription, Groupe, Session et Etudiant.</p>
+<p>Ajouter un utilisateur appelé Scott Summers qui est enseignant et Jean Grey qui est enseignante et responsable. </p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

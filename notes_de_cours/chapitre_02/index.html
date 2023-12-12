@@ -1,0 +1,4524 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../chapitre_01/">
+      
+      
+        <link rel="next" href="../chapitre_03/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.1">
+    
+    
+      
+        <title>Chapitre 2 - Cours Bases de donn&eacute;es 1</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.45e1311d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="brown" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapitre-2" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="Cours Bases de donn&amp;eacute;es 1" class="md-header__button md-logo" aria-label="Cours Bases de donn&eacute;es 1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0s224 35.8 224 80zm-54.8 134.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432v-85.9z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cours Bases de donn&eacute;es 1
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapitre 2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="brown" data-md-color-accent="orange"  aria-label="Passer en mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer en mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="brown" data-md-color-accent="orange"  aria-label="Passer en mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer en mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../chapitre_01/" class="md-tabs__link">
+          
+  
+  Notes de cours
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../exercices/exercice_01/" class="md-tabs__link">
+          
+  
+  Exercices
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Cours Bases de donn&amp;eacute;es 1" class="md-nav__button md-logo" aria-label="Cours Bases de donn&eacute;es 1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0s224 35.8 224 80zm-54.8 134.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432v-85.9z"/></svg>
+
+    </a>
+    Cours Bases de donn&eacute;es 1
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accueil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Notes de cours
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Notes de cours
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre_01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Chapitre 2
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 2
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contenu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contenu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creer-mettre-a-jour-et-supprimer-des-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Créer, mettre à jour et supprimer des données
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requetes-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requêtes SQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inserer-un-enregistrement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insérer un enregistrement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inserer-un-enregistrement_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insérer un enregistrement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inserer-un-enregistrement_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insérer un enregistrement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inserer-plusieurs-enregistrements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insérer plusieurs enregistrements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#omettre-le-nom-des-colonnes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Omettre le nom des colonnes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#omettre-le-nom-des-colonnes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Omettre le nom des colonnes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utiliser-la-valeur-par-defaut" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utiliser la valeur par défaut
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#omettre-une-colonne" class="md-nav__link">
+    <span class="md-ellipsis">
+      Omettre une colonne
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#afficher-le-contenu-complet-dune-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Afficher le contenu complet d’une table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-1-suite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-1 (suite)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mettre-a-jour-un-enregistrement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mettre à jour un enregistrement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mettre-a-jour-un-enregistrement_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mettre à jour un enregistrement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clause-where" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clause WHERE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clause-where_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clause WHERE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desactiver-le-safemode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Désactiver le SafeMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#duplicata-de-cle-primaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      Duplicata de clé primaire
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mettre-a-jour-si-la-cle-existe-deja" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mettre à jour si la clé existe déjà
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quand-utiliser-on-duplicate-key-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quand utiliser ON DUPLICATE KEY UPDATE ?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supprimer-un-enregistrement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supprimer un enregistrement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-3
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-filtrage-et-operateurs-logiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sélection, filtrage et opérateurs logiques
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-de-colonnes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sélection de colonnes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-de-colonnes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sélection de colonnes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alias
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtrer-les-enregistrements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtrer les enregistrements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creation-de-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Création de conditions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clause-where-avec-valeur-null" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clause WHERE avec valeur NULL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtrer-les-enregistrements_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtrer les enregistrements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operateurs-logiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opérateurs logiques
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtrer-les-enregistrements_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtrer les enregistrements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordonner-les-resultats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ordonner les résultats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordonner-les-resultats_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ordonner les résultats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordonner-les-resultats_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ordonner les résultats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordonner-les-resultats_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ordonner les résultats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tris-stables-et-instables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tris stables et instables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordonnancement-des-caracteres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ordonnancement des caractères
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordre-decroissant" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ordre décroissant
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limiter-les-resultats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limiter les résultats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limiter-les-resultats_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limiter les résultats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-5
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operateurs-arithmetiques-et-chaines-de-caracteres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opérateurs arithmétiques et chaînes de caractères
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operations-arithmetiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opérations arithmétiques
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operations-arithmetiques_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opérations arithmétiques
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recherche-sur-les-chaines-de-caracteres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recherche sur les chaînes de caractères
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recherche-sur-les-chaines-de-caracteres_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recherche sur les chaînes de caractères
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-like" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple LIKE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expressions-regulieres-regex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expressions régulières (REGEX)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rechercher-un-caractere" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rechercher un caractère
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debut-et-fin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Début et fin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repetitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Répétitions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repetitions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Répétitions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-6
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repetitions_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Répétitions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes-de-caracteres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes de caractères
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes-de-caracteres_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes de caractères
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-7
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes-speciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes spéciales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes-speciales-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes spéciales MySQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caractere-speciaux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caractère spéciaux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Options
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manipulation-de-dates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manipulation de dates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonctions-sql-de-manipulation-de-dates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonctions SQL de manipulation de dates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extraire-des-informations-de-la-datetemps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extraire des informations de la date/temps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extraire-des-informations-de-la-datetemps_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extraire des informations de la date/temps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extraire-des-informations-de-la-datetemps_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extraire des informations de la date/temps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date-et-heure-actuelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Date et heure actuelle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differences-de-temps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Différences de temps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-de-timediff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple de timediff
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#difference-de-dates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Différence de dates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-de-difference-de-dates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple de différence de dates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#construire-une-date-a-partir-dun-nombre-de-jour" class="md-nav__link">
+    <span class="md-ellipsis">
+      Construire une date à partir d'un nombre de jour
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#difference-de-datetime" class="md-nav__link">
+    <span class="md-ellipsis">
+      Différence de DATETIME ?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#addition-de-temps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Addition de temps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#addition-de-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      Addition de date
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#addition-de-date_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Addition de date
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#soustraction-de-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soustraction de date
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-8
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manipulation-de-timestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manipulation de timestamp
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manipulation-de-timestamp_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manipulation de timestamp
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-des-fuseaux-horaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestion des fuseaux horaires
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curiosite-de-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      Curiosité de date
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correction-doctobre-1582" class="md-nav__link">
+    <span class="md-ellipsis">
+      Correction d'octobre 1582
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calendrier-gregorien-proleptique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calendrier Grégorien proleptique
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jointures-et-agregats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jointures et agrégats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probleme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problème
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relation-programme-enseignant" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relation Programme - Enseignant
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jointures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jointures
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jointures-internes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jointures internes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syntaxe-des-jointures-internes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Syntaxe des jointures internes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#allegement-de-lecriture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allègement de l'écriture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-9
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jointure-naturelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jointure naturelle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jointure-naturelle_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jointure naturelle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-10
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probleme_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problème
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jointures-multiples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jointures multiples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-11
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agregats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agrégats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-12
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agregats-multiples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agrégats multiples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-13
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#condition-sur-les-groupes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Condition sur les groupes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-alias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple : Alias
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-14
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-unique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sélection unique
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-15
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonctions-statistiques-et-filtrage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonctions statistiques et filtrage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonctions-statistiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonctions statistiques
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trouver-le-minimum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trouver le minimum
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-16
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#afficher-toutes-les-valeurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Afficher toutes les valeurs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operateurs-densemble" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opérateurs d'ensemble
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#between" class="md-nav__link">
+    <span class="md-ellipsis">
+      Between
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#negation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Négation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in" class="md-nav__link">
+    <span class="md-ellipsis">
+      IN
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#negation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Négation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-17
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre_03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre_04/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapitre_05/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Exercices
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Exercices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exercices réguliers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Exercices réguliers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/exercice_01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercice 01 - Test123
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exercices bonus
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Exercices bonus
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/bonus/bonus_01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bonus 01 - Test123
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contenu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contenu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creer-mettre-a-jour-et-supprimer-des-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Créer, mettre à jour et supprimer des données
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requetes-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requêtes SQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inserer-un-enregistrement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insérer un enregistrement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inserer-un-enregistrement_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insérer un enregistrement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inserer-un-enregistrement_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insérer un enregistrement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inserer-plusieurs-enregistrements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insérer plusieurs enregistrements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#omettre-le-nom-des-colonnes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Omettre le nom des colonnes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#omettre-le-nom-des-colonnes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Omettre le nom des colonnes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utiliser-la-valeur-par-defaut" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utiliser la valeur par défaut
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#omettre-une-colonne" class="md-nav__link">
+    <span class="md-ellipsis">
+      Omettre une colonne
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#afficher-le-contenu-complet-dune-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Afficher le contenu complet d’une table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-1-suite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-1 (suite)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mettre-a-jour-un-enregistrement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mettre à jour un enregistrement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mettre-a-jour-un-enregistrement_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mettre à jour un enregistrement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clause-where" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clause WHERE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clause-where_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clause WHERE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desactiver-le-safemode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Désactiver le SafeMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#duplicata-de-cle-primaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      Duplicata de clé primaire
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mettre-a-jour-si-la-cle-existe-deja" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mettre à jour si la clé existe déjà
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quand-utiliser-on-duplicate-key-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quand utiliser ON DUPLICATE KEY UPDATE ?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supprimer-un-enregistrement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supprimer un enregistrement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-3
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-filtrage-et-operateurs-logiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sélection, filtrage et opérateurs logiques
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-de-colonnes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sélection de colonnes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-de-colonnes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sélection de colonnes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alias
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtrer-les-enregistrements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtrer les enregistrements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creation-de-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Création de conditions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clause-where-avec-valeur-null" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clause WHERE avec valeur NULL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtrer-les-enregistrements_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtrer les enregistrements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operateurs-logiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opérateurs logiques
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtrer-les-enregistrements_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtrer les enregistrements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordonner-les-resultats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ordonner les résultats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordonner-les-resultats_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ordonner les résultats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordonner-les-resultats_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ordonner les résultats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordonner-les-resultats_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ordonner les résultats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tris-stables-et-instables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tris stables et instables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordonnancement-des-caracteres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ordonnancement des caractères
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordre-decroissant" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ordre décroissant
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limiter-les-resultats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limiter les résultats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limiter-les-resultats_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limiter les résultats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-5
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operateurs-arithmetiques-et-chaines-de-caracteres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opérateurs arithmétiques et chaînes de caractères
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operations-arithmetiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opérations arithmétiques
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operations-arithmetiques_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opérations arithmétiques
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recherche-sur-les-chaines-de-caracteres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recherche sur les chaînes de caractères
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recherche-sur-les-chaines-de-caracteres_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recherche sur les chaînes de caractères
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-like" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple LIKE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expressions-regulieres-regex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expressions régulières (REGEX)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rechercher-un-caractere" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rechercher un caractère
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debut-et-fin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Début et fin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repetitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Répétitions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repetitions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Répétitions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-6
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repetitions_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Répétitions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes-de-caracteres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes de caractères
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes-de-caracteres_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes de caractères
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-7
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes-speciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes spéciales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes-speciales-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes spéciales MySQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caractere-speciaux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caractère spéciaux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Options
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manipulation-de-dates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manipulation de dates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonctions-sql-de-manipulation-de-dates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonctions SQL de manipulation de dates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extraire-des-informations-de-la-datetemps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extraire des informations de la date/temps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extraire-des-informations-de-la-datetemps_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extraire des informations de la date/temps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extraire-des-informations-de-la-datetemps_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extraire des informations de la date/temps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date-et-heure-actuelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Date et heure actuelle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differences-de-temps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Différences de temps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-de-timediff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple de timediff
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#difference-de-dates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Différence de dates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-de-difference-de-dates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple de différence de dates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#construire-une-date-a-partir-dun-nombre-de-jour" class="md-nav__link">
+    <span class="md-ellipsis">
+      Construire une date à partir d'un nombre de jour
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#difference-de-datetime" class="md-nav__link">
+    <span class="md-ellipsis">
+      Différence de DATETIME ?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#addition-de-temps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Addition de temps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#addition-de-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      Addition de date
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#addition-de-date_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Addition de date
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#soustraction-de-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soustraction de date
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-8
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manipulation-de-timestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manipulation de timestamp
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manipulation-de-timestamp_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manipulation de timestamp
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-des-fuseaux-horaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestion des fuseaux horaires
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curiosite-de-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      Curiosité de date
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correction-doctobre-1582" class="md-nav__link">
+    <span class="md-ellipsis">
+      Correction d'octobre 1582
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calendrier-gregorien-proleptique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calendrier Grégorien proleptique
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jointures-et-agregats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jointures et agrégats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probleme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problème
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relation-programme-enseignant" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relation Programme - Enseignant
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jointures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jointures
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jointures-internes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jointures internes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syntaxe-des-jointures-internes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Syntaxe des jointures internes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#allegement-de-lecriture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allègement de l'écriture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-9
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jointure-naturelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jointure naturelle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jointure-naturelle_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jointure naturelle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-10
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probleme_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problème
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jointures-multiples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jointures multiples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-11
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agregats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agrégats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-12
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agregats-multiples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agrégats multiples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-13
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#condition-sur-les-groupes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Condition sur les groupes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-alias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple : Alias
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-14
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-unique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sélection unique
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-15
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonctions-statistiques-et-filtrage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonctions statistiques et filtrage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonctions-statistiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonctions statistiques
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trouver-le-minimum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trouver le minimum
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-16
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#afficher-toutes-les-valeurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Afficher toutes les valeurs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operateurs-densemble" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opérateurs d'ensemble
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#between" class="md-nav__link">
+    <span class="md-ellipsis">
+      Between
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#negation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Négation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in" class="md-nav__link">
+    <span class="md-ellipsis">
+      IN
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#negation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Négation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2-17
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="chapitre-2">Chapitre 2</h1>
+<p>Manipuler des données avec SQL</p>
+<hr />
+<h2 id="contenu">Contenu</h2>
+<ol>
+<li>Créer, mettre à jour, supprimer des données</li>
+<li>Sélection, filtrage et opérateurs logiques</li>
+<li>Opérateurs arithmétiques, chaînes de caractères et expressions régulières</li>
+<li>Manipulation de dates</li>
+<li>Jointures et agrégats</li>
+<li>Fonctions statistiques</li>
+</ol>
+<hr />
+<h2 id="creer-mettre-a-jour-et-supprimer-des-donnees">Créer, mettre à jour et supprimer des données</h2>
+<p>Insérer un enregistrement
+Afficher le contenu complet d’une table
+Mettre à jour un enregistrement 
+Supprimer un enregistrement
+Atelier</p>
+<hr />
+<h2 id="requetes-sql">Requêtes SQL</h2>
+<p>L’ensemble d’instructions du langage SQL pour faire des requêtes est différent de celui pour la structure des données.</p>
+<p>On retrouve principalement 4 types de requêtes :
+- (C) Insertion
+- (R) Sélection
+- (U) Mise à jour
+- (D) Suppression</p>
+<hr />
+<h2 id="inserer-un-enregistrement">Insérer un enregistrement</h2>
+<p>La requête d’insertion est la suivante :</p>
+<pre><code class="language-sql">INSERT INTO Nom_table (nom_colonne1, nom_colonne2,...) 
+VALUES (valeur_colonne1, valeur_colonne2,...);
+</code></pre>
+<hr />
+<h2 id="inserer-un-enregistrement_1">Insérer un enregistrement</h2>
+<p>Par exemple, la requête suivante ajoute un étudiant dans la table Étudiant.</p>
+<pre><code class="language-mysql">INSERT INTO Etudiant (code, nom, 
+        annee_admission, programme)
+    VALUES (1324567, 'Tony Stark', 2018,
+        '420.A0');
+</code></pre>
+<p><img alt="height:255px" src="../images/2_etudiant_simple.png" /></p>
+<hr />
+<h2 id="inserer-un-enregistrement_2">Insérer un enregistrement</h2>
+<p>Dans le cas d’un champ assigné automatiquement, comme une clé auto-incrémentée ou l’utilisation d’une valeur par défaut, on n'indique pas la colonne dans la requête <strong>INSERT</strong>.</p>
+<pre><code class="language-mysql">INSERT INTO Cours (sigle, nom)
+    VALUES ('420-2B4-VI', 'Base de données 1');
+</code></pre>
+<p>Le cours BD1 aura alors un id automatique et une durée de 60 heures.</p>
+<p><img alt="height:210px" src="../images/2_cours.png" /></p>
+<p><img alt="height:100px" src="../images/2_omission_colonne.png" /></p>
+<hr />
+<h2 id="inserer-plusieurs-enregistrements">Insérer plusieurs enregistrements</h2>
+<p>On peut insérer dans une requête plusieurs enregistrements en les séparant par une virgule.</p>
+<pre><code class="language-mysql">INSERT INTO Etudiant (code, nom, annee_admission, programme) 
+    VALUES (1234567, 'Anthony Stark', 2018, '420.A0'),    
+        (2345678, 'Steve Rogers', 2018, '420.A0'),      
+        (3456789, 'Natasha Romanov', 2019, '420.A1');
+
+</code></pre>
+<p><img alt="height:175px" src="../images/2_etudiant_simple.png" /></p>
+<hr />
+<h2 id="omettre-le-nom-des-colonnes">Omettre le nom des colonnes</h2>
+<p>On peut omettre le nom des colonnes à condition que les valeurs soient insérées dans l’ordre des colonnes.</p>
+<p>Par exemple, cette instruction est valide :</p>
+<pre><code class="language-mysql">INSERT INTO Etudiant VALUES      
+    (1234567, '420.A0', 'Anthony Stark', 2018) 
+</code></pre>
+<p><img alt="height:255px" src="../images/2_etudiant_simple.png" /></p>
+<hr />
+<h2 id="omettre-le-nom-des-colonnes_1">Omettre le nom des colonnes</h2>
+<p>Les deux instructions suivantes ne sont pas valides.</p>
+<pre><code class="language-mysql">INSERT INTO Cours VALUES ('420-2B4-VI', 'Base de données 1');
+</code></pre>
+<ul>
+<li>La table <em>Cours</em> comporte 4 colonnes et seules 2 valeurs sont indiquées</li>
+</ul>
+<pre><code class="language-mysql">INSERT INTO Etudiant VALUES ('Anthony Stark', 2018, '420.A0', 1234567);
+</code></pre>
+<ul>
+<li>L'ordre des colonnes n’est pas respecté</li>
+</ul>
+<hr />
+<h2 id="utiliser-la-valeur-par-defaut">Utiliser la valeur par défaut</h2>
+<p>On peut indiquer explicitement à SQL d’utiliser la valeur par défaut en utilisant l’instruction  </p>
+<pre><code class="language-sql">DEFAULT(nom_colonne).
+</code></pre>
+<p>Ici le cours BD1 aura une durée de 60.</p>
+<pre><code class="language-mysql">    INSERT INTO Cours (sigle, duree, nom) VALUES      
+        ('420-2B4-VI', DEFAULT (duree), 'Base de données 1'),     
+        ('420-1D6-VI', 90, 'Programmation 1');
+</code></pre>
+<hr />
+<h2 id="omettre-une-colonne">Omettre une colonne</h2>
+<p>Si lors de l’ajout d’un enregistrement une colonne ne possède pas de valeur par défaut et qu’aucune valeur n’est précisée, alors la valeur spéciale <strong>NULL</strong> est utilisée.</p>
+<pre><code class="language-mysql">INSERT INTO Cours (nom) VALUES ('Base de données 1');
+</code></pre>
+<p>Ici le sigle de l’enregistrement est <strong>NULL</strong>.</p>
+<p><img alt="width:500px" src="../images/2_omission_colonne.png" /></p>
+<hr />
+<h2 id="afficher-le-contenu-complet-dune-table">Afficher le contenu complet d’une table</h2>
+<p>Pour afficher tous les enregistrements d’une table, on utilise l’instruction suivante :</p>
+<pre><code class="language-sql">SELECT * FROM Nom_table;
+</code></pre>
+<p>Nous verrons dans les prochaines sections les requêtes <strong>SELECT</strong> en détail.</p>
+<hr />
+<h2 id="exercice-2-1">Exercice 2-1</h2>
+<p>Ajoutez les enseignants et les programmes suivants</p>
+<p><strong>Enseigants</strong></p>
+<table>
+<thead>
+<tr>
+<th>code_employe</th>
+<th>nom</th>
+<th>no_assurance_sociale</th>
+<th>anciennete</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9876</td>
+<td>Clark Kent</td>
+<td>150 150 150</td>
+<td>8</td>
+</tr>
+<tr>
+<td>8765</td>
+<td>Bruce Wayne</td>
+<td>260 260 260</td>
+<td>14</td>
+</tr>
+<tr>
+<td>7654</td>
+<td>Kara Danvers</td>
+<td>888 777 666</td>
+<td>0</td>
+</tr>
+<tr>
+<td>6573</td>
+<td>Richard Grayson</td>
+<td>222 444 666</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="exercice-2-1-suite">Exercice 2-1 (suite)</h2>
+<p><strong>Programmes</strong> </p>
+<table>
+<thead>
+<tr>
+<th>code</th>
+<th>nom</th>
+<th>responsable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>420.A0</td>
+<td>Informatique appliquée</td>
+<td>Bruce Wayne</td>
+</tr>
+<tr>
+<td>420.B0</td>
+<td>Informatique - jeux vidéos</td>
+<td>Kara Danvers</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="mettre-a-jour-un-enregistrement">Mettre à jour un enregistrement</h2>
+<p>On utilise la requête <strong>UPDATE</strong> pour mettre à jour un enregistrement.</p>
+<pre><code class="language-mysql">UPDATE Nom_table SET nom_colonne1 = valeur1, nom_colonne2 = valeur2; 
+</code></pre>
+<p>Cette syntaxe comporte un défaut. Lequel?</p>
+<hr />
+<h2 id="mettre-a-jour-un-enregistrement_1">Mettre à jour un enregistrement</h2>
+<p>On met à jour tous les enregistrements! Dans la plupart des cas, ce n’est pas ce qu’on cherche à faire.</p>
+<p>Pour indiquer quel enregistrement mettre à jour, on utilise la clause <strong>WHERE</strong> qui permet de spécifier une condition. </p>
+<hr />
+<h2 id="clause-where">Clause WHERE</h2>
+<p>La syntaxe d’une requête UPDATE avec la clause WHERE est :</p>
+<pre><code class="language-sql">UPDATE Nom_table 
+    SET nom_colonne1 = valeur1, nom_colonne2 = valeur 2, ...
+    WHERE condition;
+</code></pre>
+<hr />
+<h2 id="clause-where_1">Clause WHERE</h2>
+<p>Par exemple, on souhaite que le programme 420.A0 (Informatique appliquée) soit maintenant sous la responsabilité de  Clark Kent (9876).</p>
+<pre><code class="language-sql">UPDATE Programme
+    SET responsable = 9876
+    WHERE code = '420.A0'; 
+</code></pre>
+<p><img alt="height:175px" src="../images/2_programme.png" /></p>
+<hr />
+<h2 id="desactiver-le-safemode">Désactiver le SafeMode</h2>
+<p>Si vous n'indiquez pas de clause WHERE ou que celle-ci ne s'applique pas sur une clé, alors la requête sera bloquée par le SafeMode.</p>
+<p>Pour désactiver le SafeMode :</p>
+<p>Edit &gt; Preferences &gt; SQLEditor &gt; Safe updates
+Puis reconnectez-vous au serveur.</p>
+<hr />
+<h2 id="exercice-2-2">Exercice 2-2</h2>
+<p>A. Mettez à jour le profil de Kara Danvers pour assigner la valeur 1 à son ancienneté.</p>
+<p>B. Mettez à jour le cours BD1 pour qu'il ait une durée de 90 heures.</p>
+<hr />
+<h2 id="duplicata-de-cle-primaire">Duplicata de clé primaire</h2>
+<p>Qu’arrive-t-il si on ajoute un enregistrement pour lequel la clé primaire existe déjà?</p>
+<p>2 choix :
+1) Provoquer une erreur (ce qui se produit normalement)
+2) Offrir la possibilité de mettre à jour l’enregistrement</p>
+<hr />
+<h2 id="mettre-a-jour-si-la-cle-existe-deja">Mettre à jour si la clé existe déjà</h2>
+<p>On modifie la requête <strong>INSERT</strong> de la façon suivante :</p>
+<pre><code class="language-mysql">INSERT INTO Nom_table (nom_colonne1, nom_colonne2,…)
+    VALUES (valeur1, valeur2,…)
+    ON DUPLICATE KEY UPDATE;
+</code></pre>
+<hr />
+<h2 id="quand-utiliser-on-duplicate-key-update">Quand utiliser ON DUPLICATE KEY UPDATE ?</h2>
+<p>Ce n’est pas toujours une bonne idée d’utiliser <strong>ON DUPLICATE KEY UPDATE</strong>.</p>
+<p>Souvent, on veut signaler une erreur pour indiquer à l’utilisateur qu’il fait une opération non standard.</p>
+<p>On peut utiliser <strong>ON DUPLICATE KEY UPDATE</strong> lorsqu’on transfère des données ou que l’on est sûr que les enregistrements sont identiques.</p>
+<hr />
+<h2 id="supprimer-un-enregistrement">Supprimer un enregistrement</h2>
+<p>La requête de suppression est <strong>DELETE</strong> et a la syntaxe suivante :</p>
+<pre><code class="language-mysql">DELETE FROM Nom_table WHERE condition;
+</code></pre>
+<p>Comme pour les requêtes DROP, aucune confirmation n'est demandée.</p>
+<p><strong><em>Attention</em></strong> : s’il n’y a pas de clause WHERE et que le SafeMode est désactivé, vous allez supprimer toutes les données de la table.</p>
+<hr />
+<h2 id="exercice-2-3">Exercice 2-3</h2>
+<p>L'enseignant Bruce Wayne souhaite quitter son poste d'enseignant pour devenir un riche homme d'affaires. Retirez-le de la table <em>Enseignants</em>.</p>
+<p>Ajoutez-le de nouveau par la suite et réassignez-le comme responsable de programme.</p>
+<p><strong><em>Difficultés :</em></strong> 
+1. Vérifier vos contraintes de clé étrangère
+2. Pour vérifier si une valeur est <strong>NULL</strong>, on doit utiliser l'expression <strong>IS NULL</strong>    et non « <strong>= NULL</strong> » (et <strong>!= NULL</strong> devient <strong>IS NOT NULL</strong>)</p>
+<hr />
+<h2 id="selection-filtrage-et-operateurs-logiques">Sélection, filtrage et opérateurs logiques</h2>
+<p>Sélection de colonnes
+Filtrage des résultats
+Opérateurs logiques
+Ordonner et limiter</p>
+<hr />
+<h2 id="selection-de-colonnes">Sélection de colonnes</h2>
+<p>Pour sélectionner des données, la requête est <strong>SELECT</strong> et à la syntaxe de base suivante :</p>
+<pre><code class="language-mysql">SELECT nom_colonne1, nom_colonne2,… FROM Nom_table;
+</code></pre>
+<p>On indique après le <strong>SELECT</strong> que le nom des colonnes que l’on souhaite récupérer.</p>
+<hr />
+<h2 id="selection-de-colonnes_1">Sélection de colonnes</h2>
+<p>Pour récupérer les colonnes sigle et nom de la table Cours, on utilise la requête suivante :</p>
+<pre><code class="language-mysql">SELECT sigle, nom FROM Cours;
+</code></pre>
+<p>On utilise le symbole <strong>*</strong> pour indiquer la sélection de toutes les colonnes.</p>
+<pre><code class="language-mysql">SELECT * FROM Nom_table;
+</code></pre>
+<p><img alt="height:250px" src="../images/2_cours.png" /></p>
+<hr />
+<h2 id="alias">Alias</h2>
+<p>Il est possible de renommer des colonnes lors de la sélection (on verra plus tard des applications de ce concept)</p>
+<p>Le mot-clé à utiliser est <strong>AS</strong></p>
+<pre><code class="language-mysql">SELECT sigle, nom AS nom_cours FROM Cours 
+</code></pre>
+<hr />
+<h2 id="filtrer-les-enregistrements">Filtrer les enregistrements</h2>
+<p>Tout comme dans un <strong>UPDATE</strong> ou <strong>DELETE</strong>, il est possible d'utiliser la clause <strong>WHERE</strong> dans un <strong>SELECT</strong> afin de restreindre le nombre d'enregistrements affectés.</p>
+<pre><code class="language-mysql">SELECT nom_colonne1, nom_colonne2,… FROM Nom_table 
+    WHERE condition;
+</code></pre>
+<hr />
+<h2 id="creation-de-conditions">Création de conditions</h2>
+<p>On peut utiliser les opérateurs suivants pour construire des conditions.</p>
+<table>
+<thead>
+<tr>
+<th>Opérateur</th>
+<th>Symbole</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Égal</td>
+<td>=</td>
+</tr>
+<tr>
+<td>Différent de</td>
+<td>&lt;&gt;</td>
+</tr>
+<tr>
+<td>Plus grand que</td>
+<td>&gt;</td>
+</tr>
+<tr>
+<td>Plus grand ou égal que</td>
+<td>&gt;=</td>
+</tr>
+<tr>
+<td>Plus petit que</td>
+<td>&lt;</td>
+</tr>
+<tr>
+<td>Plus petit ou égal que</td>
+<td>&lt;=</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="clause-where-avec-valeur-null">Clause WHERE avec valeur NULL</h2>
+<p>Pour récupérer les colonnes dont la valeur est <strong>NULL</strong>, la structure de la condition est différente. Il faut utiliser le mot-clé <strong>IS</strong>.</p>
+<pre><code class="language-mysql">SELECT nom_colonne1, nom_colonne2... FROM Nom_table WHERE nom_colonne IS NULL;
+</code></pre>
+<p>On ajoute le mot-clé <strong>NOT</strong> pour avoir les colonnes qui ne sont pas <strong>NULL</strong></p>
+<pre><code class="language-mysql">SELECT nom_colonne1, nom_colonne2... FROM Nom_table WHERE nom_colonne IS NOT NULL;
+</code></pre>
+<hr />
+<h2 id="filtrer-les-enregistrements_1">Filtrer les enregistrements</h2>
+<p>Pour sélectionner le nom des cours dont la durée est supérieure ou égale à 60 heures on utilise la requête suivante.</p>
+<pre><code class="language-mysql">SELECT nom FROM Cours 
+    WHERE duree &gt;= 60;
+</code></pre>
+<p>Pour sélectionner les sigles des cours dont le nom est <strong>NULL</strong>, on utilise la requête suivante.</p>
+<pre><code class="language-mysql">SELECT sigle FROM Cours 
+    WHERE nom IS NULL;
+</code></pre>
+<p><img alt="height:250px" src="../images/2_cours.png" /></p>
+<hr />
+<h2 id="operateurs-logiques">Opérateurs logiques</h2>
+<p>On peut combiner les opérations de filtrage en utilisant les opérateurs logiques.</p>
+<table>
+<thead>
+<tr>
+<th>Opérateur</th>
+<th>Instruction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Et</td>
+<td>AND</td>
+</tr>
+<tr>
+<td>Ou</td>
+<td>OR</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="filtrer-les-enregistrements_2">Filtrer les enregistrements</h2>
+<p>Sélectionnez le nom des cours où la durée est entre 60 et 75 heures incluse.</p>
+<pre><code class="language-mysql">SELECT nom FROM Cours
+    WHERE duree &gt;= 60 AND duree &lt;= 75;
+</code></pre>
+<p><img alt="height:250px" src="../images/2_cours.png" /></p>
+<hr />
+<h2 id="exercice-2-4">Exercice 2-4</h2>
+<p>À partir du script Ecole.sql</p>
+<p>A. Sélectionnez les codes d'employé des enseignants qui ont au moins 5 ans d'ancienneté.
+B. Sélectionnez le nom des étudiants admis entre 2019 et 2020.
+C. Sélectionnez la date de début de session de toutes les sessions d'automne.</p>
+<hr />
+<h2 id="ordonner-les-resultats">Ordonner les résultats</h2>
+<p>Pour obtenir des résultats triés, on utilise la clause ORDER BY. Cette clause est optionnelle.</p>
+<pre><code class="language-mysql">SELECT nom_colonne1, nom_colonne2, ... FROM Nom_table
+    WHERE condition
+    ORDER BY nom_colonne1, nom_colonne2, ...
+</code></pre>
+<p>Il faut porter attention à la taille de la sélection, car un tri devient vite couteux en ressources.</p>
+<hr />
+<h2 id="ordonner-les-resultats_1">Ordonner les résultats</h2>
+<p>Pour sélectionner le nom et la durée des cours et les classer en ordre alphabétique on utilise la requete suivante.</p>
+<pre><code class="language-mysql">SELECT nom, duree FROM Cours
+    ORDER by nom;
+</code></pre>
+<p><img alt="height:250px" src="../images/2_cours.png" /></p>
+<hr />
+<h2 id="ordonner-les-resultats_2">Ordonner les résultats</h2>
+<p>Maintenant, on veut la même requête, mais en ordonnant d'abord par durée, puis par ordre alphabétique. Voici le résultat attendu :</p>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th style="text-align: center;">Duree</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mathématique de l'ordinateur</td>
+<td style="text-align: center;">45</td>
+</tr>
+<tr>
+<td>Base de donnees 1</td>
+<td style="text-align: center;">60</td>
+</tr>
+<tr>
+<td>Fonctionnement de l'ordinateur</td>
+<td style="text-align: center;">60</td>
+</tr>
+<tr>
+<td>Développement Web 2</td>
+<td style="text-align: center;">75</td>
+</tr>
+<tr>
+<td>Programmation 1</td>
+<td style="text-align: center;">90</td>
+</tr>
+<tr>
+<td>Programmation 2</td>
+<td style="text-align: center;">90</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="ordonner-les-resultats_3">Ordonner les résultats</h2>
+<p>On peut trier sur plusieurs colonnes en les séparant par des virgules. Le tri se fait en ordre inverse que les colonnes sont indiquées.</p>
+<pre><code class="language-mysql">SELECT nom, duree FROM Cours
+    ORDER BY duree, nom;
+</code></pre>
+<p>Ici on tri par ordre alphabétique et après par durée. Donc le résultat final est <em>globablement</em> trié par durée, et pour chaque durée, les éléments sont en ordre alphabétique.</p>
+<hr />
+<h2 id="tris-stables-et-instables">Tris stables et instables</h2>
+<ul>
+<li>
+<p>Dans la théorie des tris (oui, ça existe et c'est assez riche comme théorie), on parle de tri stable si, pour des valeurs égales, l'ordre original est préservé.</p>
+</li>
+<li>
+<p>Dans l'exemple précédent, on tri par ordre alphabétique d'abord. Ensuite, quand on tri par durée, deux cours de même durée resteront dans l'ordre (le tri par durée ne change pas l'ordre des éléments). C'est ce qu'on appelle un tri stable.</p>
+</li>
+<li>
+<p>Bien qu'intéressant parce qu'ils permettent le tri par plusieurs colonnes successivement, les tris stables (<em>bubble</em>, <em>insertion</em>, <em>merge</em>) sont généralement plus lents que les tris instables (<em>quicksort</em>, <em>shellsort</em>, <em>radix</em>, <em>bogosort (a.k.a stupid sort)</em>).</p>
+</li>
+</ul>
+<hr />
+<h2 id="ordonnancement-des-caracteres">Ordonnancement des caractères</h2>
+<p>Comment se fait un tri sur un CHAR/VARCHAR ?</p>
+<ul>
+<li>
+<p>Par le code ASCII donc numéro en premier, ensuite lettres majuscules, ensuite lettres minuscules.</p>
+</li>
+<li>
+<p>«Boujour» vient donc avant «allo»</p>
+</li>
+<li>
+<p>Certains caractères spéciaux sont entre les majuscules et minuscules !</p>
+</li>
+</ul>
+<hr />
+<h2 id="ordre-decroissant">Ordre décroissant</h2>
+<p>On peut ajouter l’ordre du tri après le nom d'une colonne dans la clause ORDER BY.</p>
+<ul>
+<li>ASC pour ascendant (croissant). Cette valeur est celle par défaut.</li>
+<li>DESC pour descendant (décroissant)</li>
+</ul>
+<pre><code class="language-mysql">SELECT * FROM Table
+    ORDER BY nom_colonne1, nom_colonne2 DESC;
+
+SELECT * FROM Table
+    ORDER BY nom_colonne1 DESC, nom_colonne2;
+</code></pre>
+<hr />
+<h2 id="limiter-les-resultats">Limiter les résultats</h2>
+<p>On peut aussi indiquer un nombre maximal de résultats à afficher avec la clause LIMIT</p>
+<pre><code class="language-mysql">LIMIT nombre_sélectionné
+LIMIT premier_enregistrement, nombre_sélectionné
+</code></pre>
+<p>La clause LIMIT est optionnelle.</p>
+<hr />
+<h2 id="limiter-les-resultats_1">Limiter les résultats</h2>
+<p>On veut par exemple seulement les 5 premiers cours pour avoir un aperçu des données dans la table Cours.</p>
+<pre><code class="language-mysql">SELECT * FROM Cours
+    LIMIT 0, 5;
+
+## Alternative
+
+SELECT * FROM Cours
+    LIMIT 5;
+</code></pre>
+<hr />
+<h2 id="exercice-2-5">Exercice 2-5</h2>
+<p>A. Sélectionnez les 5 évaluations ayant la plus basse pondération
+B. Sélectionnez le nom des 3 étudiants qui ont été admis le plus récemment
+C. Sélectionnez tous les groupes, triés par numéro de groupe en ordre croissant et par session, de la plus récente à la plus ancienne (supposez que les sessions sont ajoutées dans l'ordre quelles arrivent). Les groupes d'un même cours doivent être regroupés à l'affichage.</p>
+<hr />
+<h2 id="operateurs-arithmetiques-et-chaines-de-caracteres">Opérateurs arithmétiques et chaînes de caractères</h2>
+<p>Opérations arithmétiques
+Sélection sur les chaînes de caractères
+Regex
+Atelier</p>
+<hr />
+<h2 id="operations-arithmetiques">Opérations arithmétiques</h2>
+<p>On peut effectuer des opérations arithmétiques lors des requêtes.</p>
+<table>
+<thead>
+<tr>
+<th>Opérateur</th>
+<th style="text-align: center;">Symbole</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Addition</td>
+<td style="text-align: center;">+</td>
+</tr>
+<tr>
+<td>Soustraction</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td>Multiplication</td>
+<td style="text-align: center;">*</td>
+</tr>
+<tr>
+<td>Division</td>
+<td style="text-align: center;">/</td>
+</tr>
+<tr>
+<td>Modulo</td>
+<td style="text-align: center;">%</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="operations-arithmetiques_1">Opérations arithmétiques</h2>
+<p>On veut sélectionner le nombre d’heures par semaine de chaque cours, sachant qu'une session dure 15 semaines.</p>
+<pre><code class="language-mysql">SELECT duree / 15 FROM Cours;
+</code></pre>
+<p>On peut utiliser des noms de colonne des deux côtés de l'opérateur.</p>
+<p><img alt="height:255px" src="../images/2_cours.png" /></p>
+<hr />
+<h2 id="recherche-sur-les-chaines-de-caracteres">Recherche sur les chaînes de caractères</h2>
+<p>Pour rechercher simplement sur des chaînes de caractères (CHAR, VARCHAR) on utilise l’opérateur LIKE et les patterns de recherche.</p>
+<p>Les patterns disposes de 3 caractères spéciaux :
+- <strong>%</strong> : correspond à 0, 1 ou plusieurs caractères
+- <strong>_</strong> : correspond à 1 unique caractère
+- <strong>\</strong> : permet d’échapper les caractères % ou _</p>
+<p>Rechercher sur un objet TEXT risque de prendre énormément de temps. C'est le type d'opération qu'on évite à moins d'y être contraint.</p>
+<hr />
+<h2 id="recherche-sur-les-chaines-de-caracteres_1">Recherche sur les chaînes de caractères</h2>
+<p>Rechercher tous les mots qui commencent par «des»
+* Pattern : des%</p>
+<p>Rechercher des mots de 2 lettres terminant par e
+* Pattern : _e</p>
+<p>Rechercher des mots terminant par le symbole %
+* Pattern : %\%</p>
+<hr />
+<h2 id="exemple-like">Exemple LIKE</h2>
+<p>On veut sélectionner les pondérations et le titre de toutes les évaluation comportant le mot « final » ou « finale »</p>
+<pre><code class="language-mysql">SELECT ponderation, titre FROM Evaluation 
+  WHERE titre LIKE '%final%';
+</code></pre>
+<p>On peut utiliser des noms de colonne des deux côtés de l'opérateur.</p>
+<p><img alt="height:255px" src="../images/2_evaluation.png" /></p>
+<hr />
+<h2 id="expressions-regulieres-regex">Expressions régulières (REGEX)</h2>
+<p>Les patterns sont simples à utilisés, mais aussi limités. Pour faire une recherche plus avancée, on utilise les REGEX (<em>Regular Expression</em>).</p>
+<p>Pour introduire une REGEX en MySQL, on utilise la syntaxe suivante :</p>
+<pre><code class="language-mysql">SELECT colonne FROM Table WHERE colonne RLIKE 'regex';
+</code></pre>
+<hr />
+<h2 id="rechercher-un-caractere">Rechercher un caractère</h2>
+<p>À moins qu'il s'agisse d'un caractère spécial, indiquez une lettre dans une REGEX permet de chercher celle-ci, n'importe où dans la chaîne.</p>
+<table>
+<thead>
+<tr>
+<th>Chaîne</th>
+<th>Regex</th>
+<th>Trouvé</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>abc</td>
+<td>a</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>cba</td>
+<td>a</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>abc</td>
+<td>ab</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>cba</td>
+<td>ab</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>cba</td>
+<td>ba</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>abc</td>
+<td>d</td>
+<td>Non</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="debut-et-fin">Début et fin</h2>
+<p>Pour indiquer le début d'une chaîne, on utilise le symbole <strong>^</strong>, et pour la fin, le symbole <strong>$</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Chaîne</th>
+<th>Regex</th>
+<th>Trouvé</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>abc</td>
+<td>^a</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>cba</td>
+<td>a$</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>abc</td>
+<td>^bc</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>abc</td>
+<td>^ab$</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>abc</td>
+<td>ab$</td>
+<td>Non</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="repetitions">Répétitions</h2>
+<p>Les REGEX offrent 3 différents caractères spéciaux pour la répétition :
+* <strong>*</strong> : indique que le caractère peut s'y trouver 0, 1 ou plusieurs fois
+* <strong>?</strong> : indique que le caractère peut s'y trouver 0 ou 1 fois
+* <strong>+</strong> : indique que le caractère doit s'y trouver au moins une fois (1 ou plusieurs)</p>
+<hr />
+<h2 id="repetitions_1">Répétitions</h2>
+<table>
+<thead>
+<tr>
+<th>Chaîne</th>
+<th>Regex</th>
+<th>Trouvé</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>abc</td>
+<td>a*</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>cba</td>
+<td>a+</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>abc</td>
+<td>b*c</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>aac</td>
+<td>b*c</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>aac</td>
+<td>a?c</td>
+<td>Non</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Chaîne</th>
+<th>Regex</th>
+<th>Trouvé</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aac</td>
+<td>a+c</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>bbc</td>
+<td>a+c</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>aaaaaaaaaaaa</td>
+<td>a*</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>aaaaaaaaaaaa</td>
+<td>a?</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>aaaaaaaaaaaa</td>
+<td>a+</td>
+<td>Oui</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="exercice-2-6">Exercice 2-6</h2>
+<p>Écrivez les REGEX pour trouver les informations suivantes parmis les mots suivants :
+chat, chaton, chatte, carotte, chalet, valet, animal</p>
+<p>Utilisez le site https://regex101.com/ pour vous aider.</p>
+<p>A. Les mots contenant « chat » (3 mots)
+B. Les mots commençant par « ch » (4 mots)
+C. Les mots contenant un ou deux 2 « t » (6 mots)
+D. Les mots finissant par « et » ou « e » (4 mots)
+E. Les mots contenant « a » suivis de 1 ou plusieurs « t » (3 mots)</p>
+<hr />
+<h2 id="repetitions_2">Répétitions</h2>
+<p>On peut aussi spécifier le nombre exacte de répétition recherché ou les mettre dans un intervalle. On utilise la notation <strong>{min, max}</strong> ou <strong>{nombre}</strong>. On peut omettre le max si l'on cherche au moins <em>x</em> caractères et omettre le min si l'on cherche au plus <em>x</em> caractères</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Intervalle</th>
+<th>Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">{1, 3}</td>
+<td>Entre 1 et 3 répétitions</td>
+</tr>
+<tr>
+<td style="text-align: center;">{4}</td>
+<td>Exactement 4 répétitions</td>
+</tr>
+<tr>
+<td style="text-align: center;">{5,}</td>
+<td>5 répétitions et plus</td>
+</tr>
+<tr>
+<td style="text-align: center;">{,2}</td>
+<td>Pas plus de 2 répétitions (équivalent à {0, 2})</td>
+</tr>
+<tr>
+<td style="text-align: center;">{3,1}</td>
+<td>Provoque une erreur</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="classes-de-caracteres">Classes de caractères</h2>
+<p>On peut sélectionner tous les caractères compris entre deux caractères (au sens du code ASCII), dans un ordre quelconque avec les classes de caractères. </p>
+<p>On indique une classe avec <strong>[<em>min</em>-<em>max</em>]</strong>. On peut juxtaposé des intervalles pour augmenter la portée de la classe.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Classe</th>
+<th>Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">[a-z]</td>
+<td>N'importe quelle lettre minuscule</td>
+</tr>
+<tr>
+<td style="text-align: center;">[02468]</td>
+<td>N'importe quel nombre pair</td>
+</tr>
+<tr>
+<td style="text-align: center;">[a-zA-Z]</td>
+<td>N'importe quelle lettre majuscule ou minuscule</td>
+</tr>
+<tr>
+<td style="text-align: center;">[a-z-]</td>
+<td>N'importe quelle lettre minuscule et le trait d'union (toujours à la fin !)</td>
+</tr>
+<tr>
+<td style="text-align: center;">[a-zA-Z0-9]</td>
+<td>N'importe quelle lettre ou nombre</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="classes-de-caracteres_1">Classes de caractères</h2>
+<table>
+<thead>
+<tr>
+<th>Énoncé</th>
+<th>REGEX</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Un numéro de téléphone</td>
+<td>[0-9]{3}-[0-9]{3}-[0-9]{4}</td>
+</tr>
+<tr>
+<td>Une séquence contenant entre 3 et 8 lettres</td>
+<td>[a-zA-Z]{3,8}</td>
+</tr>
+<tr>
+<td>Un mot de 6 lettres commençant par h</td>
+<td>^h[a-z]{5}$</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="exercice-2-7">Exercice 2-7</h2>
+<p>Écrivez les REGEX pour trouver les informations suivantes parmis les mots suivants :
+chat, chaton, chatte, carotte, chalet, valet, animal</p>
+<p>Utilisez le site https://regex101.com/ pour vous aider.</p>
+<p>A. Les mots de 4 lettres (1 mot)
+B. Les mots débutant par « cha » et ayant au moins 5 lettres (3 mots)
+C. Les mots qui contiennent au moins 3 voyelles. (2 mots)</p>
+<hr />
+<h2 id="classes-speciales">Classes spéciales</h2>
+<p>Les REGEX définissent un certains nombres de classes et de caractères spéciaux.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Classe</th>
+<th>Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">\w</td>
+<td>Tout caractère de mot (lettre et nombres) [a-zA-Z0-9_]</td>
+</tr>
+<tr>
+<td style="text-align: center;">\d</td>
+<td>Tout nombre [0-9]</td>
+</tr>
+<tr>
+<td style="text-align: center;">\s</td>
+<td>Espaces [\n\r\t ]</td>
+</tr>
+<tr>
+<td style="text-align: center;">\W \D \S</td>
+<td>La négation de la classe associé à la minuscule</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="classes-speciales-mysql">Classes spéciales MySQL</h2>
+<p>Les REGEX dans MySQL définissent des classes spéciales qui leur sont propres. Pour les utiliser on les écrits entre crochets en utilisant la syntaxe suivante :</p>
+<pre><code class="language-sql">[:classe de caractere:]
+</code></pre>
+<hr />
+<table>
+<thead>
+<tr>
+<th>Nom de la classe</th>
+<th>Contenu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alnum</td>
+<td>Caractères alphanumériques (comme \w sauf _)</td>
+</tr>
+<tr>
+<td>alpha</td>
+<td>Caractères de l'alphabet</td>
+</tr>
+<tr>
+<td>space</td>
+<td>Caractères d'espacement (semblable à \s)</td>
+</tr>
+<tr>
+<td>cntrl</td>
+<td>Caractères de contrôles (comme tabulation ou retour à la ligne)</td>
+</tr>
+<tr>
+<td>digit</td>
+<td>Caractères numériques (comme \d)</td>
+</tr>
+<tr>
+<td>lower, upper</td>
+<td>Caractères alphabétiques minuscules ou majuscules</td>
+</tr>
+</tbody>
+</table>
+<p>Plus de  classes : https://dev.mysql.com/doc/refman/8.0/en/regexp.html#regexp-syntax</p>
+<hr />
+<h2 id="caractere-speciaux">Caractère spéciaux</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Classe</th>
+<th>Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">.</td>
+<td>N'importe quel caractère</td>
+</tr>
+<tr>
+<td style="text-align: center;">|</td>
+<td>Opérateur ou</td>
+</tr>
+<tr>
+<td style="text-align: center;">^</td>
+<td>Opérateur de négation</td>
+</tr>
+<tr>
+<td style="text-align: center;">-</td>
+<td>Trait d'union, doit toujours être à la fin d'une classe</td>
+</tr>
+</tbody>
+</table>
+<p>Par exemple <strong>[^ab]</strong> vérifie que ni « a » ni « b » apparaîssent.</p>
+<hr />
+<h2 id="options">Options</h2>
+<p>À la fin d'une REGEX on peut indiquer certaines options. Cela ne fonctionne pas en MySQL. Voici les options les plus communes.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Lettre</th>
+<th>Option</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">g</td>
+<td><em>Greedy</em> : retourne toutes les occurences où la REGEX est trouvée (Pas en SQL)</td>
+</tr>
+<tr>
+<td style="text-align: center;">U</td>
+<td><em>Ungreedy</em> : retourne uniquement la première occurence où la REGEX est trouvée (Pas en SQL)</td>
+</tr>
+<tr>
+<td style="text-align: center;">m</td>
+<td><em>Multiline</em> : ^ et $ indique le début et la fin d'une ligne</td>
+</tr>
+<tr>
+<td style="text-align: center;">i</td>
+<td><em>Case insensitive</em> : la recherche n'est pas sensible à la casse</td>
+</tr>
+<tr>
+<td style="text-align: center;">c</td>
+<td><em>Case sensitive</em> : la recherche est sensible à la casse</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="manipulation-de-dates">Manipulation de dates</h2>
+<ul>
+<li>Fonctions de conversion et de temps actuel</li>
+<li>Addition et manipulation du temps</li>
+<li>Atelier</li>
+</ul>
+<hr />
+<h2 id="fonctions-sql-de-manipulation-de-dates">Fonctions SQL de manipulation de dates</h2>
+<p>Les fonctions SQL date, time et datetime permettent de convertir explicitement une chaîne de caractère en DATE, TIME ou DATETIME respectivement (ou convertir les formats de date entre eux). À l'insertion des données, des conversions implicitent s'opèrent.</p>
+<p><img alt="height:250px" src="../images/2_etudiant.png" /></p>
+<pre><code class="language-sql">INSERT INTO Etudiant (code, nom, annee_admission, 
+    date_naissance, programme) VALUES
+    (1234567, 'Tony Stark', 2019, date('1970-05-29'), '420.A0'),
+    (2345678, 'Steve Rogers' 2019, date('1918-07-04'), '420.A0');
+</code></pre>
+<hr />
+<h2 id="extraire-des-informations-de-la-datetemps">Extraire des informations de la date/temps</h2>
+<p>On peut avoir besoin d’extraire certains éléments des types DATE, TIME ou DATETIME.</p>
+<p>Une fonction existe pour chaque type. La fonction extract permet d’extraire plusieurs informations à la fois.</p>
+<p>https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_extract</p>
+<hr />
+<h2 id="extraire-des-informations-de-la-datetemps_1">Extraire des informations de la date/temps</h2>
+<p>Exemple : vendredi 2021-02-05 11:04:19</p>
+<table>
+<thead>
+<tr>
+<th>Fonction</th>
+<th>Retourne</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>year</td>
+<td>l'année</td>
+<td>2021</td>
+</tr>
+<tr>
+<td>month</td>
+<td>le numéro du mois</td>
+<td>2</td>
+</tr>
+<tr>
+<td>day / dayofmonth</td>
+<td>le numéro du jour dans le mois</td>
+<td>5</td>
+</tr>
+<tr>
+<td>hour</td>
+<td>l'heure</td>
+<td>11</td>
+</tr>
+<tr>
+<td>minute</td>
+<td>le nombre de minute</td>
+<td>4</td>
+</tr>
+<tr>
+<td>second</td>
+<td>le nombre de secondes</td>
+<td>19</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="extraire-des-informations-de-la-datetemps_2">Extraire des informations de la date/temps</h2>
+<p>Exemple : vendredi 2021-02-05 11:04:19</p>
+<table>
+<thead>
+<tr>
+<th>Fonction</th>
+<th>Retourne</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dayofweek</td>
+<td>le numéro du jour de la semaine (0 = dimanche)</td>
+<td>5</td>
+</tr>
+<tr>
+<td>dayname</td>
+<td>le nom du jour (anglais)</td>
+<td>Friday</td>
+</tr>
+<tr>
+<td>monthname</td>
+<td>le nom du mois (anglais)</td>
+<td>February</td>
+</tr>
+<tr>
+<td>dayofyear</td>
+<td>le numéro du jour dans l'année</td>
+<td>36</td>
+</tr>
+<tr>
+<td>weekofyear</td>
+<td>le numéro de la semaine dans l'année</td>
+<td>5</td>
+</tr>
+<tr>
+<td>week</td>
+<td>le numéro de la semaine</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="date-et-heure-actuelle">Date et heure actuelle</h2>
+<p>On utilise les fonctions suivantes pour obtenir la date et l’heure actuelle.</p>
+<table>
+<thead>
+<tr>
+<th>Fonction</th>
+<th>Type de retour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>now</td>
+<td>DATETIME</td>
+</tr>
+<tr>
+<td>current_date</td>
+<td>DATE</td>
+</tr>
+<tr>
+<td>current_time</td>
+<td>TIME</td>
+</tr>
+<tr>
+<td>current_timestamp</td>
+<td>TIMESTAMP</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="differences-de-temps">Différences de temps</h2>
+<p>Pour considérer la différence entre 2 temps (TIME ou DATETIME), on utilise la fonction timediff.</p>
+<p>Le résultat de timediff est exprimé en termes de TIME. Si un type DATETIME est utilisé, la partie de la date est ignorée.</p>
+<p>Les deux arguments doivent être du même type.</p>
+<hr />
+<h2 id="exemple-de-timediff">Exemple de timediff</h2>
+<p>Par exemple, chaque periode du cours possède un temps de début et de fin et on souhaite connaître la longueur des périodes.</p>
+<pre><code class="language-sql">SELECT id_periode, heure_debut, heure_fin, 
+       timediff(heure_fin, heure_debut) 
+    FROM Periode; 
+</code></pre>
+<p><img alt="height:150px" src="../images/2_resultat_timediff.png" /></p>
+<p><img alt="height:190px" src="../images/2_periode.png" /></p>
+<hr />
+<h2 id="difference-de-dates">Différence de dates</h2>
+<p>De même façon la fonction datediff permet de calculer la différence entre deux dates.</p>
+<p>Le résultat de datediff est exprimé en termes de nombre de jours. Si un type <strong>DATETIME</strong> est utilisé, la partie du temps est ignorée.</p>
+<p>Les deux arguments doivent être du même type.</p>
+<hr />
+<h2 id="exemple-de-difference-de-dates">Exemple de différence de dates</h2>
+<p>Par exemple, on peut exprimer la longueur d'une session en terme de jours, mais cela n'est pas toujours parlant.</p>
+<pre><code class="language-sql">SELECT semestre, annee, 
+    datediff(fin_session, debut_session) AS nombre_jours 
+    FROM Session;
+</code></pre>
+<p><img alt="" src="../images/2_duree_session.png" /></p>
+<hr />
+<h2 id="construire-une-date-a-partir-dun-nombre-de-jour">Construire une date à partir d'un nombre de jour</h2>
+<p>La fonction <strong>from_days</strong> permet de construire la date à partir d'un nombre de jours.</p>
+<p>Toutefois, cette fonction ne devrait pas être utilisée si le résultat est hors des limites habituels des dates.</p>
+<hr />
+<h2 id="difference-de-datetime">Différence de DATETIME ?</h2>
+<p>Il n’y a pas de fonction qui retourne l’addition ou différence de <strong>DATETIME</strong>. La partie de date et du temps doivent être traités séparément.</p>
+<hr />
+<h2 id="addition-de-temps">Addition de temps</h2>
+<p>Pour ajouter du temps à un type <strong>TIME</strong> on utilise la fonction addtime.</p>
+<p>Cette fonction ajoute deux types time ensemble.</p>
+<pre><code class="language-mysql">addtime ('00:02:15', '00:03:18') 
+-- retourne 0 h 5 m 33 s
+</code></pre>
+<hr />
+<h2 id="addition-de-date">Addition de date</h2>
+<p>La fonction adddate ajoute un intervalle à un type DATE ou à un type DATETIME. On inscrit un intervalle avec la syntaxe suivante.</p>
+<pre><code class="language-sql">INTERVAL nombre UNITE
+</code></pre>
+<p>Les unités possibles sont YEAR, MONTH, WEEK, DAY, HOUR, MINUTE, SECOND 
+https://dev.mysql.com/doc/refman/8.0/en/expressions.html#temporal-intervals</p>
+<hr />
+<h2 id="addition-de-date_1">Addition de date</h2>
+<p>Pour ajouter une journée à la date du 15 janvier 2022.</p>
+<pre><code class="language-sql">adddate ('2022-01-15', INTERVAL 1 DAY) 
+-- retourne 2022-01-16
+</code></pre>
+<hr />
+<h2 id="soustraction-de-date">Soustraction de date</h2>
+<p>Pour soustraire un intervalle à un type DATE ou DATETIME, on peut utiliser la fonction subdate.</p>
+<p>Cette fonction s’utilise exactement comme adddate.</p>
+<hr />
+<h2 id="exercice-2-8">Exercice 2-8</h2>
+<p>On veut le titre des documents qui :
+A. ont été remis au mois de mai
+B. ont été remis dans les deux dernières années</p>
+<p>On veut le semestre et l'année des sessions qui :
+C. Durent plus de 17 semaines</p>
+<hr />
+<h2 id="manipulation-de-timestamp">Manipulation de timestamp</h2>
+<p>Deux fonctions permettent la manipulation des timestamp     :</p>
+<ul>
+<li>timestampadd</li>
+<li>timestampdiff</li>
+</ul>
+<p>Les fonctions addition ou soustraient 2 timestamp et retournent la valeur sous forme de l’unité indiquée.</p>
+<hr />
+<h2 id="manipulation-de-timestamp_1">Manipulation de timestamp</h2>
+<p>Obtenir l’addition de 3 minutes à l’heure actuelle. </p>
+<pre><code class="language-mysql">timestampadd (MINUTE, 3, current_timestamp())
+</code></pre>
+<p>Obtenir le nombre de jours avant Noël.</p>
+<pre><code class="language-mysql">timestampdiff (DAY, '2022-12-25', current_timestamp ())
+</code></pre>
+<hr />
+<h2 id="gestion-des-fuseaux-horaires">Gestion des fuseaux horaires</h2>
+<p>MySQL offre plusieurs fonctions pour gérer des informations de différents fuseaux horaires.</p>
+<p>Toutes les fonctions de manipulation du temps sont décrites ici:</p>
+<p>https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html</p>
+<hr />
+<h2 id="curiosite-de-date">Curiosité de date</h2>
+<p>Il y a longtemps, le calendrier Julien (de Jules César) a été introduit avec une semaine  jours et des cycles annuels basés sur le Soleil. Malheureusement, avec l'exactitude des méthodes de mesure de l'époque, l'année julienne devait être corrigée.</p>
+<p>En 1582, le monde occidental a passé au calendrier Grégorien (demande du pape Grégoire XIII). qui régularise les années et les durées des jours en introduisant les années bisextiles (sur un cycle de 400 ans).</p>
+<p>Par contre, le passage a demandé un ajustement particulier...</p>
+<hr />
+<h2 id="correction-doctobre-1582">Correction d'octobre 1582</h2>
+<p>Voici le calendrier du mois d'octobre 1582. Les 10 jours supprimés sont entre autre les 9 années bissextile en trop entre le sixième et le seizième siècle (500, 600, 700, 900, 1000, 1100, 1300, 1400 et 1500). </p>
+<p><img alt="" src="../images/2_julien_gregorien.png" /></p>
+<hr />
+<h2 id="calendrier-gregorien-proleptique">Calendrier Grégorien proleptique</h2>
+<p>Un tel calendrier est un calendrier Grégorien rétropoler à partir d'aujourd'hui. Les dates retirées dans la correction sont inclues dans le calendrier Grégorien proleptique. </p>
+<p>Il s'agit de ce calendrier que MySQL utilise, donc les dates retirées sont valides (exemple 8 octobre 1582), même si elles n'ont jamais réellement existées. </p>
+<hr />
+<h2 id="jointures-et-agregats">Jointures et agrégats</h2>
+<p>Jointures internes
+Jointures naturelles
+Atelier
+Agrégats de données
+Atelier</p>
+<hr />
+<h2 id="probleme">Problème</h2>
+<p>Pour chaque programme, on veut afficher le nom du programme et le nom de la personne responsable. On aurait un résultat du format suivant</p>
+<table>
+<thead>
+<tr>
+<th>Nom programme</th>
+<th>Nom responsable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Informatique appliquée</td>
+<td>Bruce Wayne</td>
+</tr>
+<tr>
+<td>Informatique - Jeux Vidéo</td>
+<td>Kara Danvers</td>
+</tr>
+</tbody>
+</table>
+<p>Le problème : nom programme et nom professeur sont dans deux tables différentes.</p>
+<hr />
+<h2 id="relation-programme-enseignant">Relation Programme - Enseignant</h2>
+<p><img alt="" src="../images/2_programme_responsable.png" /></p>
+<hr />
+<h2 id="jointures">Jointures</h2>
+<p>Une jointure permet de « joindre » deux tables ensemble pour en créer une seule. Ici la table résultant n'est pas une « vraie » table au sens où elle n'est pas enregistrer dans la base de données.</p>
+<p>Il existe 3 types de jointures :
+- Jointures internes et naturelles (vues en BD1)
+- Jointures à gauche et à droite (vues en BD2)
+- Jointures externes ou complètes (vues en BD2)</p>
+<hr />
+<h2 id="jointures-internes">Jointures internes</h2>
+<p>Une jointure interne permet de récupérer les informations en croisant les informations de plusieurs tables. </p>
+<p>On peut voir la jointure interne comme une intersection d'ensembles basé sur l'égalité d'une paire de colonnes.</p>
+<hr />
+<p><img alt="height:600px" src="../images/2_jointures.png" /></p>
+<hr />
+<h2 id="syntaxe-des-jointures-internes">Syntaxe des jointures internes</h2>
+<pre><code class="language-mysql">SELECT * FROM Nom_table_1 INNER JOIN Nom_table_2 
+    ON Nom_table_1.colonne_1 = Nom_table_2.colonne_2;
+</code></pre>
+<p>Donc dans l'exemple précédent</p>
+<pre><code class="language-mysql">SELECT Programme.nom, Enseignant.nom FROM Enseignant INNER JOIN Programme
+    ON Enseignant.code_employe = Programme.responsable;
+</code></pre>
+<p>On préfixe les colonnes des noms de table pour éviter les ambiguité de nom.</p>
+<hr />
+<h2 id="allegement-de-lecriture">Allègement de l'écriture</h2>
+<p>Lorsqu'il n'y a pas de risque d'ambiguité de nom, on peut omettre le nom des tables comme préfixe. On peut aussi utiliser les alias pour clarifier le nom des colonnes.</p>
+<pre><code class="language-mysql">SELECT Programme.nom AS 'Nom programme', Enseignant.nom AS 'Responsable' 
+    FROM Enseignant INNER JOIN Programme
+    ON code_employe = responsable;
+</code></pre>
+<p><img alt="height:100px" src="../images/2_resultat_jointure.png" /></p>
+<hr />
+<h2 id="exercice-2-9">Exercice 2-9</h2>
+<p>A. Sélectionnez le nom de chaque étudiant et le nom du programme dans lequel il est inscrit. Triez les résultats par programme.</p>
+<p>B. Sélectionnez pour chaque document le code de l'étudiant qui l'a remis. Affichez le nom du document et le code de l'étudiant.</p>
+<hr />
+<h2 id="jointure-naturelle">Jointure naturelle</h2>
+<p>Une jointure naturelle fonctionne comme la jointure interne, mais ne nécessite pas de préciser sur quelle colonne se fait la jointure.</p>
+<p>Les colonnes portant le même nom entre les 2 tables servent à effectuer la jointure. </p>
+<p>ATTENTION : si plus d'une paire de colonne portent le même nom, alors la jointure naturelle vérifira que les deux paires concordent.</p>
+<hr />
+<h2 id="jointure-naturelle_1">Jointure naturelle</h2>
+<p>Syntaxe de la jointure naturelle :</p>
+<pre><code class="language-sql">SELECT * FROM Nom_table_1 NATURAL JOIN Nom_table_2;
+</code></pre>
+<p>On veut afficher le code d'employé et le sigle du cours pour chaque groupe. </p>
+<pre><code class="language-sql">SELECT enseignant, numero_groupe, sigle 
+    FROM Groupe NATURAL JOIN Cours;
+</code></pre>
+<p><img alt="height:150px" src="../images/2_natural_join.png" /></p>
+<p><img alt="height:400px" src="../images/2_cours_session.png" /></p>
+<hr />
+<h2 id="exercice-2-10">Exercice 2-10</h2>
+<p>A. Sélectionnez le titre des évaluations pour lequel aucun document n'est associé.
+B. Sélectionnez l'année admission et le nom de l'étudiant pour chaque étudiant des programmes sous la responsabilité de l'enseignant portant le code 7654.</p>
+<hr />
+<h2 id="probleme_1">Problème</h2>
+<p>On veut afficher pour chaque étudiant son nom, le titre des documents qu'il a remis et la date à laquelle la remise s'est faite.</p>
+<p>Quelle requête écrire ?</p>
+<hr />
+<h2 id="jointures-multiples">Jointures multiples</h2>
+<p>On peut appliquer une jointure sur le résultat d'une jointure.</p>
+<pre><code class="language-mysql">SELECT nom, titre, date_remise FROM Etudiant
+    INNER JOIN Evaluation_etudiant ON code = etudiant
+    INNER JOIN Document ON document = id_document;
+</code></pre>
+<p><img alt="height:200px" src="../images/2_jointures_multiples.png" /></p>
+<p><em>44 lignes ont été sélectionnées.</em></p>
+<hr />
+<h2 id="exercice-2-11">Exercice 2-11</h2>
+<p>A. Sélectionnez pour l'étudiante Nathasha Romanov le titre de tous les documents qu'elle a remis.</p>
+<p>B. Trouvez la première année durant laquelle le cours portant le sigle 420-2B4-VI s'est donné.  </p>
+<hr />
+<h2 id="agregats">Agrégats</h2>
+<p>Il est possible d’agréger des données ensemble. Un agrégat consiste à regrouper les données qui partagent une valeur commune pour une colonne précise. On fait un agrégat avec une clause <strong>GROUP BY</strong>.</p>
+<p>On utilise généralement une fonction d'agrégation avec un agrégat pour obtenir des informations sur le groupe.</p>
+<p>Il faut faire attention dans la sélection des colonnes pour n'afficher que des colonnes qui ont la même valeur pour tout le groupe.</p>
+<hr />
+<h2 id="exemple">Exemple</h2>
+<p>Sélectionner le nombre d'étudiant dans chaque groupe.</p>
+<pre><code class="language-mysql">SELECT groupe, count(etudiant) FROM Inscription 
+    GROUP BY groupe;
+</code></pre>
+<p><img alt="height:225px" src="../images/2_inscription.png" /></p>
+<p><img alt="height:225px" src="../images/2_agregation.png" /></p>
+<hr />
+<h2 id="exercice-2-12">Exercice 2-12</h2>
+<p>A. Comptez le nombre d'évaluations pour chaque groupe. Affichez seulement l'id du groupe et le nombre d'évaluations.</p>
+<p>B. Comptez le nombre de groupes pour chaque session. Affichez le nombre de groupe, le semestre et l'année de chaque session.</p>
+<hr />
+<h2 id="agregats-multiples">Agrégats multiples</h2>
+<p>Il est possible de former les agrégats par plusieurs critères. Par exemple, on souhaite obtenir le nombre de document remis pour chaque étudiant par groupe.</p>
+<pre><code class="language-mysql">SELECT count(id_document), etudiant, groupe FROM Document 
+    INNER JOIN EvaluationEtudiant ON id_document = document
+    INNER JOIN Evaluation ON EvaluationEtudiant.id_evaluation = Evaluation.id_evaluation
+    GROUP BY etudiant, groupe;
+</code></pre>
+<p><img alt="height:200px" src="../images/2_agregations_multiples.png" /></p>
+<hr />
+<h2 id="exercice-2-13">Exercice 2-13</h2>
+<p>Sélectionnez pour chaque cours le nombre de fois qu'il s'est donné à chaque session (nombre de groupes). Affichez le semestre, l'année de la session ainsi que le sigle du cours. Triez les résultats par sigle.</p>
+<hr />
+<h2 id="condition-sur-les-groupes">Condition sur les groupes</h2>
+<p>Il est possible de mettre une condition sur un groupe. Une telle condition va dans une clause <strong>HAVING</strong>.</p>
+<p>DINSTINCTION IMPORTANTE :</p>
+<ul>
+<li>Une condition portant sur chaque enregistrement 
+(avant agrégation) : <strong>WHERE</strong></li>
+<li>Une condition portant sur un agrégat de données 
+(avec une fonction d'agrégation) : <strong>HAVING</strong></li>
+</ul>
+<hr />
+<h2 id="exemple_1">Exemple</h2>
+<p>On veut les groupes de 3 étudiants et plus :</p>
+<pre><code class="language-mysql">SELECT groupe, count(etudiant) FROM Inscription
+    GROUP BY groupe
+    HAVING count(etudiant) &gt;= 3;
+</code></pre>
+<p><img alt="height:175px" src="../images/2_having.PNG" /></p>
+<hr />
+<h2 id="exemple-alias">Exemple : Alias</h2>
+<p>On peut utiliser les alias pour éviter de réécrire plusieurs fois le résultat d'une même fonction.</p>
+<pre><code class="language-mysql">SELECT groupe, count(etudiant) AS nombre_etudiants FROM Inscription
+    GROUP BY groupe
+    HAVING nombre_etudiants &gt;= 3;
+</code></pre>
+<p><em>Notez bien</em> : le nom nombre_etudiants est inscrit tel quel sans guillemet, c'est pourquoi il est accessible. Avec des guillemets, cela aurait changé l'affichage, mais nous n'aurions pas pu l'utiliser dans la clause <strong>HAVING</strong>.</p>
+<hr />
+<h2 id="exercice-2-14">Exercice 2-14</h2>
+<p>A. Sélectionnez le nombre de cours pour chaque session (id_session seulement) où il ne se donne pas plus de 2 cours;</p>
+<p>B. Sélectionnez le nombre d'étudiants admis par année après 2019.</p>
+<hr />
+<h2 id="selection-unique">Sélection unique</h2>
+<p>Dans certains cas, en combinant les jointures avec les agrégats, on peut dupliquer des résultats.</p>
+<p>Pour s'assurer que les résultats ne sont pas dupliquer, on doit utiliser le mot-clé <strong>DISTINCT</strong>. On peut utiliser le mot-clé de deux façons</p>
+<pre><code class="language-mysql">-- Dans une requête SELECT pour avoir que les valeurs différentes
+SELECT DISTICT colonne
+
+-- Dans la fonction count pour compter le nombre de valeurs distinctes
+count(DISTINCT colonne)
+</code></pre>
+<hr />
+<h2 id="exercice-2-15">Exercice 2-15</h2>
+<p>Sélectionnez les sigle des cours ayant plus de 2 évaluations lorsqu'ils se sont donnés. Chaque sigle doit apparaître qu'une seule fois.</p>
+<hr />
+<h2 id="fonctions-statistiques-et-filtrage">Fonctions statistiques et filtrage</h2>
+<p>Fonctions statistiques
+Opérateurs d'ensemble
+Atelier</p>
+<hr />
+<p>Plusieurs fonctions statistiques existent dans les agrégats.</p>
+<p>On a déjà vu la fonction count qui permet de compter le nombre d’enregistrements.</p>
+<p>On peut utiliser les fonctions statistiques hors des agrégats de données. Par contre, la restriction aux colonnes non agrégées s’applique.</p>
+<hr />
+<h2 id="fonctions-statistiques">Fonctions statistiques</h2>
+<p>Sauf pour <strong>count</strong>, les fonctions sont  appellées sur des colonnes de type numérique.</p>
+<table>
+<thead>
+<tr>
+<th>Fonction</th>
+<th>Opération</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>sum</strong>(nom_colonne)</td>
+<td>Somme les valeurs de la liste</td>
+</tr>
+<tr>
+<td><strong>min</strong>(nom_colonne)</td>
+<td>Trouve la valeur minimale parmi la liste</td>
+</tr>
+<tr>
+<td><strong>max</strong>(nom_colonne)</td>
+<td>Trouve la valeur maximale parmi la liste</td>
+</tr>
+<tr>
+<td><strong>avg</strong>(nom_colonne)</td>
+<td>Calcule la valeur moyenne de la liste</td>
+</tr>
+<tr>
+<td><strong>count</strong>(nom_colonne)</td>
+<td>Compte le nombre de valeurs de la liste</td>
+</tr>
+<tr>
+<td><strong>std</strong>(nom_colonne)</td>
+<td>Calcule l'écart-type des valeurs de la liste</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="trouver-le-minimum">Trouver le minimum</h2>
+<p>Affichez la note minimale qu’un étudiant a obtenue à l’évaluation portant l’id 5.</p>
+<pre><code class="language-mysql">SELECT min(note) FROM Evaluation_etudiant
+    WHERE id_evaluation = 5;
+</code></pre>
+<hr />
+<h2 id="exercice-2-16">Exercice 2-16</h2>
+<p>A. Sélectionnez la valeur de la plus haute note obtenue à l'évaluation 18.
+B. Sélectionnez le nom de l'étudiant ayant obtenu la plus haute note à l'évaluation 18.
+C. Sélectionnez la note totale de l'étudiant 1234567 au groupe 5.
+D. Sélectionnez la moyenne (en pourcentage) de l'évaluation 13.</p>
+<hr />
+<h2 id="afficher-toutes-les-valeurs">Afficher toutes les valeurs</h2>
+<p>Pour s'aider dans le debogage, on peut afficher le contenu d'un groupe. La fonction qui permet cela est <strong>GROUP_CONCAT</strong>.</p>
+<p>Par exemple, voici le nom des étudiants inscrit au programme 420.A0.</p>
+<pre><code class="language-mysql">SELECT GROUP_CONCAT (Etudiant nom), Programme.nom, FROM Etudiant 
+    INNER JOIN Programme ON programme = Programme.code 
+    WHERE Programme.code = '420.A0';
+</code></pre>
+<hr />
+<h2 id="operateurs-densemble">Opérateurs d'ensemble</h2>
+<p>Des opérateurs existent sur les ensembles pour simplifier les requêtes de sélection.</p>
+<p>Deux opérateurs existent :
+- BETWEEN
+- IN</p>
+<hr />
+<h2 id="between">Between</h2>
+<p>Le mot-clé BETWEEN permet de chercher un enregistrement entre deux valeurs.</p>
+<pre><code class="language-mysql">... WHERE nom_colonne BETWEEN minimum AND maximum
+
+-- équivalent à
+
+... WHERE nom_colonne &gt;= minimum AND nom_colonne &lt;= maximum
+</code></pre>
+<hr />
+<h2 id="negation">Négation</h2>
+<p>On peut appliquer la négation avec l'opérateur <strong>NOT</strong> à l'opérateur <strong>BETWEEN</strong> pour signifier toutes les valeurs sauf celles dans cet interval. La syntaxe est :</p>
+<pre><code class="language-mysql">... WHERE nom_colonne NOT BETWEEN minimum AND maximum
+</code></pre>
+<hr />
+<h2 id="in">IN</h2>
+<p>Pour vérifier si la colonne correspond à une valeur parmi une liste, on peut utiliser l’opérateur <strong>IN</strong>.</p>
+<pre><code>... WHERE nom_colonne IN (valeur1, valeur2 …)
+
+-- équivalent à
+
+... WHERE nom_colonne = valeur1 OR nom_colonne = valeur2 OR …
+</code></pre>
+<hr />
+<h2 id="negation_1">Négation</h2>
+<p>On peut aussi utiliser l'opérateur de négation <strong>NOT</strong> devant l'opérateur <strong>IN</strong> pour sélectionner toutes les valeurs sauf celles dans l’intervalle.</p>
+<pre><code class="language-mysql">... WHERE nom_colonne NOT IN (valeur1, valeur2, ...)
+</code></pre>
+<hr />
+<h2 id="exercice-2-17">Exercice 2-17</h2>
+<ul>
+<li>Sélectionnez le nom des étudiants qui ont suivi au moins l'un des cours suivants :</li>
+<li>420-1D6-VI</li>
+<li>420-2B4-VI</li>
+<li>420-2A6-VI</li>
+<li>Sélectionnez les documents remis avant le 16 octobre 2020 ou après la fin de la session automne 2020 (19 décembre 2020)</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>
