@@ -66,6 +66,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://francois-mercier.github.io/cours-db1/notes_de_cours/section_3.2/</loc>
+         <lastmod>2023-12-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://francois-mercier.github.io/cours-db1/notes_de_cours/section_3.3/</loc>
+         <lastmod>2023-12-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://francois-mercier.github.io/cours-db1/notes_de_cours/section_4.1/</loc>
          <lastmod>2023-12-13</lastmod>
          <changefreq>daily</changefreq>

@@ -908,7 +908,49 @@
         
   
   <span class="md-ellipsis">
-    3.1
+    3.1 Établir une stratégie de sauvegarde de la BD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../section_3.2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.2 Sauvegarder et restaurer une BD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../section_3.3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.3 Automatisation des sauvegardes
   </span>
   
 
@@ -1128,10 +1170,10 @@ Atelier</p>
     WHERE id_evaluation = 5;
 </code></pre>
 <h2 id="-exercice-261-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/></svg></span> --- Exercice 2.6.1 ---</h2>
-<p>A. Sélectionnez la valeur de la plus haute note obtenue à l'évaluation 18.
-B. Sélectionnez le nom de l'étudiant ayant obtenu la plus haute note à l'évaluation 18.
-C. Sélectionnez la note totale de l'étudiant 1234567 au groupe 5.
-D. Sélectionnez la moyenne (en pourcentage) de l'évaluation 13.</p>
+<p>A. Sélectionnez la valeur de la plus haute note obtenue à l'évaluation 18.</p>
+<p>B. Sélectionnez le nom de l'étudiant ayant obtenu la plus haute note à l'évaluation 18.</p>
+<p>C. Sélectionnez la note totale de l'étudiant 1234567 au groupe 5.</p>
+<p>D. Sélectionnez la moyenne (en pourcentage) de l'évaluation 13.</p>
 <h2 id="afficher-toutes-les-valeurs">Afficher toutes les valeurs</h2>
 <p>Pour s'aider dans le debogage, on peut afficher le contenu d'un groupe. La fonction qui permet cela est <strong>GROUP_CONCAT</strong>.</p>
 <p>Par exemple, voici le nom des étudiants inscrit au programme 420.A0.</p>
@@ -1169,21 +1211,13 @@ D. Sélectionnez la moyenne (en pourcentage) de l'évaluation 13.</p>
 <pre><code class="language-mysql">... WHERE nom_colonne NOT IN (valeur1, valeur2, ...)
 </code></pre>
 <h2 id="-exercice-262-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/></svg></span> --- Exercice 2.6.2 ---</h2>
-<ul>
-<li>
 <p>Sélectionnez le nom des étudiants qui ont suivi au moins l'un des cours suivants :</p>
-</li>
-<li>
-<p>420-1D6-VI</p>
-</li>
+<ul>
+<li>420-1D6-VI</li>
 <li>420-2B4-VI</li>
-<li>
-<p>420-2A6-VI</p>
-</li>
-<li>
-<p>Sélectionnez les documents remis avant le 16 octobre 2020 ou après la fin de la session automne 2020 (19 décembre 2020)</p>
-</li>
+<li>420-2A6-VI</li>
 </ul>
+<p>Sélectionnez les documents remis avant le 16 octobre 2020 ou après la fin de la session automne 2020 (19 décembre 2020)</p>
 
 
 
