@@ -8,22 +8,28 @@
       
       
       
+        <link rel="canonical" href="https://francois-mercier.github.io/cours-db1/notes_de_cours/section_2.2/">
       
       
+        <link rel="prev" href="../section_2.1/">
       
-      <link rel="icon" href="/cours-db1/assets/images/favicon.png">
+      
+        <link rel="next" href="../section_2.3/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.1">
     
     
       
-        <title>Cours Bases de donn&eacute;es 1</title>
+        <title>2.2 Sélection, filtrage et opérateurs logiques - Cours Bases de donn&eacute;es 1</title>
       
     
     
-      <link rel="stylesheet" href="/cours-db1/assets/stylesheets/main.45e1311d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.45e1311d.min.css">
       
         
-        <link rel="stylesheet" href="/cours-db1/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL("/cours-db1/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -67,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#selection-filtrage-et-operateurs-logiques" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -79,7 +90,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="/cours-db1/." title="Cours Bases de donn&amp;eacute;es 1" class="md-header__button md-logo" aria-label="Cours Bases de donn&eacute;es 1" data-md-component="logo">
+    <a href="../.." title="Cours Bases de donn&amp;eacute;es 1" class="md-header__button md-logo" aria-label="Cours Bases de donn&eacute;es 1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0s224 35.8 224 80zm-54.8 134.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432v-85.9z"/></svg>
@@ -99,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              2.2 Sélection, filtrage et opérateurs logiques
             
           </span>
         </div>
@@ -200,7 +211,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/cours-db1/." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -219,7 +230,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/cours-db1/notes_de_cours/section_1.1/" class="md-tabs__link">
+        <a href="../section_1.1/" class="md-tabs__link">
           
   
   Section 1
@@ -233,11 +244,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/cours-db1/notes_de_cours/section_2.1/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../section_2.1/" class="md-tabs__link">
           
   
   Section 2
@@ -255,7 +268,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/cours-db1/notes_de_cours/section_3.1/" class="md-tabs__link">
+        <a href="../section_3.1/" class="md-tabs__link">
           
   
   Section 3
@@ -273,7 +286,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/cours-db1/notes_de_cours/section_4.1/" class="md-tabs__link">
+        <a href="../section_4.1/" class="md-tabs__link">
           
   
   Section 4
@@ -291,7 +304,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/cours-db1/notes_de_cours/section_5.1/" class="md-tabs__link">
+        <a href="../section_5.1/" class="md-tabs__link">
           
   
   Section 5
@@ -332,7 +345,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/cours-db1/." title="Cours Bases de donn&amp;eacute;es 1" class="md-nav__button md-logo" aria-label="Cours Bases de donn&eacute;es 1" data-md-component="logo">
+    <a href="../.." title="Cours Bases de donn&amp;eacute;es 1" class="md-nav__button md-logo" aria-label="Cours Bases de donn&eacute;es 1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0s224 35.8 224 80zm-54.8 134.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432v-85.9z"/></svg>
@@ -362,7 +375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cours-db1/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -422,7 +435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cours-db1/notes_de_cours/section_1.1/" class="md-nav__link">
+      <a href="../section_1.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -443,7 +456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cours-db1/notes_de_cours/section_1.2/" class="md-nav__link">
+      <a href="../section_1.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -464,7 +477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cours-db1/notes_de_cours/section_1.3/" class="md-nav__link">
+      <a href="../section_1.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -485,7 +498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cours-db1/notes_de_cours/section_1.4/" class="md-nav__link">
+      <a href="../section_1.4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -506,7 +519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cours-db1/notes_de_cours/section_1.5/" class="md-nav__link">
+      <a href="../section_1.5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -531,8 +544,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -541,12 +556,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -560,7 +575,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Section 2
@@ -574,7 +589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cours-db1/notes_de_cours/section_2.1/" class="md-nav__link">
+      <a href="../section_2.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -592,10 +607,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/cours-db1/notes_de_cours/section_2.2/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    2.2 Sélection, filtrage et opérateurs logiques
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -604,6 +639,158 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#selection-de-colonnes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sélection de colonnes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sélection de colonnes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alias
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtrer-les-enregistrements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtrer les enregistrements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Filtrer les enregistrements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creation-de-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Création de conditions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clause-where-avec-valeur-null" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clause WHERE avec valeur NULL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-exercice-221-" class="md-nav__link">
+    <span class="md-ellipsis">
+       --- Exercice 2.2.1 ---
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordonner-les-resultats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ordonner les résultats
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ordonner les résultats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tris-stables-et-instables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tris stables et instables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ordonnancement-des-caracteres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ordonnancement des caractères
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ordre-decroissant" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ordre décroissant
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limiter-les-resultats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limiter les résultats
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limiter les résultats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-exercice-222-" class="md-nav__link">
+    <span class="md-ellipsis">
+       --- Exercice 2.2.2 ---
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -616,7 +803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cours-db1/notes_de_cours/section_2.3/" class="md-nav__link">
+      <a href="../section_2.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -637,7 +824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cours-db1/notes_de_cours/section_2.4/" class="md-nav__link">
+      <a href="../section_2.4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -658,7 +845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cours-db1/notes_de_cours/section_2.5/" class="md-nav__link">
+      <a href="../section_2.5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -679,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cours-db1/notes_de_cours/section_2.6/" class="md-nav__link">
+      <a href="../section_2.6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -747,7 +934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cours-db1/notes_de_cours/section_3.1/" class="md-nav__link">
+      <a href="../section_3.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -815,7 +1002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cours-db1/notes_de_cours/section_4.1/" class="md-nav__link">
+      <a href="../section_4.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -883,7 +1070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cours-db1/notes_de_cours/section_5.1/" class="md-nav__link">
+      <a href="../section_5.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -916,8 +1103,241 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+  
+  
+
+
+<h1 id="selection-filtrage-et-operateurs-logiques">Sélection, filtrage et opérateurs logiques</h1>
+<p>Sélection de colonnes
+Filtrage des résultats
+Opérateurs logiques
+Ordonner et limiter</p>
+<h2 id="selection-de-colonnes">Sélection de colonnes</h2>
+<p>Pour sélectionner des données, la requête est <strong>SELECT</strong> et à la syntaxe de base suivante :</p>
+<pre><code class="language-mysql">SELECT nom_colonne1, nom_colonne2,… FROM Nom_table;
+</code></pre>
+<p>On indique après le <strong>SELECT</strong> que le nom des colonnes que l’on souhaite récupérer.</p>
+<p>Pour récupérer les colonnes sigle et nom de la table Cours, on utilise la requête suivante :</p>
+<pre><code class="language-mysql">SELECT sigle, nom FROM Cours;
+</code></pre>
+<p>On utilise le symbole <strong>*</strong> pour indiquer la sélection de toutes les colonnes.</p>
+<pre><code class="language-mysql">SELECT * FROM Nom_table;
+</code></pre>
+<p><img alt="" src="../images/2_cours.png" /></p>
+<h3 id="alias">Alias</h3>
+<p>Il est possible de renommer des colonnes lors de la sélection (on verra plus tard des applications de ce concept)</p>
+<p>Le mot-clé à utiliser est <strong>AS</strong></p>
+<pre><code class="language-mysql">SELECT sigle, nom AS nom_cours FROM Cours 
+</code></pre>
+<h2 id="filtrer-les-enregistrements">Filtrer les enregistrements</h2>
+<p>Tout comme dans un <strong>UPDATE</strong> ou <strong>DELETE</strong>, il est possible d'utiliser la clause <strong>WHERE</strong> dans un <strong>SELECT</strong> afin de restreindre le nombre d'enregistrements affectés.</p>
+<pre><code class="language-mysql">SELECT nom_colonne1, nom_colonne2,… FROM Nom_table 
+    WHERE condition;
+</code></pre>
+<h3 id="creation-de-conditions">Création de conditions</h3>
+<p>On peut utiliser les opérateurs suivants pour construire des conditions.</p>
+<table>
+<thead>
+<tr>
+<th>Opérateur</th>
+<th>Symbole</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Égal</td>
+<td>=</td>
+</tr>
+<tr>
+<td>Différent de</td>
+<td>&lt;&gt;</td>
+</tr>
+<tr>
+<td>Plus grand que</td>
+<td>&gt;</td>
+</tr>
+<tr>
+<td>Plus grand ou égal que</td>
+<td>&gt;=</td>
+</tr>
+<tr>
+<td>Plus petit que</td>
+<td>&lt;</td>
+</tr>
+<tr>
+<td>Plus petit ou égal que</td>
+<td>&lt;=</td>
+</tr>
+</tbody>
+</table>
+<h3 id="clause-where-avec-valeur-null">Clause WHERE avec valeur NULL</h3>
+<p>Pour récupérer les colonnes dont la valeur est <strong>NULL</strong>, la structure de la condition est différente. Il faut utiliser le mot-clé <strong>IS</strong>.</p>
+<pre><code class="language-mysql">SELECT nom_colonne1, nom_colonne2... FROM Nom_table WHERE nom_colonne IS NULL;
+</code></pre>
+<p>On ajoute le mot-clé <strong>NOT</strong> pour avoir les colonnes qui ne sont pas <strong>NULL</strong></p>
+<pre><code class="language-mysql">SELECT nom_colonne1, nom_colonne2... FROM Nom_table WHERE nom_colonne IS NOT NULL;
+</code></pre>
+<p>Pour sélectionner le nom des cours dont la durée est supérieure ou égale à 60 heures on utilise la requête suivante.</p>
+<pre><code class="language-mysql">SELECT nom FROM Cours 
+    WHERE duree &gt;= 60;
+</code></pre>
+<p>Pour sélectionner les sigles des cours dont le nom est <strong>NULL</strong>, on utilise la requête suivante.</p>
+<pre><code class="language-mysql">SELECT sigle FROM Cours 
+    WHERE nom IS NULL;
+</code></pre>
+<p><img alt="" src="../images/2_cours.png" /></p>
+<p>On peut combiner les opérations de filtrage en utilisant les opérateurs logiques.</p>
+<table>
+<thead>
+<tr>
+<th>Opérateur</th>
+<th>Instruction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Et</td>
+<td>AND</td>
+</tr>
+<tr>
+<td>Ou</td>
+<td>OR</td>
+</tr>
+</tbody>
+</table>
+<p>Sélectionnez le nom des cours où la durée est entre 60 et 75 heures incluse.</p>
+<pre><code class="language-mysql">SELECT nom FROM Cours
+    WHERE duree &gt;= 60 AND duree &lt;= 75;
+</code></pre>
+<p><img alt="" src="../images/2_cours.png" /></p>
+<h3 id="-exercice-221-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/></svg></span> --- Exercice 2.2.1 ---</h3>
+<p>À partir du script Ecole.sql</p>
+<p>A. Sélectionnez les codes d'employé des enseignants qui ont au moins 5 ans d'ancienneté.
+B. Sélectionnez le nom des étudiants admis entre 2019 et 2020.
+C. Sélectionnez la date de début de session de toutes les sessions d'automne.</p>
+<h2 id="ordonner-les-resultats">Ordonner les résultats</h2>
+<p>Pour obtenir des résultats triés, on utilise la clause ORDER BY. Cette clause est optionnelle.</p>
+<pre><code class="language-mysql">SELECT nom_colonne1, nom_colonne2, ... FROM Nom_table
+    WHERE condition
+    ORDER BY nom_colonne1, nom_colonne2, ...
+</code></pre>
+<p>Il faut porter attention à la taille de la sélection, car un tri devient vite couteux en ressources.</p>
+<p>Pour sélectionner le nom et la durée des cours et les classer en ordre alphabétique on utilise la requete suivante.</p>
+<pre><code class="language-mysql">SELECT nom, duree FROM Cours
+    ORDER by nom;
+</code></pre>
+<p><img alt="" src="../images/2_cours.png" /></p>
+<p>Maintenant, on veut la même requête, mais en ordonnant d'abord par durée, puis par ordre alphabétique. Voici le résultat attendu :</p>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th style="text-align: center;">Duree</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mathématique de l'ordinateur</td>
+<td style="text-align: center;">45</td>
+</tr>
+<tr>
+<td>Base de donnees 1</td>
+<td style="text-align: center;">60</td>
+</tr>
+<tr>
+<td>Fonctionnement de l'ordinateur</td>
+<td style="text-align: center;">60</td>
+</tr>
+<tr>
+<td>Développement Web 2</td>
+<td style="text-align: center;">75</td>
+</tr>
+<tr>
+<td>Programmation 1</td>
+<td style="text-align: center;">90</td>
+</tr>
+<tr>
+<td>Programmation 2</td>
+<td style="text-align: center;">90</td>
+</tr>
+</tbody>
+</table>
+<p>On peut trier sur plusieurs colonnes en les séparant par des virgules. Le tri se fait en ordre inverse que les colonnes sont indiquées.</p>
+<pre><code class="language-mysql">SELECT nom, duree FROM Cours
+    ORDER BY duree, nom;
+</code></pre>
+<p>Ici on tri par ordre alphabétique et après par durée. Donc le résultat final est <em>globablement</em> trié par durée, et pour chaque durée, les éléments sont en ordre alphabétique.</p>
+<h3 id="tris-stables-et-instables">Tris stables et instables</h3>
+<ul>
+<li>
+<p>Dans la théorie des tris (oui, ça existe et c'est assez riche comme théorie), on parle de tri stable si, pour des valeurs égales, l'ordre original est préservé.</p>
+</li>
+<li>
+<p>Dans l'exemple précédent, on tri par ordre alphabétique d'abord. Ensuite, quand on tri par durée, deux cours de même durée resteront dans l'ordre (le tri par durée ne change pas l'ordre des éléments). C'est ce qu'on appelle un tri stable.</p>
+</li>
+<li>
+<p>Bien qu'intéressant parce qu'ils permettent le tri par plusieurs colonnes successivement, les tris stables (<em>bubble</em>, <em>insertion</em>, <em>merge</em>) sont généralement plus lents que les tris instables (<em>quicksort</em>, <em>shellsort</em>, <em>radix</em>, <em>bogosort (a.k.a stupid sort)</em>).</p>
+</li>
+</ul>
+<h3 id="ordonnancement-des-caracteres">Ordonnancement des caractères</h3>
+<p>Comment se fait un tri sur un CHAR/VARCHAR ?</p>
+<ul>
+<li>
+<p>Par le code ASCII donc numéro en premier, ensuite lettres majuscules, ensuite lettres minuscules.</p>
+</li>
+<li>
+<p>«Boujour» vient donc avant «allo»</p>
+</li>
+<li>
+<p>Certains caractères spéciaux sont entre les majuscules et minuscules!</p>
+</li>
+</ul>
+<h3 id="ordre-decroissant">Ordre décroissant</h3>
+<p>On peut ajouter l’ordre du tri après le nom d'une colonne dans la clause ORDER BY.</p>
+<ul>
+<li>ASC pour ascendant (croissant). Cette valeur est celle par défaut.</li>
+<li>DESC pour descendant (décroissant)</li>
+</ul>
+<pre><code class="language-mysql">SELECT * FROM Table
+    ORDER BY nom_colonne1, nom_colonne2 DESC;
+
+SELECT * FROM Table
+    ORDER BY nom_colonne1 DESC, nom_colonne2;
+</code></pre>
+<h2 id="limiter-les-resultats">Limiter les résultats</h2>
+<p>On peut aussi indiquer un nombre maximal de résultats à afficher avec la clause LIMIT</p>
+<pre><code class="language-mysql">LIMIT nombre_sélectionné
+LIMIT premier_enregistrement, nombre_sélectionné
+</code></pre>
+<p>La clause LIMIT est optionnelle.</p>
+<p>On veut par exemple seulement les 5 premiers cours pour avoir un aperçu des données dans la table Cours.</p>
+<pre><code class="language-mysql">SELECT * FROM Cours
+    LIMIT 0, 5;
+
+## Alternative
+
+SELECT * FROM Cours
+    LIMIT 5;
+</code></pre>
+<h3 id="-exercice-222-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/></svg></span> --- Exercice 2.2.2 ---</h3>
+<p>A. Sélectionnez les 5 évaluations ayant la plus basse pondération</p>
+<p>B. Sélectionnez le nom des 3 étudiants qui ont été admis le plus récemment</p>
+<p>C. Sélectionnez tous les groupes, triés par numéro de groupe en ordre croissant et par session, de la plus récente à la plus ancienne (supposez que les sessions sont ajoutées dans l'ordre quelles arrivent). Les groupes d'un même cours doivent être regroupés à l'affichage.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -951,10 +1371,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/cours-db1/", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "content.code.copy", "toc.integrate"], "search": "/cours-db1/assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "content.code.copy", "toc.integrate"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="/cours-db1/assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   </body>

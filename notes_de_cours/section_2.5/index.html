@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://francois-mercier.github.io/cours-db1/notes_de_cours/section_3.1/">
+        <link rel="canonical" href="https://francois-mercier.github.io/cours-db1/notes_de_cours/section_2.5/">
       
       
-        <link rel="prev" href="../section_2.6/">
+        <link rel="prev" href="../section_2.4/">
       
       
-        <link rel="next" href="../section_4.1/">
+        <link rel="next" href="../section_2.6/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>3.1 - Cours Bases de donn&eacute;es 1</title>
+        <title>2.5 Jointures et agrégats - Cours Bases de donn&eacute;es 1</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapitre-3" class="md-skip">
+        <a href="#jointures-et-agregats" class="md-skip">
           Aller au contenu
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              3.1
+              2.5 Jointures et agrégats
             
           </span>
         </div>
@@ -244,10 +244,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../section_2.1/" class="md-tabs__link">
           
   
@@ -262,13 +264,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../section_3.1/" class="md-tabs__link">
           
   
   Section 3
@@ -544,8 +544,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -554,12 +556,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -573,7 +575,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Section 2
@@ -668,10 +670,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../section_2.5/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    2.5 Jointures et agrégats
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -680,6 +702,257 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#probleme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problème
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relation-programme-enseignant" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relation Programme - Enseignant
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jointures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jointures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Jointures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jointures-internes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jointures internes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Jointures internes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe-des-jointures-internes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Syntaxe des jointures internes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allegement-de-lecriture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allègement de l'écriture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-exercice-251-" class="md-nav__link">
+    <span class="md-ellipsis">
+       --- Exercice 2.5.1 ---
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jointure-naturelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jointure naturelle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-exercice-252-" class="md-nav__link">
+    <span class="md-ellipsis">
+       --- Exercice 2.5.2 ---
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probleme_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problème
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Problème">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jointures-multiples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jointures multiples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-exercice-253-" class="md-nav__link">
+    <span class="md-ellipsis">
+       --- Exercice 2.5.3 ---
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agregats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agrégats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemple">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-exercice-254-" class="md-nav__link">
+    <span class="md-ellipsis">
+       --- Exercice 2.5.4 ---
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agregats-multiples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agrégats multiples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-exercice-255-" class="md-nav__link">
+    <span class="md-ellipsis">
+       --- Exercice 2.5.5 ---
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condition-sur-les-groupes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Condition sur les groupes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-alias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple : Alias
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-exercice-256-" class="md-nav__link">
+    <span class="md-ellipsis">
+       --- Exercice 2.5.6 ---
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-unique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sélection unique
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-exercice-257-" class="md-nav__link">
+    <span class="md-ellipsis">
+       --- Exercice 2.5.7 ---
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -717,8 +990,6 @@
       
   
   
-    
-  
   
   
     
@@ -729,12 +1000,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
@@ -748,7 +1019,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Section 3
@@ -759,30 +1030,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    3.1
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../section_3.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -791,269 +1042,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#contenu" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contenu
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#etablir-une-strategie-de-sauvegarde-de-la-bd" class="md-nav__link">
-    <span class="md-ellipsis">
-      Établir une stratégie de sauvegarde de la BD
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pourquoi-sauvegarder-une-bd" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pourquoi sauvegarder une BD?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#importance-de-la-sauvegarde" class="md-nav__link">
-    <span class="md-ellipsis">
-      Importance de la sauvegarde
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#la-strategie-3-2-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      La stratégie 3-2-1
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#etapes-dune-strategie-de-sauvegarde" class="md-nav__link">
-    <span class="md-ellipsis">
-      Étapes d’une stratégie de sauvegarde
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#etapes-dune-strategie-de-sauvegarde_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Étapes d’une stratégie de sauvegarde
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#etapes-dune-strategie-de-sauvegarde_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Étapes d’une stratégie de sauvegarde
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#etapes-dune-strategie-de-sauvegarde_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Étapes d’une stratégie de sauvegarde
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#types-de-sauvegarde" class="md-nav__link">
-    <span class="md-ellipsis">
-      Types de sauvegarde
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sauvegarder-et-restaurer-une-bd" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sauvegarder et restaurer une BD
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dumping" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dumping
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dumping_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dumping
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#charger-une-bd-a-partir-dun-fichier-de-sauvegarde" class="md-nav__link">
-    <span class="md-ellipsis">
-      Charger une BD à partir d’un fichier de sauvegarde
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#table-corrompue" class="md-nav__link">
-    <span class="md-ellipsis">
-      Table corrompue
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dumping-dans-un-fichier-texte" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dumping dans un fichier texte
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#le-format-csv" class="md-nav__link">
-    <span class="md-ellipsis">
-      Le format CSV
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#le-format-csv_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Le format CSV
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exporter-vers-csv" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exporter vers CSV
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gestion-de-droits" class="md-nav__link">
-    <span class="md-ellipsis">
-      Gestion de droits
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#charger-a-partir-dun-fichier-csv" class="md-nav__link">
-    <span class="md-ellipsis">
-      Charger à partir d'un fichier CSV
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#automatisation-des-sauvegardes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Automatisation des sauvegardes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#script-bat" class="md-nav__link">
-    <span class="md-ellipsis">
-      Script bat
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sauvegarder-la-base-de-donnees" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sauvegarder la base de données
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#appeler-le-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      Appeler le script
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#programmer-la-tache" class="md-nav__link">
-    <span class="md-ellipsis">
-      Programmer la tâche
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#programmer-une-tache" class="md-nav__link">
-    <span class="md-ellipsis">
-      Programmer une tâche
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1220,277 +1208,160 @@
   
 
 
-<h1 id="chapitre-3">Chapitre 3</h1>
-<p>Sauvegarder et restaurer la base de données</p>
-<h2 id="contenu">Contenu</h2>
-<ol>
-<li>Établir une stratégie de sauvegarde de la BD</li>
-<li>Sauvegarder et restaurer une BD</li>
-<li>Automatisation des sauvegardes</li>
-</ol>
-<hr />
-<h2 id="etablir-une-strategie-de-sauvegarde-de-la-bd">Établir une stratégie de sauvegarde de la BD</h2>
-<p>Pourquoi sauvegarder une BD?
-Stratégie 3-2-1
-Étapes d’une stratégie de sauvegarde</p>
-<hr />
-<h2 id="pourquoi-sauvegarder-une-bd">Pourquoi sauvegarder une BD?</h2>
-<p>Pouvoir restaurer la BD dans les cas de :
-* Destruction accidentelle (DROP *)
-* Bris de serveur (usure/Ti-Guy qui a encore échappé son café)
-* Attaque de pirates visant à détruire notre BD
-* Manipulation erronée (ex. par du développement)
-* Récréer les données suite à changement d’environnement (mise à jour MySQL)
-* Avant un déploiement en production
-* Cataclysme naturel, incendie ou invasion d’extra-terrestres qui détruisent le serveur physique</p>
-<hr />
-<h2 id="importance-de-la-sauvegarde">Importance de la sauvegarde</h2>
-<p>Une perte de données coûte en moyenne entre 4,4 millions au Canada (2021).</p>
-<p>Selon certains fournisseurs de stockage, jusqu’à la moitié des entreprises perdront des données au cours de leurs opérations.</p>
-<hr />
-<h2 id="la-strategie-3-2-1">La stratégie 3-2-1</h2>
-<p>Présentée comme un standard, la règle du 3-2-1 est la suivante:</p>
-<ul>
-<li>3 copies de chaque donnée</li>
-<li>2 copies «onsite» (sur le même lieu physique)</li>
-<li>1 copie «offsite» (dans un emplacement physique différent)</li>
-</ul>
-<hr />
-<h2 id="etapes-dune-strategie-de-sauvegarde">Étapes d’une stratégie de sauvegarde</h2>
-<ol>
-<li>
-<p>Déterminer les données à sauvegarder?</p>
-</li>
-<li>
-<p>Qu’est-ce qui est critique?</p>
-<ul>
-<li>Grouper par groupe : critique pour survivre, important pour opérer, optimal pour le développement</li>
-</ul>
-</li>
-<li>Qu’est-ce qui est suffisamment important pour investir dans sa sauvegarde?<ul>
-<li>Dans cette question, évaluez le rapport quantité/coût. Faire une sauvegarde de Facebook (+/- 100 Po) est plus lourd qu’une sauvegarde de Wikipédia (+/- 10TB).</li>
-</ul>
-</li>
-</ol>
-<hr />
-<h2 id="etapes-dune-strategie-de-sauvegarde_1">Étapes d’une stratégie de sauvegarde</h2>
-<ol>
-<li>
-<p>Déterminer la fréquence des sauvegardes?</p>
-</li>
-<li>
-<p>Sauvegardes périodiques (quotidienne, hebdomadaire)</p>
-<ul>
-<li>Quelle quantité de travail on peut se permettre de perdre?</li>
-</ul>
-</li>
-<li>Sauvegarde exceptionnelle<ul>
-<li>Quand ces sauvegardes sont-elles requises?</li>
-</ul>
-</li>
-</ol>
-<hr />
-<h2 id="etapes-dune-strategie-de-sauvegarde_2">Étapes d’une stratégie de sauvegarde</h2>
-<ol>
-<li>
-<p>Choisir et mettre en place une stratégie</p>
-</li>
-<li>
-<p>Préparer deux serveurs locaux (2)</p>
-</li>
-<li>Préparer un serveur distance/souscrire à un service (1)</li>
-<li>Décrire un système d’organisation des sauvegardes<ul>
-<li>Nomenclature/emplacement logiciel</li>
-</ul>
-</li>
-<li>Mettre en place une routine de sauvegarde (périodique)</li>
-<li>Mettre en place une procédure de sauvegarde exceptionnelle</li>
-</ol>
-<hr />
-<h2 id="etapes-dune-strategie-de-sauvegarde_3">Étapes d’une stratégie de sauvegarde</h2>
-<ol>
-<li>
-<p>Tester (régulièrement) et assurer la maintenance</p>
-</li>
-<li>
-<p>Ne pas tenter la loi de Murphy/loi de l’emmerdement maximal</p>
-</li>
-<li>La journée que vous avez besoin de restaurer la sauvegarde, il y a intérêt à ce que ça fonctionne</li>
-<li>Tenez compte des modifications aux structures de données<ul>
-<li>Avec l’évolution du projet, la stratégie de sauvegarde doit évoluer</li>
-</ul>
-</li>
-</ol>
-<hr />
-<h2 id="types-de-sauvegarde">Types de sauvegarde</h2>
-<ul>
-<li>Sauvegarde complète<ul>
-<li>Crée une copie complète de toutes les données</li>
-<li>Pour : facile à mettre en place et diminue les risques d’incohérence à la restauration</li>
-<li>Contre : demande beaucoup d’espace de stockage, car duplique l’information</li>
-</ul>
-</li>
-<li>Sauvegarde différentielle<ul>
-<li>Crée une copie seulement des changements</li>
-<li>Pour : ne duplique pas l’information de sauvegarde</li>
-<li>Contre : système de restauration plus complexe qui peut s’effondrer si l’historique est corrompu.</li>
-</ul>
-</li>
-</ul>
-<hr />
-<h2 id="sauvegarder-et-restaurer-une-bd">Sauvegarder et restaurer une BD</h2>
-<p>Dumping
-Charger une sauvegarde
-Dumping dans un format texte
-Charger des données d’un format texte</p>
-<hr />
-<h2 id="dumping">Dumping</h2>
-<p>Le «dumping» consiste à générer le code SQL pour recréer complètement la base de données (CREATE DATABASE, TABLE et INSERT INTO).</p>
-<p>Ce fichier comporte de nombreuses instructions SQL supplémentaires pour assurer que les données sont restaurées normalement.</p>
-<hr />
-<h2 id="dumping_1">Dumping</h2>
-<p>Dans une invite de commande située là où votre exécutable MySQL est placé, entrez la commande suivante (Windows)</p>
-<pre><code class="language-console">.\mysqldump.exe --databases nom1 nom2 … &gt; chemin/fichier.sql –unom_utilisateur –p
-</code></pre>
-<p>Exemple :</p>
-<pre><code class="language-console">.\mysqldump.exe --databases ecole … &gt; ../ecole_backup.sql –uroot –p
-```` 
-
-Puis saisissez le mot de passe du compte.
-
----
-
-## Dumping
-
-Dans le répertoire parent, vous trouverez le fichier ecole_backup.sql.
-
-Pour exporter toutes les bases de données, on remplace 
-«--databases nom1» par «--all-databases»
-
-On peut omettre l’option databases si l’on en exporte qu’une
-
-```console
-.\mysqldump.exe nom_db &gt; chemin/fichier.sql –unom_utilisateur –p
-</code></pre>
-<hr />
-<h2 id="charger-une-bd-a-partir-dun-fichier-de-sauvegarde">Charger une BD à partir d’un fichier de sauvegarde</h2>
-<p>Pour charger la BD, c’est simple : il suffit d’exécuter le script mysql!</p>
-<p>Soit à travers Workbench ou avec l'invite de commandes</p>
-<pre><code class="language-console">mysql &lt; fichier.sql
-</code></pre>
-<hr />
-<h2 id="table-corrompue">Table corrompue</h2>
-<p>Une instruction permet de récupérer les données d’une table dont le fichier de sauvegarde serait corrompu.</p>
-<pre><code class="language-mysql">REPAIR TABLE Nom_table EXTENDED;
-</code></pre>
-<p>https://dev.mysql.com/doc/refman/8.0/en/repair-table.html</p>
-<hr />
-<h2 id="dumping-dans-un-fichier-texte">Dumping dans un fichier texte</h2>
-<p>Il est possible d’exporter le contenu des tables dans des fichiers de format texte afin de les lire avec d’autres logiciels.</p>
-<p>On trouve notamment le format <em>Comma Separeted Values</em> lisible par <em>Excel</em>. </p>
-<hr />
-<h2 id="le-format-csv">Le format CSV</h2>
-<p>Le format CSV vient avec un standard français et anglais (avec un simple logiciel comme Notepad++ et une toute petite REGEX, vous pouvez facilement effectuer la conversion)</p>
-<ul>
-<li>Standard anglais : séparateur de colonne «,»</li>
-<li>Standard français : séparateur de colonne «;»</li>
-</ul>
-<p>Séparateur de ligne : (\r)\n (retour de ligne)
-Encapsulation des chaînes de caractère " "</p>
-<hr />
-<h2 id="le-format-csv_1">Le format CSV</h2>
+<h1 id="jointures-et-agregats">Jointures et agrégats</h1>
+<p>Jointures internes
+Jointures naturelles
+Atelier
+Agrégats de données
+Atelier</p>
+<h2 id="probleme">Problème</h2>
+<p>Pour chaque programme, on veut afficher le nom du programme et le nom de la personne responsable. On aurait un résultat du format suivant</p>
 <table>
 <thead>
 <tr>
-<th>id_personne</th>
-<th>nom</th>
-<th>prenom</th>
+<th>Nom programme</th>
+<th>Nom responsable</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>2</td>
-<td>Shutt</td>
-<td>Steve</td>
+<td>Informatique appliquée</td>
+<td>Bruce Wayne</td>
 </tr>
 <tr>
-<td>5</td>
-<td>Stastny</td>
-<td>Peter</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Dryden</td>
-<td>Ken</td>
+<td>Informatique - Jeux Vidéo</td>
+<td>Kara Danvers</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Format anglais</strong>
-Id_personne,nom,prenom
-2,Shutt,Steve
-5,Stastny,Peter
-7,Dryden,Ken</p>
-<p><strong>Format français</strong>
-Id_personne;nom;prenom
-2;Shutt;Steve
-5;Stastny;Peter
-7;Dryden;Ken</p>
-<hr />
-<h2 id="exporter-vers-csv">Exporter vers CSV</h2>
-<p>Par défaut, l’exportation sépare les colonnes par une tabulation.</p>
-<pre><code class="language-mysql">SELECT colonnes INTO OUTFILE 'nom_fichier'
-    FIELDS TERMINATED BY ',' 
-    OPTIONALLY ENCLOSED BY '&quot;'
-    LINES TERMINATED BY '\n'
-    FROM nom_table;
+<p>Le problème : nom programme et nom professeur sont dans deux tables différentes.</p>
+<h2 id="relation-programme-enseignant">Relation Programme - Enseignant</h2>
+<p><img alt="" src="../images/2_programme_responsable.png" /></p>
+<h2 id="jointures">Jointures</h2>
+<p>Une jointure permet de « joindre » deux tables ensemble pour en créer une seule. Ici la table résultant n'est pas une « vraie » table au sens où elle n'est pas enregistrer dans la base de données.</p>
+<p>Il existe 3 types de jointures :
+- Jointures internes et naturelles (vues en BD1)
+- Jointures à gauche et à droite (vues en BD2)
+- Jointures externes ou complètes (vues en BD2)</p>
+<h3 id="jointures-internes">Jointures internes</h3>
+<p>Une jointure interne permet de récupérer les informations en croisant les informations de plusieurs tables. </p>
+<p>On peut voir la jointure interne comme une intersection d'ensembles basé sur l'égalité d'une paire de colonnes.</p>
+<p><img alt="" src="../images/2_jointures.png" /></p>
+<h4 id="syntaxe-des-jointures-internes">Syntaxe des jointures internes</h4>
+<pre><code class="language-mysql">SELECT * FROM Nom_table_1 INNER JOIN Nom_table_2 
+    ON Nom_table_1.colonne_1 = Nom_table_2.colonne_2;
 </code></pre>
-<p>Une instruction existe aussi à partir de l’invite de commande.</p>
-<hr />
-<h2 id="gestion-de-droits">Gestion de droits</h2>
-<p>Par défaut (et pour d’évidentes raisons de sécurité), MySQL limite les endroits où il est possible d’exporter un fichier texte.</p>
-<p>Dans votre fichier my.ini, il faut ajouter l’instruction suivante </p>
-<p>[mysqld]
-secure_file_priv = ""</p>
-<p>N’oubliez de redémarrez mysql après.</p>
-<hr />
-<h2 id="charger-a-partir-dun-fichier-csv">Charger à partir d'un fichier CSV</h2>
-<p>Pour lire un fichier CSV, on utilise l’instruction suivante:</p>
-<pre><code class="language-mysql">LOAD DATA INFILE 'nom_fichier' 
-    INTO TABLE Nom_table
-    FIELDS TERMINATED BY ',' 
-    FIELDS ENCLOSED BY '&quot;'
-    LINES TERMINATED BY '\r\n';
+<p>Donc dans l'exemple précédent</p>
+<pre><code class="language-mysql">SELECT Programme.nom, Enseignant.nom FROM Enseignant INNER JOIN Programme
+    ON Enseignant.code_employe = Programme.responsable;
 </code></pre>
-<p>Une instruction existe aussi à partir de l’invite de commande.</p>
-<hr />
-<h2 id="automatisation-des-sauvegardes">Automatisation des sauvegardes</h2>
-<p>Créer le script bat
-Programmer la tâche</p>
-<hr />
-<h2 id="script-bat">Script bat</h2>
-<p>Le script bat permet de programmer un script s’exécutant dans l’invite de commande. C’est à peu près l’équivalent Windows des scripts bash des environnements UNIX.</p>
-<hr />
-<h2 id="sauvegarder-la-base-de-donnees">Sauvegarder la base de données</h2>
-<p>:: declaration variable
-SET "date=%DATE:/=-%"</p>
-<p>:: instructions
-ECHO ================
-ECHO Sauvegarde auto
-ECHO ================
-I:\Programmes\Ampps\mysql\bin\mysqldump.exe --all-databases &gt; C:\Users\Alexandre\Desktop\backup_%date%.sql -uroot -pmysql
-ECHO Sauvegarde realisee avec succes</p>
-<hr />
-<h2 id="appeler-le-script">Appeler le script</h2>
-<p>Maintenant, plus qu’à double cliquer sur le script bat pour qu’il s’exécute.</p>
-<p><img alt="" src="../images/bat_1.png" /></p>
-<hr />
-<h2 id="programmer-la-tache">Programmer la tâche</h2>
-<p>Avec le planificateur de tâche Windows (Task Scheduler), vous pouvez indiquer à Windows de démarrer une tâche à un moment donné.</p>
-<p>Une tâche peut consister à exécuter un script bat par exemple.</p>
-<p>Le planificateur se trouve dans « Outils d’administration Windows » </p>
-<hr />
-<h2 id="programmer-une-tache">Programmer une tâche</h2>
-<p><img alt="" src="../images/bat_2.png" /></p>
+<p>On préfixe les colonnes des noms de table pour éviter les ambiguité de nom.</p>
+<h4 id="allegement-de-lecriture">Allègement de l'écriture</h4>
+<p>Lorsqu'il n'y a pas de risque d'ambiguité de nom, on peut omettre le nom des tables comme préfixe. On peut aussi utiliser les alias pour clarifier le nom des colonnes.</p>
+<pre><code class="language-mysql">SELECT Programme.nom AS 'Nom programme', Enseignant.nom AS 'Responsable' 
+    FROM Enseignant INNER JOIN Programme
+    ON code_employe = responsable;
+</code></pre>
+<p><img alt="" src="../images/2_resultat_jointure.png" /></p>
+<h4 id="-exercice-251-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/></svg></span> --- Exercice 2.5.1 ---</h4>
+<p>A. Sélectionnez le nom de chaque étudiant et le nom du programme dans lequel il est inscrit. Triez les résultats par programme.</p>
+<p>B. Sélectionnez pour chaque document le code de l'étudiant qui l'a remis. Affichez le nom du document et le code de l'étudiant.</p>
+<h3 id="jointure-naturelle">Jointure naturelle</h3>
+<p>Une jointure naturelle fonctionne comme la jointure interne, mais ne nécessite pas de préciser sur quelle colonne se fait la jointure.</p>
+<p>Les colonnes portant le même nom entre les 2 tables servent à effectuer la jointure. </p>
+<p>ATTENTION : si plus d'une paire de colonne portent le même nom, alors la jointure naturelle vérifira que les deux paires concordent.</p>
+<p>Syntaxe de la jointure naturelle :</p>
+<pre><code class="language-sql">SELECT * FROM Nom_table_1 NATURAL JOIN Nom_table_2;
+</code></pre>
+<p>On veut afficher le code d'employé et le sigle du cours pour chaque groupe. </p>
+<pre><code class="language-sql">SELECT enseignant, numero_groupe, sigle 
+    FROM Groupe NATURAL JOIN Cours;
+</code></pre>
+<p><img alt="" src="../images/2_natural_join.png" /></p>
+<p><img alt="" src="../images/2_cours_session.png" /></p>
+<h3 id="-exercice-252-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/></svg></span> --- Exercice 2.5.2 ---</h3>
+<p>A. Sélectionnez le titre des évaluations pour lequel aucun document n'est associé.
+ A 
+B. Sélectionnez l'année admission et le nom de l'étudiant pour chaque étudiant des programmes sous la responsabilité de l'enseignant portant le code 7654.</p>
+<h2 id="probleme_1">Problème</h2>
+<p>On veut afficher pour chaque étudiant son nom, le titre des documents qu'il a remis et la date à laquelle la remise s'est faite.</p>
+<p>Quelle requête écrire ?</p>
+<h3 id="jointures-multiples">Jointures multiples</h3>
+<p>On peut appliquer une jointure sur le résultat d'une jointure.</p>
+<pre><code class="language-mysql">SELECT nom, titre, date_remise FROM Etudiant
+    INNER JOIN Evaluation_etudiant ON code = etudiant
+    INNER JOIN Document ON document = id_document;
+</code></pre>
+<p><img alt="" src="../images/2_jointures_multiples.png" /></p>
+<p><em>44 lignes ont été sélectionnées.</em></p>
+<h3 id="-exercice-253-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/></svg></span> --- Exercice 2.5.3 ---</h3>
+<p>A. Sélectionnez pour l'étudiante Nathasha Romanov le titre de tous les documents qu'elle a remis.</p>
+<p>B. Trouvez la première année durant laquelle le cours portant le sigle 420-2B4-VI s'est donné.  </p>
+<h2 id="agregats">Agrégats</h2>
+<p>Il est possible d’agréger des données ensemble. Un agrégat consiste à regrouper les données qui partagent une valeur commune pour une colonne précise. On fait un agrégat avec une clause <strong>GROUP BY</strong>.</p>
+<p>On utilise généralement une fonction d'agrégation avec un agrégat pour obtenir des informations sur le groupe.</p>
+<p>Il faut faire attention dans la sélection des colonnes pour n'afficher que des colonnes qui ont la même valeur pour tout le groupe.</p>
+<h2 id="exemple">Exemple</h2>
+<p>Sélectionner le nombre d'étudiant dans chaque groupe.</p>
+<pre><code class="language-mysql">SELECT groupe, count(etudiant) FROM Inscription 
+    GROUP BY groupe;
+</code></pre>
+<p><img alt="" src="../images/2_inscription.png" /></p>
+<p><img alt="" src="../images/2_agregation.png" /></p>
+<h3 id="-exercice-254-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/></svg></span> --- Exercice 2.5.4 ---</h3>
+<p>A. Comptez le nombre d'évaluations pour chaque groupe. Affichez seulement l'id du groupe et le nombre d'évaluations.</p>
+<p>B. Comptez le nombre de groupes pour chaque session. Affichez le nombre de groupe, le semestre et l'année de chaque session.</p>
+<h3 id="agregats-multiples">Agrégats multiples</h3>
+<p>Il est possible de former les agrégats par plusieurs critères. Par exemple, on souhaite obtenir le nombre de document remis pour chaque étudiant par groupe.</p>
+<pre><code class="language-mysql">SELECT count(id_document), etudiant, groupe FROM Document 
+    INNER JOIN EvaluationEtudiant ON id_document = document
+    INNER JOIN Evaluation ON EvaluationEtudiant.id_evaluation = Evaluation.id_evaluation
+    GROUP BY etudiant, groupe;
+</code></pre>
+<p><img alt="" src="../images/2_agregations_multiples.png" /></p>
+<h3 id="-exercice-255-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/></svg></span> --- Exercice 2.5.5 ---</h3>
+<p>Sélectionnez pour chaque cours le nombre de fois qu'il s'est donné à chaque session (nombre de groupes). Affichez le semestre, l'année de la session ainsi que le sigle du cours. Triez les résultats par sigle.</p>
+<h3 id="condition-sur-les-groupes">Condition sur les groupes</h3>
+<p>Il est possible de mettre une condition sur un groupe. Une telle condition va dans une clause <strong>HAVING</strong>.</p>
+<p>DINSTINCTION IMPORTANTE :</p>
+<ul>
+<li>
+<p>Une condition portant sur chaque enregistrement 
+(avant agrégation) : <strong>WHERE</strong></p>
+</li>
+<li>
+<p>Une condition portant sur un agrégat de données 
+(avec une fonction d'agrégation) : <strong>HAVING</strong></p>
+</li>
+</ul>
+<h3 id="exemple_1">Exemple</h3>
+<p>On veut les groupes de 3 étudiants et plus :</p>
+<pre><code class="language-mysql">SELECT groupe, count(etudiant) FROM Inscription
+    GROUP BY groupe
+    HAVING count(etudiant) &gt;= 3;
+</code></pre>
+<p><img alt="" src="../images/2_having.PNG" /></p>
+<h3 id="exemple-alias">Exemple : Alias</h3>
+<p>On peut utiliser les alias pour éviter de réécrire plusieurs fois le résultat d'une même fonction.</p>
+<pre><code class="language-mysql">SELECT groupe, count(etudiant) AS nombre_etudiants FROM Inscription
+    GROUP BY groupe
+    HAVING nombre_etudiants &gt;= 3;
+</code></pre>
+<p><em>Notez bien</em> : le nom nombre_etudiants est inscrit tel quel sans guillemet, c'est pourquoi il est accessible. Avec des guillemets, cela aurait changé l'affichage, mais nous n'aurions pas pu l'utiliser dans la clause <strong>HAVING</strong>.</p>
+<h2 id="-exercice-256-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/></svg></span> --- Exercice 2.5.6 ---</h2>
+<p>A. Sélectionnez le nombre de cours pour chaque session (id_session seulement) où il ne se donne pas plus de 2 cours;</p>
+<p>B. Sélectionnez le nombre d'étudiants admis par année après 2019.</p>
+<h2 id="selection-unique">Sélection unique</h2>
+<p>Dans certains cas, en combinant les jointures avec les agrégats, on peut dupliquer des résultats.</p>
+<p>Pour s'assurer que les résultats ne sont pas dupliquer, on doit utiliser le mot-clé <strong>DISTINCT</strong>. On peut utiliser le mot-clé de deux façons</p>
+<pre><code class="language-mysql">-- Dans une requête SELECT pour avoir que les valeurs différentes
+SELECT DISTICT colonne
+
+-- Dans la fonction count pour compter le nombre de valeurs distinctes
+count(DISTINCT colonne)
+</code></pre>
+<h2 id="-exercice-257-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/></svg></span> --- Exercice 2.5.7 ---</h2>
+<p>Sélectionnez les sigle des cours ayant plus de 2 évaluations lorsqu'ils se sont donnés. Chaque sigle doit apparaître qu'une seule fois.</p>
 
 
 
