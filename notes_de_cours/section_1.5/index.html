@@ -8,22 +8,28 @@
       
       
       
+        <link rel="canonical" href="https://francois-mercier.github.io/cours-db1/notes_de_cours/section_1.5/">
       
       
+        <link rel="prev" href="../section_1.4/">
       
-      <link rel="icon" href="/cours-db1/assets/images/favicon.png">
+      
+        <link rel="next" href="../section_2.1/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.1">
     
     
       
-        <title>Cours Bases de donn&eacute;es 1</title>
+        <title>1.5 Clés étrangères et relations - Cours Bases de donn&eacute;es 1</title>
       
     
     
-      <link rel="stylesheet" href="/cours-db1/assets/stylesheets/main.45e1311d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.45e1311d.min.css">
       
         
-        <link rel="stylesheet" href="/cours-db1/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL("/cours-db1/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -67,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#cles-etrangeres-et-relations" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -79,7 +90,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="/cours-db1/." title="Cours Bases de donn&amp;eacute;es 1" class="md-header__button md-logo" aria-label="Cours Bases de donn&eacute;es 1" data-md-component="logo">
+    <a href="../.." title="Cours Bases de donn&amp;eacute;es 1" class="md-header__button md-logo" aria-label="Cours Bases de donn&eacute;es 1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0s224 35.8 224 80zm-54.8 134.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432v-85.9z"/></svg>
@@ -99,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              1.5 Clés étrangères et relations
             
           </span>
         </div>
@@ -200,7 +211,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/cours-db1/." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -215,11 +226,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/cours-db1/notes_de_cours/section_1.1/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../section_1.1/" class="md-tabs__link">
           
   
   Section 1
@@ -237,7 +250,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/cours-db1/notes_de_cours/section_2.1/" class="md-tabs__link">
+        <a href="../section_2.1/" class="md-tabs__link">
           
   
   Section 2
@@ -255,7 +268,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/cours-db1/notes_de_cours/section_3.1/" class="md-tabs__link">
+        <a href="../section_3.1/" class="md-tabs__link">
           
   
   Section 3
@@ -273,7 +286,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/cours-db1/notes_de_cours/section_4.1/" class="md-tabs__link">
+        <a href="../section_4.1/" class="md-tabs__link">
           
   
   Section 4
@@ -291,7 +304,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/cours-db1/notes_de_cours/section_5.1/" class="md-tabs__link">
+        <a href="../section_5.1/" class="md-tabs__link">
           
   
   Section 5
@@ -332,7 +345,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/cours-db1/." title="Cours Bases de donn&amp;eacute;es 1" class="md-nav__button md-logo" aria-label="Cours Bases de donn&eacute;es 1" data-md-component="logo">
+    <a href="../.." title="Cours Bases de donn&amp;eacute;es 1" class="md-nav__button md-logo" aria-label="Cours Bases de donn&eacute;es 1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0s224 35.8 224 80zm-54.8 134.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432v-85.9z"/></svg>
@@ -362,7 +375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cours-db1/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -379,8 +392,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -389,12 +404,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -408,7 +423,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Section 1
@@ -422,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cours-db1/notes_de_cours/section_1.1/" class="md-nav__link">
+      <a href="../section_1.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -443,7 +458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cours-db1/notes_de_cours/section_1.2/" class="md-nav__link">
+      <a href="../section_1.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -464,7 +479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cours-db1/notes_de_cours/section_1.3/" class="md-nav__link">
+      <a href="../section_1.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -485,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cours-db1/notes_de_cours/section_1.4/" class="md-nav__link">
+      <a href="../section_1.4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -503,10 +518,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/cours-db1/notes_de_cours/section_1.5/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    1.5 Clés étrangères et relations
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -515,6 +550,131 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#stocker-des-informations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stocker des informations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relations-entre-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relations entre tables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importances-des-relations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importances des relations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cle-etrangere-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clé étrangère SQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suppression-de-tables-qui-contiennent-des-relations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suppression de tables qui contiennent des relations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordre-de-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ordre de création
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ordre de création">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercice-151" class="md-nav__link">
+    <span class="md-ellipsis">
+       Exercice 1.5.1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tables-dassociation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tables d'association
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mais-un-instant" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mais... un instant!
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cle-composee" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clé composée
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notation-de-contraintes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notation de contraintes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -574,7 +734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cours-db1/notes_de_cours/section_2.1/" class="md-nav__link">
+      <a href="../section_2.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -642,7 +802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cours-db1/notes_de_cours/section_3.1/" class="md-nav__link">
+      <a href="../section_3.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -710,7 +870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cours-db1/notes_de_cours/section_4.1/" class="md-nav__link">
+      <a href="../section_4.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -778,7 +938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cours-db1/notes_de_cours/section_5.1/" class="md-nav__link">
+      <a href="../section_5.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -811,8 +971,152 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+  
+  
+
+
+<h1 id="cles-etrangeres-et-relations">Clés étrangères et relations</h1>
+<h2 id="stocker-des-informations">Stocker des informations</h2>
+<p>Imaginons maintenant que l'on souhaite stocker des informations sur quel étudiant suit quel cours. On pourrait faire quelque chose qui ressemble à ceci :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Nom</th>
+<th style="text-align: left;">Code</th>
+<th style="text-align: left;">Session</th>
+<th style="text-align: left;">Sigle cours</th>
+<th style="text-align: center;">Duree cours</th>
+<th style="text-align: left;">Nom enseignant</th>
+<th style="text-align: left;">Code employe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Tony Stark</td>
+<td style="text-align: left;">1234567</td>
+<td style="text-align: left;">H22</td>
+<td style="text-align: left;">420-2B4-VI</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: left;">Kara Danvers</td>
+<td style="text-align: left;">7654</td>
+</tr>
+<tr>
+<td style="text-align: left;">Natasha Romanov</td>
+<td style="text-align: left;">3456789</td>
+<td style="text-align: left;">H22</td>
+<td style="text-align: left;">420-2B4-VI</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: left;">Kara Danvers</td>
+<td style="text-align: left;">7654</td>
+</tr>
+<tr>
+<td style="text-align: left;">Tony Stark</td>
+<td style="text-align: left;">1234567</td>
+<td style="text-align: left;">H22</td>
+<td style="text-align: left;">420-2A6-VI</td>
+<td style="text-align: center;">90</td>
+<td style="text-align: left;">Bruce Wayne</td>
+<td style="text-align: left;">8765</td>
+</tr>
+<tr>
+<td style="text-align: left;">Thor Odison</td>
+<td style="text-align: left;">6789012</td>
+<td style="text-align: left;">H22</td>
+<td style="text-align: left;">420-2A6-VI</td>
+<td style="text-align: center;">90</td>
+<td style="text-align: left;">Bruce Wayne</td>
+<td style="text-align: left;">8765</td>
+</tr>
+</tbody>
+</table>
+<p>Problèmes ? 
+* Répétition des valeurs : perte d'espace mémoire !</p>
+<h2 id="relations-entre-tables">Relations entre tables</h2>
+<p>Il faut découper nos informations entre plusieurs tables et faire des références entre les tables. On référence alors la clé primaire d'une des tables dans l'autre table. </p>
+<p>C'est ce que l'on appelle une clé étrangère (<strong>FOREIGN KEY</strong>).</p>
+<p>On remarque la direction de la flèche, de la table appelée « enfant » vers la table 
+« parent ».</p>
+<p>On ajoute dans la table enfant un champ enseignant et une annotation de clé étrangère. Donc ici chaque Cours possède un enseignant.</p>
+<p><img alt="" src="../images/1_cle_etrangere.png" /></p>
+<h2 id="importances-des-relations">Importances des relations</h2>
+<p>On trouve rarement une table isolée dans un modèle de base de données (table en relation avec aucune autre table).</p>
+<p>Pour faire une analogie, on pourrait comporarer une table isolée à du code qui n'est pas référencé (fonction qui n'est jamais appelée) dans le domaine de la programmation.</p>
+<h2 id="cle-etrangere-sql">Clé étrangère SQL</h2>
+<p>Pour indiquer une clé étrangère, on ajoute la contrainte suivante dans la requête de création de la table.</p>
+<pre><code class="language-mysql">FOREIGN KEY (nom_colonne) REFERENCES Table_parent(cle_primaire)
+</code></pre>
+<p>Exemple avec la table Cours</p>
+<pre><code class="language-mysql">CREATE TABLE Cours (  
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,  
+    sigle CHAR (11),  
+    duree SMALLINT, 
+    nom VARCHAR(255),
+    enseignant NUMERIC(8),
+    FOREIGN KEY (enseignant) REFERENCES Enseignant (code_employe));
+</code></pre>
+<p>Ici rien ne change dans la création de la table Enseignant (la table ne sait pas qu'elle est utilisée comme clé étrangère ailleurs).</p>
+<h2 id="suppression-de-tables-qui-contiennent-des-relations">Suppression de tables qui contiennent des relations</h2>
+<p><img alt="" src="../images/1_cle_etrangere.png" /></p>
+<p>Peut-on supprimer la table Enseignant sans supprimer la table Cours? Pourquoi?</p>
+<p><img alt="❗" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2757.svg" title=":exclamation:" />Pour pouvoir supprimer une table, celle-ci ne doit pas être référencée par une autre table. Autrement dit, il faut que sa clé primaire ne soit pas une clé étrangère pour une ou plusieurs autres tables.</p>
+<p>Si l'on pouvait faire la suppression, la table <em>Cours</em> aurait une colonne qui contiendrait des clés d'une table inexistante.</p>
+<h2 id="ordre-de-creation">Ordre de création</h2>
+<p>Afin d'ajouter les contraintes de clés étrangères, la table parent doit être créée avant la table enfants.</p>
+<p>Autrement, vous aurez une erreur SQL disant que votre contrainte FOREIGN KEY référence une table inexistante.</p>
+<h3 id="exercice-151"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/></svg></span> Exercice 1.5.1</h3>
+<p>Proposez un modèle de base de données illustrant qu'un enseignant est responsable d'un programme.</p>
+<p>Implémentez la base de données correspondant à votre modèle.</p>
+<h2 id="tables-dassociation">Tables d'association</h2>
+<p>Les clés étrangères permettent de référer un enregistrement dans une autre table. Qu'arrive-t-il dans la situation suivante:</p>
+<p>Une BD permet de gérer les inscriptions des étudiants à leurs cours. Comment représenter le fait qu'un étudiant puisse s'inscrire à plusieurs cours et qu'à un même cours, plusieurs étudiants puissent s'inscrire ?</p>
+<p>On ajoute une table dont le rôle dont les enregistrements représentent chaque relation.</p>
+<p>Par exemple, on ajouterait une table « Inscription » pour représenter notre association. Comme Inscription est créée spécialement pour représenter une association, elle est appelée table d'association.</p>
+<p>On voit ici que la table Inscription assure l'association entre Cours et Etudiant.</p>
+<p>On peut voir que deux tables sont associées si l'on peut suivre avec notre doigt d'une table à l'autre en empruntant les flèches comme des chemins (ici le sens des flèches n'a pas d'importance).</p>
+<p><img alt="" src="../images/1_table_association.png" /></p>
+<h2 id="mais-un-instant">Mais... un instant!</h2>
+<p>Dans la table Inscription la clé primaire est-elle vraiment composée de <em>deux</em> colonnes?</p>
+<p>Oui, c'est possible: c'est appelé une <em>clé composée</em>. </p>
+<p><img alt="" src="../images/1_table_association.png" /></p>
+<h2 id="cle-composee">Clé composée</h2>
+<p>Pour indiquer une clé composée dans une base de données, nous devrons utiliser la notation de contrainte.</p>
+<p>Après avoir déclaré les colonnes, on indique</p>
+<pre><code class="language-mysql">PRIMARY KEY (nom_colonne1, nom_colonne2, … )
+</code></pre>
+<p>Ne fonctionne pas :</p>
+<pre><code class="language-mysql">CREATE TABLE Inscription(
+    etudiant NUMERIC(7) PRIMARY KEY, 
+    cours INTEGER PRIMARY KEY,
+    FOREIGN KEY (etudiant) REFERENCES Etudiant (code),
+    FOREIGN KEY (cours) REFERENCES Cours (id_cours));
+</code></pre>
+<p>Bonne écriture :</p>
+<pre><code class="language-mysql">CREATE TABLE Inscription(
+    etudiant NUMERIC(7), 
+    cours INTEGER,
+    PRIMARY KEY (etudiant, cours),
+    FOREIGN KEY (etudiant) REFERENCES Etudiant (code),
+    FOREIGN KEY (cours) REFERENCES Cours (id_cours));
+</code></pre>
+<h2 id="notation-de-contraintes">Notation de contraintes</h2>
+<p>La notation contrainte de <strong>PRIMARY KEY</strong> s'utilise aussi en présence d'une clé simple (clé comportant une seule colonne).</p>
+<p>La notation vue précédemment constitue un raccourci intéressant lorsqu'on travaille.</p>
+<p>On revient plus en détail sur les contraintes dans le Chapitre 4 - Assurer l'intégrité des données.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -846,10 +1150,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/cours-db1/", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "content.code.copy", "toc.integrate"], "search": "/cours-db1/assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "content.code.copy", "toc.integrate"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="/cours-db1/assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   </body>

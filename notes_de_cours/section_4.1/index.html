@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://francois-mercier.github.io/cours-db1/notes_de_cours/chapitre_04/">
+        <link rel="canonical" href="https://francois-mercier.github.io/cours-db1/notes_de_cours/section_4.1/">
       
       
-        <link rel="prev" href="../chapitre_03/">
+        <link rel="prev" href="../section_3.1/">
       
       
-        <link rel="next" href="../chapitre_05/">
+        <link rel="next" href="../section_5.1/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Chapitre 4 - Cours Bases de donn&eacute;es 1</title>
+        <title>4.1 - Cours Bases de donn&eacute;es 1</title>
       
     
     
@@ -65,7 +65,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="orange">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="deep-orange">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#base-de-donnees-1" class="md-skip">
+        <a href="#chapitre-4-assurer-lintegrite-et-la-confidentialite-des-donnees" class="md-skip">
           Aller au contenu
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chapitre 4
+              4.1
             
           </span>
         </div>
@@ -123,7 +123,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="orange"  aria-label="Passer en mode sombre"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="deep-orange"  aria-label="Passer en mode sombre"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Passer en mode sombre" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
@@ -133,7 +133,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="purple" data-md-color-accent="deep-orange"  aria-label="Passer en mode clair"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="yellow"  aria-label="Passer en mode clair"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Passer en mode clair" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
@@ -226,16 +226,14 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../chapitre_01/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../section_1.1/" class="md-tabs__link">
           
   
-  Notes de cours
+  Section 1
 
         </a>
       </li>
@@ -249,23 +247,70 @@
   
     
     
-      
-  
-  
-  
-    
-    
       <li class="md-tabs__item">
-        <a href="../../exercices/exercice_01/" class="md-tabs__link">
+        <a href="../section_2.1/" class="md-tabs__link">
           
   
-  Exercices
+  Section 2
 
         </a>
       </li>
     
   
 
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../section_3.1/" class="md-tabs__link">
+          
+  
+  Section 3
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  Section 4
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../section_5.1/" class="md-tabs__link">
+          
+  
+  Section 5
+
+        </a>
+      </li>
     
   
 
@@ -296,7 +341,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Cours Bases de donn&amp;eacute;es 1" class="md-nav__button md-logo" aria-label="Cours Bases de donn&eacute;es 1" data-md-component="logo">
       
@@ -345,8 +392,6 @@
       
   
   
-    
-  
   
   
     
@@ -357,29 +402,29 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
-    Notes de cours
+    Section 1
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Notes de cours
+            Section 1
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -390,11 +435,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapitre_01/" class="md-nav__link">
+      <a href="../section_1.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Chapitre 1
+    1.1 Introduction
   </span>
   
 
@@ -411,11 +456,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapitre_02/" class="md-nav__link">
+      <a href="../section_1.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Chapitre 2
+    1.2 Composantes
   </span>
   
 
@@ -432,46 +477,15 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapitre_03/" class="md-nav__link">
+      <a href="../section_1.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Chapitre 3
+    1.3 Types de données
   </span>
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Chapitre 4
-  </span>
-  
-
-      </a>
-      
     </li>
   
 
@@ -484,11 +498,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapitre_05/" class="md-nav__link">
+      <a href="../section_1.4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Chapitre 5
+    1.4 Création de BD et Tables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../section_1.5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.5 Clés étrangères et relations
   </span>
   
 
@@ -531,7 +566,7 @@
             
   
   <span class="md-ellipsis">
-    Exercices
+    Section 2
   </span>
   
 
@@ -541,44 +576,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Exercices
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Exercices réguliers
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_1">
-            <span class="md-nav__icon md-icon"></span>
-            Exercices réguliers
+            Section 2
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -589,11 +587,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../exercices/exercice_01/" class="md-nav__link">
+      <a href="../section_2.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Exercice 01 - Test123
+    2.1
   </span>
   
 
@@ -609,10 +607,9 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
   
   
   
@@ -622,29 +619,32 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   <span class="md-ellipsis">
-    Exercices bonus
+    Section 3
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            Exercices bonus
+            Section 3
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -655,11 +655,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../exercices/bonus/bonus_01/" class="md-nav__link">
+      <a href="../section_3.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Bonus 01 - Test123
+    3.1
   </span>
   
 
@@ -672,6 +672,269 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Section 4
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Section 4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    4.1
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    4.1
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contraintes-dintegrite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contraintes d’intégrité
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contraintes d’intégrité">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cle-primaire-cle-etrangere-et-valeur-par-defaut" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clé primaire, clé étrangère et valeur par défaut
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rappel-des-contraintes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rappel des contraintes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rappel des contraintes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cascade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cascade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-4-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 4-1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cle-unique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clé unique
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nullite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nullité
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-4-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 4-2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Section 5
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Section 5
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../section_5.1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.1
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -691,24 +954,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -720,117 +965,45 @@
   
 
 
-<style>
-  section {
-    font-family: 'Trebuchet ms', serif !important;
-    height: 720px;
-    width: 1080px;
-    padding: 70px 80px 70px 80px;
-  }
-  h1 {
-    margin : 0.5em 0 1em 0;
-    color: #780006;
-    font-size : 40pt;
-    position: absolute;
-    top: 70px;
-  }
-  p, h2 {
-    color: #333
-    font-size: 24pt;
-  }
-  img[alt~="center"] {
-    display: block;
-    margin: 20px auto;
-  }
-  blockquote {
-    border-left: 8px solid #333; 
-    border-right: 8px solid #333;
-    text-align: center; 
-  }
-
-
-  section::after {
-    content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
-    color : #000;
-    bottom: -2px;
-  }
-
-
-</style>
-<!-- _paginate: false -->
-
-<h1 id="base-de-donnees-1">Base de données 1</h1>
-<p><strong>Chapitre 4 - Assurer l'intégrité et la confidentialité des données</strong></p>
-<p>Base de données 1
-420-2B4-VI
-Hiver 2022
-Durée approximative : 6 heures — 3 périodes </p>
-<hr />
-<h1 id="contenu">Contenu</h1>
-<ol>
-<li><a href="#3">Contraintes d’intégrité</a></li>
-<li><a href="#29">Cryptage</a></li>
-<li><a href="#53">Gestion des accès</a></li>
-</ol>
-<hr />
-<h1 id="contraintes-dintegrite">Contraintes d’intégrité</h1>
-<p>Clé primaire, clé étrangère et valeur par défaut
-Cascade
-Clé unique
-NULL
-CHECK
-Atelier</p>
-<hr />
-<h1 id="contraintes-dintegrite_1">Contraintes d’intégrité</h1>
-<p>Une contrainte d’intégrité est une condition à vérifier sur un enregistrement afin de maintenir son intégrité (qu'elle contienne une valeur qui a un sens).</p>
-<p>Généralement, une contrainte d’intégrité a pour effet de restreindre les valeurs possibles d’une colonne.</p>
-<hr />
-<h1 id="cle-primaire-cle-etrangere-et-valeur-par-defaut">Clé primaire, clé étrangère et valeur par défaut</h1>
-<p>Les contraintes clé primaire, clé étrangère et valeur par défaut ont déjà été couvertes.</p>
-<p>On a pu voir que certaines sont spécifiées directement dans la déclaration d’une colonne (<strong>DEFAULT</strong>, <strong>PRIMARY KEY</strong>), tandis que d’autres sont spécifiés sur leur ligne à part (<strong>FOREIGN KEY</strong>, <strong>PRIMARY KEY</strong>).</p>
-<p>Ajouter un enregistrement ne respectant pas la contrainte, déclenche une erreur.</p>
-<hr />
-<h1 id="rappel-des-contraintes">Rappel des contraintes</h1>
+<h1 id="chapitre-4-assurer-lintegrite-et-la-confidentialite-des-donnees">Chapitre 4 - Assurer l'intégrité et la confidentialité des données</h1>
+<h2 id="contraintes-dintegrite">Contraintes d’intégrité</h2>
+<p>Une contrainte d’intégrité est une condition à vérifier sur un enregistrement afin de maintenir son intégrité (qu'elle contienne une valeur qui a un sens). Généralement, une contrainte d’intégrité a pour effet de restreindre les valeurs possibles d’une colonne.</p>
+<h3 id="cle-primaire-cle-etrangere-et-valeur-par-defaut">Clé primaire, clé étrangère et valeur par défaut</h3>
+<p>Les contraintes clé primaire, clé étrangère et valeur par défaut ont déjà été couvertes. On a pu voir que certaines sont spécifiées directement dans la déclaration d’une colonne (<strong>DEFAULT</strong>, <strong>PRIMARY KEY</strong>), tandis que d’autres sont spécifiés sur leur ligne à part (<strong>FOREIGN KEY</strong>, <strong>PRIMARY KEY</strong>). Ajouter un enregistrement ne respectant pas la contrainte déclenche une erreur.</p>
+<h2 id="rappel-des-contraintes">Rappel des contraintes</h2>
 <p>Clé primaire : <strong>PRIMARY KEY</strong>
 Force la valeur à être unique et est utilisé pour trouver rapidement un enregistrement. Permet l’utilisation par une clé étrangère. Une seule clé primaire permise par table.</p>
 <p>Clé étrangère : <strong>FOREIGN KEY</strong>
 Référence un enregistrement d’une autre table. Garanti que l’enregistrement existe.</p>
-<hr />
-<h1 id="rappel-des-contraintes_1">Rappel des contraintes</h1>
 <p>Valeur par défaut : <strong>DEFAULT</strong>
 Spécifie la valeur utilisée lorsqu’un enregistrement est créé et qu’aucune valeur n’est spécifiée. Si aucune valeur par défaut n’est indiquée, <strong>NULL</strong> est utilisée.</p>
 <hr />
-<h1 id="cascade">Cascade</h1>
+<h3 id="cascade">Cascade</h3>
 <p>Jusqu’à présent le code suivant provoque une erreur.</p>
 <pre><code class="language-mysql">DELETE FROM Enseignant
     WHERE id_enseignant = 1;
 </code></pre>
 <p>Parce que la table Programme contient une clé étrangère vers Enseignant et elle pointerait sur rien si l'enseignant est supprimé.</p>
-<p><center></p>
 <p><img alt="width:9000px" src="../images/4_programme_enseignant.png" /></p>
-<p></center></p>
 <hr />
-<h1 id="cascade_1">Cascade</h1>
-<p>La stratégie cascade permet de supprimer tous les enregistrements sont référencés, donc qui pose problème.</p>
+<p>La stratégie cascade permet de supprimer tous les enregistrements sont référencés, donc qui posent problème.</p>
 <p>Par exemple, ici tous les cours associés aux professeurs seraient également supprimés.</p>
 <pre><code class="language-mysql">FOREIGN KEY (colonne) REFERENCES Nom_table(colonne) ON DELETE CASCADE
 </code></pre>
 <hr />
-<h1 id="exercice-4-1">Exercice 4-1</h1>
+<h3 id="exercice-4-1">Exercice 4-1</h3>
 <p>À partir du diagramme Ecole.pdf, identifiez les enregistrements de quelles tables seraient supprimés si toutes les clés étrangères utilisent la stratégie Cascade et que l'on supprime une session.</p>
 <hr />
-<h1 id="cascade_2">Cascade</h1>
 <p>La mise à jour en cascade permet de modifier la valeur d’une clé primaire et de mettre à jour simultanément toutes les clés étrangères (conserver l’intégrité).</p>
 <p>Utile seulement si la clé primaire n’est pas un identifiant autoincrémenté.</p>
 <pre><code>FOREIGN KEY (colonne) REFERENCES Nom_table(colonne) ON UPDATE CASCADE
 </code></pre>
 <hr />
-<h1 id="cle-unique">Clé unique</h1>
+<h3 id="cle-unique">Clé unique</h3>
 <p>Une clé unique est une façon de préciser qu’une valeur ou un groupe de valeur sont uniques dans la table.</p>
 <p>La clé primaire est un type particulier de clé unique.</p>
 <p><strong>ATTENTION</strong> : contrairement à une clé primaire, une clé unique peut être nulle et plusieurs enregistrements peuvent être nuls.</p>
 <hr />
-<h1 id="cle-unique_1">Clé unique</h1>
 <p>Pour indiquer qu’une colonne est unique, on place le mot-clé unique après le nom de la colonne.</p>
 <pre><code class="language-mysql">CREATE TABLE Programme (  
     code CHAR(6) PRIMARY KEY,
@@ -839,23 +1012,11 @@ Spécifie la valeur utilisée lorsqu’un enregistrement est créé et qu’aucu
     ...
 );
 </code></pre>
-<p><center></p>
 <p><img alt="height:200px" src="../images/4_programme.png" /></p>
-<p></center></p>
 <hr />
-<h1 id="cle-unique_2">Clé unique</h1>
 <p>Pour indiquer une clé unique portant sur plusieurs colonnes, on utilise la syntaxe suivante.</p>
-<div>
-<div style="width: 55%; display: inline-block; margin-right:20px;">
-
-
-
 <pre><code class="language-mysql">CONSTRAINT nom UNIQUE (colonne1, colonne2...)
 </code></pre>
-
-
-
-
 <pre><code class="language-mysql">CREATE TABLE Session (
     id_session INTEGER 
       PRIMARY KEY AUTO_INCREMENT,
@@ -866,74 +1027,30 @@ Spécifie la valeur utilisée lorsqu’un enregistrement est créé et qu’aucu
     CONSTRAINT semestre_annee_unique 
       UNIQUE (semestre, annee));
 </code></pre>
-
-
-
-</div>
-<div style="display:inline-block; vertical-align:top;">
-
-
-<center>
-
-
-![height:250px](images/4_session.png)
-
-
-</center>
-
-
-</div>
-</div>
-
+<p><img alt="height:250px" src="../images/4_session.png" /></p>
 <hr />
-<h1 id="nullite">Nullité</h1>
+<h3 id="nullite">Nullité</h3>
 <p>À l’exception des clés primaires, toutes les colonnes peuvent prendre la valeur nulle.</p>
 <p>On peut empêcher la présence de valeur nulle dans une colonne en ajoutant <strong>NOT NULL</strong> après le type.</p>
 <hr />
-<h1 id="nullite_1">Nullité</h1>
-<div>
-<div style="width: 50%; display: inline-block; margin-right:20px;">
-
-
-Pour éviter des professeurs dont le nom est **NULL**, on ajoute
-**| NN** après le type sur le diagramme.
-
-
-
+<p>Pour éviter des professeurs dont le nom est <strong>NULL</strong>, on ajoute
+<strong>| NN</strong> après le type sur le diagramme.</p>
 <pre><code class="language-mysql">CREATE TABLE Etudiant (
     code NUMERIC(7) PRIMARY KEY,
     nom VARCHAR(255) NOT NULL
     ...
 );
 </code></pre>
-
-
-
-</div>
-<div style="display:inline-block; vertical-align:top;">
-
-
-<center>
-
-
-![height:200px](images/4_etudiant.png)
-
-
-</center>
-
-
-</div>
-</div>
-
+<p><img alt="height:200px" src="../images/4_etudiant.png" /></p>
 <hr />
-<h1 id="exercice-4-2">Exercice 4-2</h1>
+<h3 id="exercice-4-2">Exercice 4-2</h3>
 <p>Modifiez le script de création de la base de données ecole pour inclure les contraintes suivantes :</p>
 <p>A) Deux programmes ne peuvent pas porter le même nom
 B) Chaque programme doit toujours avoir un professeur responsable
 C) Un même numéro de groupe ne peut pas être affecté au même cours à la même session (il y a un seul groupe 1 de BD1 à la session H22)
 D) Si l'on supprime une Évaluation, on veut supprimer toutes les Evaluation_etudiant associées.</p>
 <hr />
-<h1 id="check">Check</h1>
+<h3 id="check">Check</h3>
 <p>La contrainte <strong>CHECK</strong> permet de vérifier que les valeurs suivent une certaine condition. On insère cette contrainte directement dans la définition de la table.</p>
 <pre><code class="language-mysql">CREATE TABLE Nom_table (
     colonne TYPE,
@@ -941,15 +1058,7 @@ D) Si l'on supprime une Évaluation, on veut supprimer toutes les Evaluation_etu
     CONSTRAINT nom_contrainte CHECK (condition));
 </code></pre>
 <hr />
-<h1 id="check_1">Check</h1>
-<div>
-<div style="width: 50%; display: inline-block; margin-right:20px;">
-
-
-Exemple : les pondérations des évaluations doivent être entre 0 et 100.
-
-
-
+<p>Exemple : les pondérations des évaluations doivent être entre 0 et 100.</p>
 <pre><code class="language-mysql">CREATE TABLE Evaluation (
   id_evaluation INTEGER 
     PRIMARY KEY AUTO_INCREMENT
@@ -959,26 +1068,7 @@ Exemple : les pondérations des évaluations doivent être entre 0 et 100.
   CONSTRAINT note_0_a_100 
     CHECK (ponderation BETWEEN 0 AND 100));
 </code></pre>
-
-
-
-</div>
-<div style="display:inline-block; vertical-align:top;">
-
-
-<center>
-
-
-![height:225px](images/4_evaluation.png)
-
-
-</center>
-
-
-</div>
-</div>
-
-<hr />
+<p><img alt="height:225px" src="../images/4_evaluation.png" /></p>
 <h1 id="exercice-4-3">Exercice 4-3</h1>
 <p>Insérez une vérification pour vous assurer que :
 A) La note obtenue à une évaluation est positive
@@ -992,7 +1082,6 @@ C) Les sigles des cours sont dans le format suivant (A est lettre majuscule, # e
 <li>Colonne avec référence d’action (CASCADE).</li>
 </ul>
 <hr />
-<h1 id="que-peut-contenir-un-check_1">Que peut contenir un CHECK</h1>
 <p>On ne peut pas non plus appeler les éléments suivants dans un CHECK :</p>
 <ul>
 <li>Fonction non native ou procédure stockée</li>
@@ -1001,7 +1090,6 @@ C) Les sigles des cours sont dans le format suivant (A est lettre majuscule, # e
 <li>Fonction non déterministe comme NOW()</li>
 </ul>
 <hr />
-<h1 id="que-peut-contenir-un-check_2">Que peut contenir un CHECK</h1>
 <p>Finalement, un CHECK peut contenir les éléments suivants :</p>
 <ul>
 <li>Opérateur arithmétique</li>
@@ -1010,7 +1098,7 @@ C) Les sigles des cours sont dans le format suivant (A est lettre majuscule, # e
 <li>Comparaison / opération sur plusieurs colonnes d’une même table.</li>
 </ul>
 <hr />
-<h1 id="tricher-et-eviter-les-check">Tricher et éviter les CHECK</h1>
+<h3 id="tricher-et-eviter-les-check">Tricher et éviter les CHECK</h3>
 <p>À l’occasion, on peut vouloir insérer une valeur qui ne respecte pas une condition en raison d’un élément spécial.</p>
 <p>On peut utiliser alors les requêtes spéciales avec la clause <strong>IGNORE</strong> :</p>
 <pre><code class="language-mysql">INSERT IGNORE INTO ...
@@ -1019,7 +1107,7 @@ LOAD DATA INFILE 'nom' IGNORE INTO TABLE ...
 </code></pre>
 <p>Comme toute vérification, il faut une bonne raison pour l’éviter !</p>
 <hr />
-<h1 id="exercice-4-4">Exercice 4-4</h1>
+<h3 id="exercice-4-4">Exercice 4-4</h3>
 <p>Implémentez, lorsque possible, les vérifications suivantes. Expliquez pourquoi lorsque vous ne pouvez pas les implémenter.</p>
 <p>A) Le nom des documents remis n'excède pas 64 caractères (fonction CHAR_LENGTH ?)
 B) La note d’un étudiant n’excède jamais la pondération de l'évaluation
@@ -1027,7 +1115,7 @@ C) La durée d'une session n'excède pas 17 semaines
 D) Pour une évaluation, tous les étudiants reçoivent une note
 E) Tous les documents sont remis à la date du jour (si je le dépose le 15 mars, alors la valeur dans date_remise est le 15 mars)</p>
 <hr />
-<h1 id="modifier-les-tables-pour-ajouter-ou-retirer-des-contraintes">Modifier les tables pour ajouter ou retirer des contraintes</h1>
+<h3 id="modifier-les-tables-pour-ajouter-ou-retirer-des-contraintes">Modifier les tables pour ajouter ou retirer des contraintes</h3>
 <p>On peut modifier les tables pour ajouter ou supprimer des contraintes</p>
 <pre><code class="language-mysql">ALTER TABLE Nom_table
   ADD CONSTRAINT nom TYPE_CONTRAINTE (contrainte)
@@ -1037,27 +1125,27 @@ ALTER TABLE Nom_table
   DROP [PRIMARY KEY | FOREIGN KEY | CHECK] nom
 </code></pre>
 <hr />
-<h1 id="ajouter-une-contrainte">Ajouter une contrainte</h1>
-<h3 id="ajouter-une-cle-primaire">Ajouter une clé primaire</h3>
+<h3 id="ajouter-une-contrainte">Ajouter une contrainte</h3>
+<h4 id="ajouter-une-cle-primaire">Ajouter une clé primaire</h4>
 <pre><code class="language-mysql">ALTER TABLE Evaluation
   ADD CONSTRAINT evaluation_pk PRIMARY KEY (id_evaluation);
 </code></pre>
-<h3 id="ajouter-un-check">Ajouter un CHECK</h3>
+<h4 id="ajouter-un-check">Ajouter un CHECK</h4>
 <pre><code class="language-mysql">ALTER TABLE Evaluation_etudiant 
   ADD CONSTRAINT note_0_a_100 CHECK (note BETWEEN 0 AND 100);
 </code></pre>
 <hr />
-<h1 id="supprimer-une-contrainte">Supprimer une contrainte</h1>
-<h3 id="supprimer-une-cle-primaire">Supprimer une clé primaire</h3>
+<h3 id="supprimer-une-contrainte">Supprimer une contrainte</h3>
+<h4 id="supprimer-une-cle-primaire">Supprimer une clé primaire</h4>
 <pre><code class="language-mysql">ALTER TABLE Evaluation
   DROP PRIMARY KEY;
 </code></pre>
-<h3 id="supprimer-un-check">Supprimer un CHECK</h3>
+<h4 id="supprimer-un-check">Supprimer un CHECK</h4>
 <pre><code class="language-mysql">ALTER TABLE Evaluation_etudiant
   DROP CHECK note_0_a_100;
 </code></pre>
 <hr />
-<h1 id="cryptage">Cryptage</h1>
+<h2 id="cryptage">Cryptage</h2>
 <p>Techniques de cryptage et hashage
 Cryptage à clé symétrique
 Cryptage de la BD</p>
@@ -1222,7 +1310,6 @@ Texte crypté + clé 🡺 texte clair </p>
 <hr />
 <h1 id="fonction-unhex">Fonction UNHEX</h1>
 <p>La fonction <strong>UNHEX</strong> convertit une chaîne de valeurs hexadécimale en sa représentation sous forme de chaîne de caractères.</p>
-<p><center></p>
 <table>
 <thead>
 <tr>
@@ -1244,7 +1331,6 @@ Texte crypté + clé 🡺 texte clair </p>
 </tr>
 </tbody>
 </table>
-<p></center></p>
 <hr />
 <h1 id="decrypter-avec-mysql">Décrypter avec MySQL</h1>
 <p>Pour décrypter, on utilise la fonction <strong>AES_DECRYPT</strong>. Le premier argument est la valeur à décrypter, le second la clé secrète.</p>
@@ -1487,9 +1573,6 @@ REVOKE role FROM utilisateur;
 
 
 
-  
-  
-
 
 
 
@@ -1502,12 +1585,6 @@ REVOKE role FROM utilisateur;
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
-        
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
-  Retour en haut de la page
-</button>
         
       </main>
       
@@ -1535,7 +1612,7 @@ REVOKE role FROM utilisateur;
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "content.code.copy", "toc.integrate"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
