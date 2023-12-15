@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://francois-mercier.github.io/cours-db1/notes_de_cours/section_3.1/">
+        <link rel="canonical" href="https://francois-mercier.github.io/cours-db1/notes_de_cours/section_5.3/">
       
       
-        <link rel="prev" href="../section_2.6/">
+        <link rel="prev" href="../section_5.2/">
       
-      
-        <link rel="next" href="../section_3.2/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +20,7 @@
     
     
       
-        <title>3.1 Établir une stratégie de sauvegarde de la BD - Cours Bases de donn&eacute;es 1</title>
+        <title>5.3 Procédures stockées et transactions - Cours Bases de donn&eacute;es 1</title>
       
     
     
@@ -74,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pourquoi-sauvegarder-une-bd" class="md-skip">
+        <a href="#procedures-stockees-et-transactions" class="md-skip">
           Aller au contenu
         </a>
       
@@ -110,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              3.1 Établir une stratégie de sauvegarde de la BD
+              5.3 Procédures stockées et transactions
             
           </span>
         </div>
@@ -262,13 +260,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../section_3.1/" class="md-tabs__link">
           
   
   Section 3
@@ -300,10 +296,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../section_5.1/" class="md-tabs__link">
           
   
@@ -717,8 +715,6 @@
       
   
   
-    
-  
   
   
     
@@ -729,12 +725,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
@@ -748,7 +744,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Section 3
@@ -759,28 +755,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    3.1 Établir une stratégie de sauvegarde de la BD
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../section_3.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -789,69 +767,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#pourquoi-sauvegarder-une-bd" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pourquoi sauvegarder une BD?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#importance-de-la-sauvegarde" class="md-nav__link">
-    <span class="md-ellipsis">
-      Importance de la sauvegarde
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#la-strategie-3-2-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      La stratégie 3-2-1
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#etapes-dune-strategie-de-sauvegarde" class="md-nav__link">
-    <span class="md-ellipsis">
-      Étapes d’une stratégie de sauvegarde
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#types-de-sauvegarde" class="md-nav__link">
-    <span class="md-ellipsis">
-      Types de sauvegarde
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1020,8 +935,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -1030,12 +947,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
@@ -1049,7 +966,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Section 5
@@ -1102,10 +1019,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../section_5.3/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    5.3 Procédures stockées et transactions
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1114,6 +1051,281 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#procedures-stockees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procédures stockées
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Procédures stockées">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#utilisation-des-procedures-et-des-fonctions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilisation des procédures et des fonctions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#declarer-et-invoquer-une-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Déclarer et invoquer une procédure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametres-de-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paramètres de procédure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invocation-de-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Invocation de procédure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documenter-une-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documenter une procédure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-exercice-531-" class="md-nav__link">
+    <span class="md-ellipsis">
+       --- Exercice 5.3.1 ---
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transactions-et-gestion-derreur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transactions et gestion d'erreur
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transactions et gestion d'erreur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exceptions-en-programmation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exceptions en programmation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quand-gerer-les-exceptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quand gérer les exceptions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exceptions-possibles-en-bd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exceptions possibles en BD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codes-derreur-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Codes d'erreur MySQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lancer-un-signal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lancer un signal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-des-signaux-et-des-transactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestion des signaux et des transactions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condition-du-gestionnaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      Condition du gestionnaire
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#afficher-lerreur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Afficher l'erreur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-complet-de-gestion-dexception" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple complet de gestion d'exception
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transactions-mise-en-situation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transactions - Mise en situation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principe-dune-transaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principe d’une transaction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fonctionnement-dune-transaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonctionnement d'une transaction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-de-rollback" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple de ROLLBACK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-de-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple de commit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demonstration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Démonstration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-exercice-532-" class="md-nav__link">
+    <span class="md-ellipsis">
+       --- Exercice 5.3.2 ---
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1144,104 +1356,287 @@
   
 
 
-  <h1>3.1 Établir une stratégie de sauvegarde de la BD</h1>
+<h1 id="procedures-stockees-et-transactions">Procédures stockées et transactions</h1>
+<h2 id="procedures-stockees">Procédures stockées</h2>
+<p>Les procédures stockées sont semblables aux fonctions. Elles permettent de préparer des traitements (comme des fonctions) et de les exécuter. À la différence des fonctions les procédures stockées :</p>
+<ul>
+<li>Peuvent ne pas retourner de valeur</li>
+<li>Peuvent s'appeller elle-même</li>
+<li>Les fonctions ne peuvent pas appeler de procédures, mais les procédures peuvent appeler des fonctions</li>
+</ul>
+<h3 id="utilisation-des-procedures-et-des-fonctions">Utilisation des procédures et des fonctions</h3>
+<p>Les procédures gèrent généralement la logique applicative (couche métier). Par exemple, les ajouts ou modifications aux données.</p>
+<p>Les fonctions définissent généralement un traitement d’appoint, un calcul ou l'obtention d'un renseignement.</p>
+<h3 id="declarer-et-invoquer-une-procedure">Déclarer et invoquer une procédure</h3>
+<pre><code class="language-sql">DELIMITER $$
 
-<p>Établir une stratégie de sauvegarde de la BD</p>
-<h2 id="pourquoi-sauvegarder-une-bd">Pourquoi sauvegarder une BD?</h2>
-<p>Pouvoir restaurer la BD dans les cas de :</p>
+CREATE PROCEDURE nom_procedure()
+BEGIN
+  traitement
+END $$
+
+DELIMITER ;
+
+</code></pre>
+<p>Pour invoquer une procédure, on utilise l'instruction <strong>CALL</strong>.</p>
+<pre><code class="language-sql">CALL nom_procedure();
+</code></pre>
+<h3 id="parametres-de-procedure">Paramètres de procédure</h3>
+<p>Les paramètres d'une procédure peuvent prendre 3 formes :</p>
 <ul>
-<li>Destruction accidentelle (DROP *)</li>
-<li>Bris de serveur (usure/Ti-Guy qui a encore échappé son café)</li>
-<li>Attaque de pirates (ex.: rançongiciel)</li>
-<li>Manipulation erronée (ex. par du développement)</li>
-<li>Récréer les données suite à changement d’environnement (mise à jour MySQL)</li>
-<li>Pour un passage d'un environnement de tests à un déploiement en production</li>
-<li>Catastrophe naturelle, incendie, météorite ou invasion d’extra-terrestres <img alt="👽" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f47d.svg" title=":alien:" /></li>
+<li>IN : paramètre d'entrée, donc en lecture seule</li>
+<li>OUT : paramètre de sortie, donc en écriture puis en lecture au besoin</li>
+<li>INOUT : paramètre d'entrée et de sortie (ref). En lecture et en écriture.</li>
 </ul>
-<h2 id="importance-de-la-sauvegarde">Importance de la sauvegarde</h2>
-<p>Une perte de données coûte en moyenne entre 4,4 millions au Canada (2021).</p>
-<p>Selon certains fournisseurs de stockage, jusqu’à la moitié des entreprises perdront des données au cours de leurs opérations.</p>
-<h2 id="la-strategie-3-2-1">La stratégie 3-2-1</h2>
-<p>Présentée comme un standard, la règle du 3-2-1 est la suivante:</p>
+<p>On inscrit des variables dans les paramètres OUT pour récupérer les valeurs. Si la variable contient déjà une valeur, il n'est pas possible de la récupérer dans la procédure.</p>
+<h3 id="exemple">Exemple</h3>
+<pre><code class="language-sql">DELIMITER $$
+CREATE PROCEDURE somme (IN _operande1 INT, IN _operande2 INT, OUT _resultat INT)
+BEGIN   
+  SET _resultat = _operande1 + _operande2;
+END $$
+DELIMITER ; 
+</code></pre>
+<p>On remarque ici :
+- L'absence d'instruction RETURN (interdit dans une procédure)
+- L'utilisation du OUT pour résultat</p>
+<h3 id="invocation-de-procedure">Invocation de procédure</h3>
+<pre><code class="language-sql">SET @resultat = 0;            -- Déclaration d'une variable
+CALL somme(2, 4, @resultat);  -- Invocation
+SELECT @resultat;             -- Affichage
+</code></pre>
+<h3 id="documenter-une-procedure">Documenter une procédure</h3>
+<p>Chaque procédure s'accompagne d'une documentation d'en-tête</p>
+<pre><code class="language-sql">/**
+ * Description de la procédure
+ * 
+ * @param   IN | OUT | INOUT  Nom du paramètre  Description   
+ * @param   IN | OUT | INOUT  Nom du paramètre  Description  
+ * ...
+ */
+</code></pre>
+<p><strong>Comme les procédures peuvent devenir très longues, il est important d'utiliser des commentaires pour les variables locales déclarées et certaines instructions (IF, WHILE, REPEAT ...)</strong></p>
+<h3 id="-exercice-531-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/></svg></span> --- Exercice 5.3.1 ---</h3>
+<p>A. Créez une procédure pour ajouter un nouveau groupe. Initialement l'enseignant est null. Vous connaissez seulement le semestre, l'année et le sigle du cours. Vous devez ajouter le numéro de groupe suivant (si le groupe 1 et 2 existent, alors le groupe aura le numéro 3). Le premier groupe porte le numéro 1. La procédure retourne le numéro du groupe qui a été créé. En cas d'erreur, le numéro -1 est retourné.</p>
+<p><strong>Paramètres</strong> : semestre, annee et sigle du cours
+<strong>Valeur de retour</strong> : le numéro du groupe qui a été créé</p>
+<p>B. Créez une procédure pour inscrire un étudiant à un cours. La procédure reçoit le code de l'étudiant, le sigle du cours, le semestre et l'année pour l'inscription. </p>
+<p>L'étudiant est toujours ajouté au groupe avec le plus petit numéro qui a une place de libre. Si le groupe est plein (4 étudiants et plus), alors un nouveau groupe est créé.</p>
+<p>Le numéro du groupe dans lequel l'élève a été inscrit est retourné. En cas d'erreur, la valeur -1 est retournée.</p>
+<p><strong>Paramètres</strong> : code étudiant, sigle du cours, semestre, année
+<strong>Valeur de retour</strong> : numéro du groupe dans lequel l'inscription s'est faite</p>
+<h2 id="transactions-et-gestion-derreur">Transactions et gestion d'erreur</h2>
+<p>Concept d'exception en programmation
+Principe d’une transaction</p>
+<h3 id="exceptions-en-programmation">Exceptions en programmation</h3>
+<p><img alt="" src="../images/5_exception.png" /></p>
+<h3 id="quand-gerer-les-exceptions">Quand gérer les exceptions</h3>
 <ul>
-<li>3 copies de chaque donnée</li>
-<li>2 copies «onsite» (sur le même lieu physique)</li>
-<li>1 copie «offsite» (dans un emplacement physique différent)</li>
+<li>Quand une erreur de fonctionnement imprévisible est à risque de survenir :</li>
+<li>Donnée utilisateur</li>
+<li>Référence à un programme externe</li>
+<li>Référence à des données non contrôlées</li>
+<li>Gérer certaines scénarios d'exécution problématiques</li>
 </ul>
-<h2 id="etapes-dune-strategie-de-sauvegarde">Étapes d’une stratégie de sauvegarde</h2>
+<h3 id="exceptions-possibles-en-bd">Exceptions possibles en BD</h3>
+<p>Les exceptions possibles dans le domaine de la BD sont :</p>
+<ul>
+<li>Violation de contrainte</li>
+<li>Duplicat de clé primaire</li>
+<li>Duplicat de valeur unique</li>
+<li>Insérer NULL dans une colonne qui n'est pas nullifiable</li>
+<li>Ne pas respecter un contrainte CHECK</li>
+<li>Ne pas respecter une clé étrangère </li>
+<li>Exception personnalisées</li>
+</ul>
+<h3 id="codes-derreur-mysql">Codes d'erreur MySQL</h3>
+<p>Les codes d'erreur de MySQL sont gérés par les <strong>SQLSTATE</strong>. Les états SQL sont des codes à 5 chiffres. Les 2 premiers indiquent un état global (erreur, avertissement, succès, information...) et les 3 derniers sont spécifiques à la situation</p>
+<ul>
+<li>00### : indique un succès</li>
+<li>01### : avertissement</li>
+<li>02### : non trouvé</li>
+<li>&gt;02### : exception</li>
+</ul>
+<h3 id="lancer-un-signal">Lancer un signal</h3>
+<p>Le SGBD lance des sigaux lorsqu'une erreur interne se produit. Il est possible de lancer un signal avec un code d'erreur personnalisé.</p>
+<pre><code class="language-sql">SIGNAL SQLSTATE 'code 5 chiffres' SET MESSAGE_TEXT = 'Message erreur';
+</code></pre>
+<h3 id="gestion-des-signaux-et-des-transactions">Gestion des signaux et des transactions</h3>
+<p>Pour attraper un signal, on déclare un gestionnaire (<em>handler</em>).</p>
+<pre><code class="language-mysql">DECLARE action HANDLER FOR condition | code
+</code></pre>
+<p>L'action est de deux types :
+- CONTINUE : le bloc BEGIN - END continue son exécution après la gestion du signal
+- EXIT : le bloc BEGIN - END arrête son exécution après la gestion du signal.</p>
+<p>Les gestionnaires peuvent seulement être déclarés dans les procédures.</p>
+<h3 id="condition-du-gestionnaire">Condition du gestionnaire</h3>
+<p>La condition peut être de différents types.
+- Une classe de signaux :
+  - SQLWARNING
+  - NOT FOUND 
+  - SQLEXCEPTION
+- Un code particulier :
+  - Code d'erreur MySQL (4 chiffres) : https://dev.mysql.com/doc/mysql-errors/8.0/en/server-error-reference.html
+  - Un code de signal SQLSIGNAL code5
+- Le nom d'une condition (<strong>DECLARE ... CONDITION</strong>)</p>
+<h3 id="exemple_1">Exemple</h3>
+<p>Attraper les erreurs de clé primaire nulle</p>
+<pre><code class="language-mysql">DECLARE EXIT HANDLER FOR 1171 
+
+-- Alternative
+
+DECLARE EXIT HANDLER FOR 42000
+</code></pre>
+<p>Attraper toutes les exceptions</p>
+<pre><code class="language-mysql">DECLARE EXIT HANDLER FOR SQLEXCEPTION
+</code></pre>
+<h3 id="afficher-lerreur">Afficher l'erreur</h3>
+<p>On récupère l'erreur avec une requête </p>
+<pre><code class="language-sql">GET DIAGNOSTICS 
+</code></pre>
+<p>Par exemple pour récupérer le code et le message d'erreur actuel</p>
+<pre><code class="language-sql">GET DIAGNOSTICS CONDITION 1            
+  _code = RETURNED_SQLSTATE, 
+  _message = MESSAGE_TEXT;
+SELECT _code, _message;
+</code></pre>
+<p>où _code et _message sont des variables locales</p>
+<h3 id="exemple-complet-de-gestion-dexception">Exemple complet de gestion d'exception</h3>
+<pre><code class="language-sql">CREATE PROCEDURE gestion_erreur()
+BEGIN
+  DECLARE _code CHAR(5);
+  DECLARE _message TEXT;
+  ...
+
+  -- On répère ce bloc pour chaque type d'erreur à traiter
+  DECLARE EXIT HANDLER FOR 00000
+  BEGIN
+    GET DIAGNOSTICS CONDITION 1
+      _code = RETURNED_SQLSTATE,
+      _message = MESSAGE_TEXT;
+    SELECT _code, _message;
+  END;
+
+  ...
+</code></pre>
+<h3 id="transactions-mise-en-situation">Transactions - Mise en situation</h3>
+<p>Timmy, dévoué programmeur, crée un script qui importe, dans notre système École, les notes de tous les étudiants à une évaluation . Afin d'éviter d'insérer de mauvaises données, Timmy applique la règle suivante : si une des notes ne peut pas être ajoutée (par exemple pour une violation de contrainte), alors aucune note n'est ajoutée.</p>
+<p>Si notre script s’exécute automatiquement, comment appliquer cette mesure ?</p>
+<h3 id="principe-dune-transaction">Principe d’une transaction</h3>
+<p>Une transaction contient une série d’instructions. Une fois que toutes les instructions ont été effectuées, on peut les enregistrer ou les annuler.</p>
+<p>L’utilisation de transaction facilite l’exécution d’instructions multiples et aide à maintenir une intégrité dans nos données.</p>
+<h3 id="fonctionnement-dune-transaction">Fonctionnement d'une transaction</h3>
 <ol>
-<li>
-<p>Déterminer les données à sauvegarder?</p>
-</li>
-<li>
-<p>Qu’est-ce qui est critique?</p>
-<ul>
-<li>Grouper par groupe : critique pour survivre, important pour opérer, optimal pour le développement</li>
-</ul>
-</li>
-<li>
-<p>Qu’est-ce qui est suffisamment important pour investir dans sa sauvegarde?</p>
-<ul>
-<li>Dans cette question, évaluez le rapport quantité/coût. Faire une sauvegarde de Facebook (+/- 100 Po) est plus lourd qu’une sauvegarde de Wikipédia (+/- 10TB).</li>
-</ul>
-</li>
-<li>
-<p>Déterminer la fréquence des sauvegardes?</p>
-</li>
-<li>
-<p>Sauvegardes périodiques (quotidienne, hebdomadaire)</p>
-<ul>
-<li>Quelle quantité de travail on peut se permettre de perdre?</li>
-</ul>
-</li>
-<li>
-<p>Sauvegarde exceptionnelle</p>
-<ul>
-<li>Quand ces sauvegardes sont-elles requises?</li>
-</ul>
-</li>
-<li>
-<p>Choisir et mettre en place une stratégie</p>
-</li>
-<li>
-<p>Préparer deux serveurs locaux (2)</p>
-</li>
-<li>Préparer un serveur distance/souscrire à un service (1)</li>
-<li>Décrire un système d’organisation des sauvegardes<ul>
-<li>Nomenclature/emplacement logiciel</li>
-</ul>
-</li>
-<li>Mettre en place une routine de sauvegarde (périodique)</li>
-<li>
-<p>Mettre en place une procédure de sauvegarde exceptionnelle</p>
-</li>
-<li>
-<p>Tester (régulièrement) et assurer la maintenance</p>
-</li>
-<li>
-<p>Ne pas tenter la loi de Murphy/loi de l’emmerdement maximal</p>
-</li>
-<li>La journée que vous avez besoin de restaurer la sauvegarde, il y a intérêt à ce que ça fonctionne</li>
-<li>Tenez compte des modifications aux structures de données<ul>
-<li>Avec l’évolution du projet, la stratégie de sauvegarde doit évoluer</li>
-</ul>
-</li>
+<li>On commence pas indiquer notre intention de faire un bloc d'instructions (transaction) par START TRANSACTION</li>
+<li>On effectue les requêtes</li>
+<li>On COMMIT la transaction si tout s'est bien déroulé OU on ROLLBACK si on veut tout annuler.</li>
 </ol>
-<h2 id="types-de-sauvegarde">Types de sauvegarde</h2>
+<h3 id="exemple_2">Exemple</h3>
+<p>Ajoutez la contrainte suivante à la table Evaluation_etudiant </p>
+<pre><code class="language-mysql">CONSTRAINT interval_note CHECK (note BETWEEN 0 AND 100)
+</code></pre>
+<p>Désactivons le autocommit de MySQL Workbench</p>
+<p><img alt="" src="../images/4_autocommit.png" /></p>
+<p>Ajoutons maintenant les données suivantes</p>
+<pre><code class="language-mysql">INSERT INTO Evaluation_etudiant (id_evaluation, etudiant, note, document) VALUES
+  (1, 1234567, 22, NULL);
+
+INSERT INTO Evaluation_etudiant (id_evaluation, etudiant, note, document) VALUES
+  (1, 4567890, -5, NULL);
+
+INSERT INTO Evaluation_etudiant (id_evaluation, etudiant, note, document) VALUES
+  (1, 8901234, 24, NULL);
+</code></pre>
+<p>Comment revenir supprimer le premier enregistrement qui s'est bien déroulé ?</p>
+<h3 id="exemple-de-rollback">Exemple de ROLLBACK</h3>
+<pre><code class="language-mysql">SELECT count(id_evaluation) FROM Evaluation_etudiant; -- Affiche 75
+
+START TRANSACTION;
+
+INSERT INTO Evaluation_etudiant (id_evaluation, etudiant, note, document) VALUES
+  (1, 1234567, 22, NULL);
+
+INSERT INTO Evaluation_etudiant (id_evaluation, etudiant, note, document) VALUES
+  (1, 4567890, -5, NULL);
+
+INSERT INTO Evaluation_etudiant (id_evaluation, etudiant, note, document) VALUES
+  (1, 8901234, 24, NULL);
+
+SELECT count(id_evaluation) FROM Evaluation_etudiant; -- Affiche 77 (+2)
+
+ROLLBACK; -- Il y a eu erreur
+
+SELECT count(id_evaluation) FROM Evaluation_etudiant; -- Affiche 75
+</code></pre>
+<h3 id="exemple-de-commit">Exemple de commit</h3>
+<p>Les INSERT sont valides cette fois-ci.</p>
+<pre><code class="language-mysql">SELECT count(id_evaluation) FROM Evaluation_etudiant; -- Affiche 75
+
+START TRANSACTION;
+
+INSERT INTO Evaluation_etudiant (id_evaluation, etudiant, note, document) VALUES
+  (1, 1234567, 22, NULL);
+
+INSERT INTO Evaluation_etudiant (id_evaluation, etudiant, note, document) VALUES
+  (1, 4567890, 17, NULL);
+
+INSERT INTO Evaluation_etudiant (id_evaluation, etudiant, note, document) VALUES
+  (1, 8901234, 24, NULL);
+
+SELECT count(id_evaluation) FROM Evaluation_etudiant; -- Affiche 78 (+3)
+
+COMMIT; -- Tout s'est bien déroulé
+
+SELECT count(id_evaluation) FROM Evaluation_etudiant; -- Affiche 78
+</code></pre>
+<h3 id="demonstration">Démonstration</h3>
+<p>Créez une procédure pour inscire un nouveau vol. La procédure reçoit une immatriculation de vaisseau, le numéro de vol et le nom du capitaine du vol.</p>
+<p>La procédure crée le vol et ajoute un membre d'équipage, le capitaine. En cas d'erreur, aucune donnée ne doit être créée.</p>
+<h3 id="-exercice-532-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/></svg></span> --- Exercice 5.3.2 ---</h3>
+<p>A. Créez une procédure pour noter un étudiant. Cette procédure doit accepter un code étudiant, l'id de groupe (que l'on suppose avoir obtenu par un autre moyen) et le nom de l'évaluation. </p>
+<p>Supposez que l'id du groupe et le nom de l'évaluation forme une clé unique.</p>
+<p>Gérez l'erreur qui pourrait survenir si l'évaluation n'existe pas. </p>
+<p>Votre procédure doit permettre d'assigner une note que Evaluation_etudiant existe ou non au préalable.</p>
+<p><strong>Paramètres</strong> : code_etudiant, id_groupe, nom_evaluation et note.</p>
+<p>B. Créez une procédure pour permettre à un étudiant de déposer un travail. La procédure doit accepter un code etudiant, un id_evaluation (que l'on suppose avoir obtenu par un autre moyen) et les informations relative au document. On suppose que Evaluation_etudiant a déjà été créé pour l'évaluation et l'étudiant donné. </p>
+<p>Si un document a déjà été déposé, alors :</p>
 <ul>
-<li>Sauvegarde complète<ul>
-<li>Crée une copie complète de toutes les données</li>
-<li>Pour : facile à mettre en place et diminue les risques d’incohérence à la restauration</li>
-<li>Contre : demande beaucoup d’espace de stockage, car duplique l’information</li>
+<li>Mettez à jour l'information du document</li>
+<li>Déclencher un avertissement de code 01001 qui ne bloque pas l'exécution de la procédure</li>
 </ul>
-</li>
-<li>Sauvegarde différentielle<ul>
-<li>Crée une copie seulement des changements</li>
-<li>Pour : ne duplique pas l’information de sauvegarde</li>
-<li>Contre : système de restauration plus complexe qui peut s’effondrer si l’historique est corrompu.</li>
-</ul>
-</li>
-</ul>
+<p><strong>Paramètres</strong> : code_etudiant, id_evaluation et le titre du document</p>
+<p>C. Vous devez ajouter 3 nouveaux enseignants dans le système École. Voici les données de ceux-ci.</p>
+<p>Effectuez l'opération en utilisant les transactions. Si l'un d'entre eux ne peut pas être ajouté, alors aucune ne doit l'être.</p>
+<table>
+<thead>
+<tr>
+<th>Code employé</th>
+<th>Nom</th>
+<th>No assurance sociale</th>
+<th>Ancienneté</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7645</td>
+<td>Diana de Themyscira</td>
+<td>111 222 333</td>
+<td>15</td>
+</tr>
+<tr>
+<td>7654</td>
+<td>Jason Todd</td>
+<td>987 654 321</td>
+<td>1</td>
+</tr>
+<tr>
+<td>6574</td>
+<td>Barry Allen</td>
+<td>555 777 333</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
 
 
 

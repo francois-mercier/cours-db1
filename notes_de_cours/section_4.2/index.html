@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://francois-mercier.github.io/cours-db1/notes_de_cours/section_3.1/">
+        <link rel="canonical" href="https://francois-mercier.github.io/cours-db1/notes_de_cours/section_4.2/">
       
       
-        <link rel="prev" href="../section_2.6/">
+        <link rel="prev" href="../section_4.1/">
       
       
-        <link rel="next" href="../section_3.2/">
+        <link rel="next" href="../section_4.3/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>3.1 Établir une stratégie de sauvegarde de la BD - Cours Bases de donn&eacute;es 1</title>
+        <title>4.2 Confidentialité des données - Cours Bases de donn&eacute;es 1</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pourquoi-sauvegarder-une-bd" class="md-skip">
+        <a href="#confidentialite-des-donnees" class="md-skip">
           Aller au contenu
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              3.1 Établir une stratégie de sauvegarde de la BD
+              4.2 Confidentialité des données
             
           </span>
         </div>
@@ -262,13 +262,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../section_3.1/" class="md-tabs__link">
           
   
   Section 3
@@ -282,10 +280,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../section_4.1/" class="md-tabs__link">
           
   
@@ -717,8 +717,6 @@
       
   
   
-    
-  
   
   
     
@@ -729,12 +727,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
@@ -748,7 +746,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Section 3
@@ -759,28 +757,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    3.1 Établir une stratégie de sauvegarde de la BD
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../section_3.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -789,69 +769,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#pourquoi-sauvegarder-une-bd" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pourquoi sauvegarder une BD?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#importance-de-la-sauvegarde" class="md-nav__link">
-    <span class="md-ellipsis">
-      Importance de la sauvegarde
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#la-strategie-3-2-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      La stratégie 3-2-1
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#etapes-dune-strategie-de-sauvegarde" class="md-nav__link">
-    <span class="md-ellipsis">
-      Étapes d’une stratégie de sauvegarde
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#types-de-sauvegarde" class="md-nav__link">
-    <span class="md-ellipsis">
-      Types de sauvegarde
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -910,8 +827,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -920,12 +839,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
@@ -939,7 +858,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Section 4
@@ -971,10 +890,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../section_4.2/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    4.2 Confidentialité des données
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -983,6 +922,161 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cryptage-et-hashage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cryptage et hashage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hashage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hashage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hashage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sha2" class="md-nav__link">
+    <span class="md-ellipsis">
+      SHA2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avantages-et-desavantages-du-hashage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avantages et désavantages du hashage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quand-utiliser-le-hashage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quand utiliser le hashage?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fonction-de-sha256" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction de SHA256
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cryptage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cryptage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cryptage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#securite-du-cryptage-symetrique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sécurité du cryptage symétrique
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithme-aes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithme AES
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crypter-avec-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crypter avec MySQL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Crypter avec MySQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fonction-unhex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction UNHEX
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decrypter-avec-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Décrypter avec MySQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phrase-secrete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phrase secrète
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1144,104 +1238,215 @@
   
 
 
-  <h1>3.1 Établir une stratégie de sauvegarde de la BD</h1>
+<h1 id="confidentialite-des-donnees">Confidentialité des données</h1>
+<p>Cryptage et hashage
+Cryptage à clé symétrique
+Cryptage de la BD</p>
+<h2 id="cryptage-et-hashage">Cryptage et hashage</h2>
+<p>Il est très souvent nécessaire d'assurer la confidentialité des données. Ainsi, un administrateur de BDD ne peut pas voir les informations de certains champs ou tables.</p>
+<p>Quelle est la distinction entre le cryptage et le hashage?</p>
+<p><strong>Cryptage</strong> : transformation des données à l’aide d’une donnée secrète appelée clé</p>
+<p><strong>Hashage</strong> : transformation <em>non inversible</em> à l’aide d’un algorithme</p>
+<p>Doc : https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html</p>
+<h2 id="hashage">Hashage</h2>
+<p>Une fonction de hashage accepte généralement une seule chaîne en entrée et retourne une valeur correspondant à l’entrée (appelé <em>hash</em>).</p>
+<p>La fonction peut produire un <em>hash</em> unique pour chaque entrée (fonction injective) ou permettre à plusieurs entrées de partager le même <em>hash</em>. Le deuxième cas est celui le plus rencontré.</p>
+<p>Il faut évidemment évaluer le risque de collision de <em>hash</em> (partage de valeur). Pour le <em>hash</em> de Git, ce risque est estimé à environ $1 \times 10^{-48}$, soit de tirer au hasard un atome sur la Terre. </p>
+<p>Les fonctions utilisables par MySQL (et d'autres langages) sont</p>
+<table>
+<thead>
+<tr>
+<th>Fonction</th>
+<th>Longueur du hash</th>
+<th>Type de colonne</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MD5</td>
+<td>128 bits</td>
+<td>CHAR(32)</td>
+</tr>
+<tr>
+<td>SHA</td>
+<td>160 bits</td>
+<td>CHAR(40)</td>
+</tr>
+<tr>
+<td>SHA2</td>
+<td>variable</td>
+<td>CHAR(56) à CHAR(128)</td>
+</tr>
+</tbody>
+</table>
+<p>Elles retournent toutes un hash en hexadécimal. On peut le convertir en binaire en utilisant la fonction <strong>UNHEX</strong>().</p>
+<h3 id="sha2">SHA2</h3>
+<p>La fonction SHA2 permet d’utiliser divers algorithmes. Les algorithmes sont SHA-224, SHA-256, SHA-384 et SHA-512.</p>
+<p>L’algorithme retourne un nombre de bits égal au nombre après le SHA (par exemple SHA-256 retourne un nombre binaire de 256 bits).</p>
+<p>Le standard est d’utiliser au moins 256 bits. On voit souvent 256 et 512 être utilisés.</p>
+<p><strong>Exemple</strong></p>
+<p>L’utilisateur veut enregistrer un mot de passe 'tarte123'. Pour le hasher avec SHA-256 avant de l’intégrer à la BD on utilise :</p>
+<pre><code class="language-mysql">INSERT INTO Utilisateur (nom, mot_de_passe)
+    VALUES ('Patissier21', SHA2('tarte123', 256));
+</code></pre>
+<p><strong>Résultat de SHA2</strong></p>
+<p>La requête </p>
+<pre><code class="language-mysql">SELECT * FROM Utilisateur;
+</code></pre>
+<p>retourne:</p>
+<pre><code>| nom           | mot_de_passe                                                     |
 
-<p>Établir une stratégie de sauvegarde de la BD</p>
-<h2 id="pourquoi-sauvegarder-une-bd">Pourquoi sauvegarder une BD?</h2>
-<p>Pouvoir restaurer la BD dans les cas de :</p>
+| patissier21   | b2c4b81704855df00cff57312d46ec28254e2f69f526cc61da5f2df20c43d075 |
+| jardiner14    | b48cea174391677879618ace9ea78531f5a0d18551de187ee76eb3190624ef35 |
+...
+</code></pre>
+<h3 id="avantages-et-desavantages-du-hashage">Avantages et désavantages du hashage</h3>
+<p>Avantages :</p>
 <ul>
-<li>Destruction accidentelle (DROP *)</li>
-<li>Bris de serveur (usure/Ti-Guy qui a encore échappé son café)</li>
-<li>Attaque de pirates (ex.: rançongiciel)</li>
-<li>Manipulation erronée (ex. par du développement)</li>
-<li>Récréer les données suite à changement d’environnement (mise à jour MySQL)</li>
-<li>Pour un passage d'un environnement de tests à un déploiement en production</li>
-<li>Catastrophe naturelle, incendie, météorite ou invasion d’extra-terrestres <img alt="👽" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f47d.svg" title=":alien:" /></li>
+<li>Plus rapide qu’un cryptage</li>
+<li>Espace mémoire constant</li>
+<li>Impossible à inverser</li>
 </ul>
-<h2 id="importance-de-la-sauvegarde">Importance de la sauvegarde</h2>
-<p>Une perte de données coûte en moyenne entre 4,4 millions au Canada (2021).</p>
-<p>Selon certains fournisseurs de stockage, jusqu’à la moitié des entreprises perdront des données au cours de leurs opérations.</p>
-<h2 id="la-strategie-3-2-1">La stratégie 3-2-1</h2>
-<p>Présentée comme un standard, la règle du 3-2-1 est la suivante:</p>
+<p>Désavantage :</p>
 <ul>
-<li>3 copies de chaque donnée</li>
-<li>2 copies «onsite» (sur le même lieu physique)</li>
-<li>1 copie «offsite» (dans un emplacement physique différent)</li>
+<li>Impossible d’avoir accès à la donnée originale</li>
 </ul>
-<h2 id="etapes-dune-strategie-de-sauvegarde">Étapes d’une stratégie de sauvegarde</h2>
+<h3 id="quand-utiliser-le-hashage">Quand utiliser le hashage?</h3>
+<ul>
+<li>Pour les données que nous n’avons pas besoin de consulter</li>
+<li>Vérification d’intégrité de fichier ou de transport (checksum) </li>
+</ul>
+<h3 id="fonction-de-sha256">Fonction de SHA256</h3>
+<p>https://qvault.io/cryptography/how-sha-2-works-step-by-step-sha-256/#:~:text=SHA%2D2%20is%20an%20algorithm,is%20the%20output%20size%2C%20256.</p>
 <ol>
-<li>
-<p>Déterminer les données à sauvegarder?</p>
-</li>
-<li>
-<p>Qu’est-ce qui est critique?</p>
-<ul>
-<li>Grouper par groupe : critique pour survivre, important pour opérer, optimal pour le développement</li>
-</ul>
-</li>
-<li>
-<p>Qu’est-ce qui est suffisamment important pour investir dans sa sauvegarde?</p>
-<ul>
-<li>Dans cette question, évaluez le rapport quantité/coût. Faire une sauvegarde de Facebook (+/- 100 Po) est plus lourd qu’une sauvegarde de Wikipédia (+/- 10TB).</li>
-</ul>
-</li>
-<li>
-<p>Déterminer la fréquence des sauvegardes?</p>
-</li>
-<li>
-<p>Sauvegardes périodiques (quotidienne, hebdomadaire)</p>
-<ul>
-<li>Quelle quantité de travail on peut se permettre de perdre?</li>
-</ul>
-</li>
-<li>
-<p>Sauvegarde exceptionnelle</p>
-<ul>
-<li>Quand ces sauvegardes sont-elles requises?</li>
-</ul>
-</li>
-<li>
-<p>Choisir et mettre en place une stratégie</p>
-</li>
-<li>
-<p>Préparer deux serveurs locaux (2)</p>
-</li>
-<li>Préparer un serveur distance/souscrire à un service (1)</li>
-<li>Décrire un système d’organisation des sauvegardes<ul>
-<li>Nomenclature/emplacement logiciel</li>
-</ul>
-</li>
-<li>Mettre en place une routine de sauvegarde (périodique)</li>
-<li>
-<p>Mettre en place une procédure de sauvegarde exceptionnelle</p>
-</li>
-<li>
-<p>Tester (régulièrement) et assurer la maintenance</p>
-</li>
-<li>
-<p>Ne pas tenter la loi de Murphy/loi de l’emmerdement maximal</p>
-</li>
-<li>La journée que vous avez besoin de restaurer la sauvegarde, il y a intérêt à ce que ça fonctionne</li>
-<li>Tenez compte des modifications aux structures de données<ul>
-<li>Avec l’évolution du projet, la stratégie de sauvegarde doit évoluer</li>
-</ul>
-</li>
+<li>Convertir en binaire</li>
+<li>Ajouter un 1</li>
+<li>Allonger avec des 0 à la fin pour obtenir un multiple de 512 moins 64 bits</li>
+<li>Ajouter la longueur de l'entrée originale en binaire sur 64 bits.</li>
 </ol>
-<h2 id="types-de-sauvegarde">Types de sauvegarde</h2>
+<p><strong>Exemple</strong></p>
+<ol>
+<li>Allo -&gt; <strong>01100001 01101100 01101100 01101111</strong></li>
+<li>01100001 01101100 01101100 01101111 <strong>1</strong></li>
+<li>01100001 01101100 01101100 01101111 1<strong>000000 00000000 00000000 
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000</strong></li>
+<li>01100001 01101100 01101100 01101111 1000000 00000000 00000000 00000000
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+   00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+   <strong>00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000100</strong></li>
+<li>Initialisation des 8 constantes de hash qui sont la représentation binaire des 32 premiers bits de la partie fractionnaire des racines des 8 premiers nombres premiers (2, 3, 5, 7, 11, 13, 17, 19)</li>
+</ol>
+<p><strong>Exemple</strong></p>
+<p>Racine de 2 = 1.41421356237
+Partie fractionnaire = 41421356237
+En binaire = 1101010000010011110011001100111</p>
+<ol>
+<li>Initialisation des 64 constantes d'arrondissement qui sont la représentation binaire des 32 premiers bits de la partie fractionnaire des racines cubiques des 64 premiers nombres premiers (2, 3, 5, 7, 11, 13, 17, 19 - 311)</li>
+<li>Création de <em>chunk</em> (segment) de 512 bits de long</li>
+<li>Création du message pour chaque <em>chunk</em> </li>
+<li>Compression du message en utilisant les constantes établies et concaténation du résultat.</li>
+</ol>
+<h2 id="cryptage">Cryptage</h2>
+<p>Une fonction de cryptage transforme une chaîne avec les données d’une chaîne secrète appelée « clé ».</p>
+<p>Texte clair + clé 🡺 texte crypté
+Texte crypté + clé 🡺 texte clair </p>
+<p>On appelle cryptage à clé symétrique lorsque la clé servant à crypter et à décrypter est la même.</p>
+<p>Voir Illustration - Hashage et cryptage </p>
+<h3 id="securite-du-cryptage-symetrique">Sécurité du cryptage symétrique</h3>
+<p>La sécurité d’un cryptage à clé symétrique repose sur 2 facteurs :</p>
 <ul>
-<li>Sauvegarde complète<ul>
-<li>Crée une copie complète de toutes les données</li>
-<li>Pour : facile à mettre en place et diminue les risques d’incohérence à la restauration</li>
-<li>Contre : demande beaucoup d’espace de stockage, car duplique l’information</li>
+<li>Le secret de la clé</li>
+<li>La longueur de la clé</li>
 </ul>
-</li>
-<li>Sauvegarde différentielle<ul>
-<li>Crée une copie seulement des changements</li>
-<li>Pour : ne duplique pas l’information de sauvegarde</li>
-<li>Contre : système de restauration plus complexe qui peut s’effondrer si l’historique est corrompu.</li>
+<h3 id="algorithme-aes">Algorithme AES</h3>
+<p>Le Advance Encryption Standard (AES) est la méthode de cryptage symétrique la plus utilisée aujourd’hui.</p>
+<p>Les données sont cryptées par bloc de 128 bits. La clé peut faire 128, 192 ou 256 bits.</p>
+<p>Il effectue plusieurs étapes de permutation / substitution</p>
+<h3 id="crypter-avec-mysql">Crypter avec MySQL</h3>
+<p>Pour crypter, on utilise la fonction <strong>AES_ENCRYPT</strong>. Son premier argument est le texte à crypter et le second la clé secrète. La clé doit avoir entre 128 et 256 bits.</p>
+<pre><code class="language-mysql">INSERT INTO Utilisateur (nom, carte_credit)
+  VALUES ('Patissier21', AES_ENCRYPT('1234123412341234',  
+  UNHEX('F3229A0B371ED2D9441B830D21A390C3')));
+</code></pre>
+<p>On place le résultat dans un BLOB.</p>
+<h4 id="fonction-unhex">Fonction UNHEX</h4>
+<p>La fonction <strong>UNHEX</strong> convertit une chaîne de valeurs hexadécimale en sa représentation sous forme de chaîne de caractères.</p>
+<table>
+<thead>
+<tr>
+<th>Mot</th>
+<th>HEX(<em>mot</em>)</th>
+<th>CAST(UNHEX(<em>hex</em>) AS CHAR)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>41</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Allo</td>
+<td>416C6C6F</td>
+<td>Allo</td>
+</tr>
+</tbody>
+</table>
+<h3 id="decrypter-avec-mysql">Décrypter avec MySQL</h3>
+<p>Pour décrypter, on utilise la fonction <strong>AES_DECRYPT</strong>. Le premier argument est la valeur à décrypter, le second la clé secrète.</p>
+<pre><code class="language-mysql">SELECT nom, CAST(AES_DECRYPT(carte_credit,   
+  UNHEX('F3229A0B371ED2D9441B830D21A390C3’)) AS CHAR)
+  AS carte_credit FROM Utilisateur;
+</code></pre>
+<p>Le résultat du décryptage.</p>
+<pre><code class="language-console">| nom           | carte_credit     |
+
+| patissier21   | 1234123412341234 |
+| jardiner14    | 9876987698769876 |
+</code></pre>
+<p>Si la mauvaise clé est passée, alors la valeur NULL est retounée (et non le résultat du décryptage avec la mauvaise clé !)</p>
+<h3 id="phrase-secrete">Phrase secrète</h3>
+<p>Plutôt que d’utiliser une clé binaire, on peut utiliser une phrase secrète comme mot de passe. La clé est cependant limitée à 256 caractères. Comment fait-on ?</p>
+<ul>
+<li>On peut hasher la phrase secrète pour obtenir une chaîne de la bonne longueur !</li>
 </ul>
-</li>
-</ul>
+<h1 id="phrase-secrete_1">Phrase secrète</h1>
+<pre><code class="language-mysql"># Insertion
+INSERT INTO Utilisateur (nom, carte_credit) 
+  VALUES ('Patissier21', AES_ENCRYPT('1234123412341234',
+                           UNHEX(SHA2('secret', 256))));
+
+# Lecture
+SELECT nom, 
+  CAST(AES_DECRYPT(carte_credit, UNHEX(SHA2('secret', 256))) AS CHAR) AS 'Carte credit'
+  FROM Utilisateur;
+</code></pre>
+<h1 id="cryptage-de-la-bd">Cryptage de la BD</h1>
+<p>L’engin de stockage de données InnoDB permet de crypter l’ensemble d’une table ou de la BD. Via un plug-in.</p>
+<p>Ces manipulations ne sont pas vues en classe.</p>
+<p>https://dev.mysql.com/doc/refman/8.0/en/innodb-data-encryption.html</p>
+<h3 id="-exercice-421-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/></svg></span> --- Exercice 4.2.1 ---</h3>
+<p>On crée la table de renseignements personnels suivant :</p>
+<ol>
+<li>Nom</li>
+<li>Mot de passe</li>
+<li>Le contenu du certificat de naissance</li>
+<li>Une chaîne authentifiant le contenu du certificat de naissance</li>
+<li>Numéro de compte en banque</li>
+<li>Date de naissance</li>
+</ol>
+<p>Ajoutez les informations d’une personne fictive en cryptant ou hashant les données selon la situation.</p>
+<p>Affichez ensuite ces informations</p>
 
 
 

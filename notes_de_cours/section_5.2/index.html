@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://francois-mercier.github.io/cours-db1/notes_de_cours/section_3.1/">
+        <link rel="canonical" href="https://francois-mercier.github.io/cours-db1/notes_de_cours/section_5.2/">
       
       
-        <link rel="prev" href="../section_2.6/">
+        <link rel="prev" href="../section_5.1/">
       
       
-        <link rel="next" href="../section_3.2/">
+        <link rel="next" href="../section_5.3/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>3.1 Établir une stratégie de sauvegarde de la BD - Cours Bases de donn&eacute;es 1</title>
+        <title>5.2 Fonctions et déclencheurs - Cours Bases de donn&eacute;es 1</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pourquoi-sauvegarder-une-bd" class="md-skip">
+        <a href="#fonctions-et-declancheurs" class="md-skip">
           Aller au contenu
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              3.1 Établir une stratégie de sauvegarde de la BD
+              5.2 Fonctions et déclencheurs
             
           </span>
         </div>
@@ -262,13 +262,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../section_3.1/" class="md-tabs__link">
           
   
   Section 3
@@ -300,10 +298,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../section_5.1/" class="md-tabs__link">
           
   
@@ -717,8 +717,6 @@
       
   
   
-    
-  
   
   
     
@@ -729,12 +727,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
@@ -748,7 +746,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Section 3
@@ -759,28 +757,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    3.1 Établir une stratégie de sauvegarde de la BD
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../section_3.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -789,69 +769,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#pourquoi-sauvegarder-une-bd" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pourquoi sauvegarder une BD?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#importance-de-la-sauvegarde" class="md-nav__link">
-    <span class="md-ellipsis">
-      Importance de la sauvegarde
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#la-strategie-3-2-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      La stratégie 3-2-1
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#etapes-dune-strategie-de-sauvegarde" class="md-nav__link">
-    <span class="md-ellipsis">
-      Étapes d’une stratégie de sauvegarde
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#types-de-sauvegarde" class="md-nav__link">
-    <span class="md-ellipsis">
-      Types de sauvegarde
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1020,8 +937,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -1030,12 +949,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
@@ -1049,7 +968,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Section 5
@@ -1081,10 +1000,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../section_5.2/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    5.2 Fonctions et déclencheurs
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1093,6 +1032,287 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fonctions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonctions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fonctions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-de-fonction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types de fonction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caractere-deterministe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caractère déterministe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contenu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exigence-minimale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exigence minimale
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cas-des-fonctions-non-deterministe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cas des fonctions non déterministe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#declarer-une-fonction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Déclarer une fonction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-de-fonction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple de fonction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ajouter-des-parametres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ajouter des paramètres
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-de-fonction_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple de fonction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supprimer-une-fonction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supprimer une fonction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documenter-une-fonction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documenter une fonction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-exercice-521-" class="md-nav__link">
+    <span class="md-ellipsis">
+       --- Exercice 5.2.1 ---
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#declencheurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Déclencheurs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Déclencheurs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe-des-declencheurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Syntaxe des déclencheurs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choisir-before-ou-after" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choisir BEFORE ou AFTER
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acceder-a-lenregistrement-modifie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accéder à l'enregistrement modifié
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documenter-un-declencheur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documenter un déclencheur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demonstration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Démonstration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-exercice-522-" class="md-nav__link">
+    <span class="md-ellipsis">
+       --- Exercice 5.2.2 ---
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conflits-et-limitations-des-declencheurs-et-des-fonctions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conflits et limitations des déclencheurs et des fonctions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conflits et limitations des déclencheurs et des fonctions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-de-schemas-dexecution-a-probleme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple de schémas d'exécution à problème
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#declencheurs-sur-la-meme-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Déclencheurs sur la même table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demonstration_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Démonstration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-exercice-523-" class="md-nav__link">
+    <span class="md-ellipsis">
+       --- Exercice 5.2.3 ---
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lire-la-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lire la documentation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1144,104 +1364,292 @@
   
 
 
-  <h1>3.1 Établir une stratégie de sauvegarde de la BD</h1>
+<h1 id="fonctions-et-declancheurs">Fonctions et déclancheurs</h1>
+<h2 id="fonctions">Fonctions</h2>
+<p>Qu'est-ce qu'une fonction ?</p>
+<ul>
+<li>Traitement regroupé dans une structure. Peut accepter des valeurs et les transformer pour retourner un résultat.</li>
+</ul>
+<p>Particularité en SQL :</p>
+<ul>
+<li>Le type de retour <strong>VOID</strong> n'existe pas. Toutes les fonctions retournent un résultat.</li>
+</ul>
+<h3 id="types-de-fonction">Types de fonction</h3>
+<p>Plusieurs types de caractéristiques de fonctions existent dans MySQL. On en distingue principalement 2 :</p>
+<ul>
+<li>Caractère déterministe</li>
+<li>Contenu de la fonction (Type de requête qu'elle contient)</li>
+</ul>
+<h3 id="caractere-deterministe">Caractère déterministe</h3>
+<p>Indique si la valeur de retour est déterminée seulement selon les paramètres ou non.</p>
+<p>2 valeurs possibles :</p>
+<ul>
+<li>DETERMINISTIC</li>
+<li>NOT DETERMINISTIC (NOW, RAND...)</li>
+</ul>
+<h3 id="contenu">Contenu</h3>
+<p>4 valeurs représentent le contenu d’une fonction :</p>
+<p><strong>NO SQL</strong> : ne contient pas d’instruction SQL
+<strong>CONTAINS SQL</strong> : contient des instructions SQL
+<strong>READS SQL DATA</strong> : contient une opération SELECT
+<strong>MODIFIES SQL DATA</strong> : contient une opération <em>INSERT</em>, <em>UPDATE</em> ou <em>DELETE</em></p>
+<p>On indique toujours une seule caractéristique de contenu. (<em>MODIFIES</em> implique <em>READS</em>). </p>
+<h3 id="exigence-minimale">Exigence minimale</h3>
+<p>Dans vos fonctions, vous devez préciser explicitement au moins une caractéristique de déterministe ou de contenu.</p>
+<p><strong>Pour le cours, il faut préciser les deux caractéristiques en tout temps</strong></p>
+<p><em>Par défaut</em> :
+Déterminisme : <strong>NOT DETERMINISTIC</strong>
+Valeur : <strong>CONTAINS SQL</strong></p>
+<p>Vous pouvez en préciser une de chaque type.</p>
+<h3 id="cas-des-fonctions-non-deterministe">Cas des fonctions non déterministe</h3>
+<p><em>ERREUR 1418</em> : This function has none of DETERMINISTIC, NO SQL, or READS SQL DATA in its declaration and binary logging is enabled (you <em>might</em> want to use the less safe log_bin_trust_function_creators variable).</p>
+<p>Pour éviter cette erreur, on peut exécuter la ligne suivante AVANT de créer la fonction :</p>
+<pre><code class="language-sql">SET GLOBAL log_bin_trust_function_creators = 1;
+</code></pre>
+<p>Référence : https://stackoverflow.com/questions/26015160/deterministic-no-sql-or-reads-sql-data-in-its-declaration-and-binary-logging-i</p>
+<h3 id="declarer-une-fonction">Déclarer une fonction</h3>
+<pre><code class="language-sql">DELIMITER $$
 
-<p>Établir une stratégie de sauvegarde de la BD</p>
-<h2 id="pourquoi-sauvegarder-une-bd">Pourquoi sauvegarder une BD?</h2>
-<p>Pouvoir restaurer la BD dans les cas de :</p>
+CREATE FUNCTION nom_fonction() RETURNS TYPE CARACTERISTIQUE_1 CARACTERISTIQUE_2
+BEGIN   
+  ...
+  RETURN VALEUR;
+END $$
+
+DELIMITER ;
+</code></pre>
+<h3 id="exemple-de-fonction">Exemple de fonction</h3>
+<p>Fonction qui retourne le nombre d’enregistrements de la table Étudiant.</p>
+<pre><code class="language-sql">DELIMITER $$
+
+CREATE FUNCTION nombre_etudiants() RETURNS INTEGER NOT DETERMINISTIC READS SQL DATA
+BEGIN       
+  DECLARE _nombre INT;    
+  SET _nombre = (SELECT count(*) FROM Etudiant);    
+  RETURN _nombre;
+END $$
+
+DELIMITER ;
+</code></pre>
+<p>Pour exécuter la fonction</p>
+<pre><code class="language-sql">SELECT nombre_etudiants();
+</code></pre>
+<h3 id="ajouter-des-parametres">Ajouter des paramètres</h3>
+<p>On précise les paramètres entre les parenthèses en utilisant la syntaxe </p>
+<pre><code>nom_parametre TYPE
+</code></pre>
+<h3 id="exemple-de-fonction_1">Exemple de fonction</h3>
+<p>La fonction ajoute 1 à son argument.</p>
+<pre><code class="language-sql">DELIMITER $$
+
+CREATE FUNCTION plus_un(_nombre INTEGER) RETURNS INTEGER DETERMINISTIC CONTAINS SQL
+BEGIN       
+  RETURN _nombre + 1;
+END $$
+
+DELIMITER ;
+</code></pre>
+<h3 id="supprimer-une-fonction">Supprimer une fonction</h3>
+<p>L’instruction pour retirer une fonction est :</p>
+<pre><code class="language-mysql">DROP FUNCTION nom_fonction;
+</code></pre>
+<h3 id="documenter-une-fonction">Documenter une fonction</h3>
+<p>Pour documenter une fonction, on utilise un commentaire de style JavaDOC</p>
+<pre><code>/**
+ * Description de la fonction
+ *
+ * @param _nom_parametre Description
+ * @param _nom_parametre Description
+ * @return Description de la valeur retournée
+ */
+</code></pre>
+<h3 id="-exercice-521-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/></svg></span> --- Exercice 5.2.1 ---</h3>
+<p>A. Faites une fonction qui retourne la somme de deux entiers.</p>
+<p>B. Faites une fonction qui calcule la factorielle d’un entier.</p>
+<p>Rappel :</p>
+<p>6! = 6 x 5 x 4 x 3 x 2 x 1 x 1<br />
+  0! = 1</p>
+<p>C. Retournez le nombre d’étudiants inscrit dans un groupe dont vous connaissez la session (semestre et annee), le cours (sigle) et le numéro du groupe.</p>
+<p>Effectuez cet exerice de deux façons : sans utiliser de jointure et en utilisant des jointures.</p>
+<p><strong>Paramètres</strong> : semestre, annee, sigle, numero_groupe </p>
+<p><strong>Exemples d'exécution:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Semestre</th>
+<th>Annee</th>
+<th>Sigle</th>
+<th>Numéro de groupe</th>
+<th>Nombre d'étudiants</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Automne</td>
+<td>2020</td>
+<td>420-1D6-VI</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Automne</td>
+<td>2021</td>
+<td>420-1D6-VI</td>
+<td>1</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="declencheurs">Déclencheurs</h2>
+<p>Comment résoudre les situations suivantes :</p>
 <ul>
-<li>Destruction accidentelle (DROP *)</li>
-<li>Bris de serveur (usure/Ti-Guy qui a encore échappé son café)</li>
-<li>Attaque de pirates (ex.: rançongiciel)</li>
-<li>Manipulation erronée (ex. par du développement)</li>
-<li>Récréer les données suite à changement d’environnement (mise à jour MySQL)</li>
-<li>Pour un passage d'un environnement de tests à un déploiement en production</li>
-<li>Catastrophe naturelle, incendie, météorite ou invasion d’extra-terrestres <img alt="👽" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f47d.svg" title=":alien:" /></li>
+<li>Si l’on essaie d’ajouter une note plus grande que la note maximale d’évaluation, alors on affecte la note maximale</li>
+<li>Après la création d'une Evaluation, on crée un ligne de EvaluationEtudiant pour chaque étudiant du groupe</li>
+<li>Si l'on supprime une EvaluationEtudiant, alors on supprime le document associé (sens inverse du ON CASCADE) </li>
 </ul>
-<h2 id="importance-de-la-sauvegarde">Importance de la sauvegarde</h2>
-<p>Une perte de données coûte en moyenne entre 4,4 millions au Canada (2021).</p>
-<p>Selon certains fournisseurs de stockage, jusqu’à la moitié des entreprises perdront des données au cours de leurs opérations.</p>
-<h2 id="la-strategie-3-2-1">La stratégie 3-2-1</h2>
-<p>Présentée comme un standard, la règle du 3-2-1 est la suivante:</p>
+<p>Un déclencheur (appelé communément <em>Trigger</em>) permet d’effectuer un traitement immédiatement avant ou après l'une de ces opérations :</p>
 <ul>
-<li>3 copies de chaque donnée</li>
-<li>2 copies «onsite» (sur le même lieu physique)</li>
-<li>1 copie «offsite» (dans un emplacement physique différent)</li>
+<li>INSERT </li>
+<li>UPDATE</li>
+<li>DELETE</li>
 </ul>
-<h2 id="etapes-dune-strategie-de-sauvegarde">Étapes d’une stratégie de sauvegarde</h2>
+<h3 id="syntaxe-des-declencheurs">Syntaxe des déclencheurs</h3>
+<pre><code class="language-sql">DELIMITER $$
+CREATE TRIGGER nom TEMPS EVENEMENT ON Table FOR EACH ROW
+BEGIN
+    traitement
+END; $$
+DELIMITER ;
+
+TEMPS : BEFORE ou AFTER
+EVENEMENT : INSERT, UPDATE ou DELETE
+</code></pre>
+<h3 id="choisir-before-ou-after">Choisir BEFORE ou AFTER</h3>
+<p><strong>BEFORE</strong> :
+Quand il faut changer une valeur à insérer ou à modifier.</p>
+<p><strong>AFTER</strong> :
+Quand on veut s’assurer que la donnée soit bien insérée avant de faire le traitement (ex. n’a pas déclenché un check erroné). </p>
+<h3 id="acceder-a-lenregistrement-modifie">Accéder à l'enregistrement modifié</h3>
+<p>On peut utiliser les références <strong>OLD</strong> et <strong>NEW</strong> pour accéder à l'enregistrement qui fait l'objet d'un déclencheur.</p>
+<table>
+<thead>
+<tr>
+<th>Type de requête</th>
+<th>OLD</th>
+<th>NEW</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INSERT</td>
+<td>NULL</td>
+<td>L'enregistrement inséré</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>L'enregistrement avant la modification</td>
+<td>L'enregistrement après la modification</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>L'enregistrement supprimé</td>
+<td>NULL</td>
+</tr>
+</tbody>
+</table>
+<h3 id="exemple">Exemple</h3>
+<p>Si l’on essaie d’ajouter une note plus grande que la note maximale d’évaluation, alors on affecte la note maximale</p>
+<pre><code class="language-sql">DELIMITER $$
+CREATE TRIGGER respect_note_maximale BEFORE INSERT ON Evaluation_etudiant FOR EACH ROW
+BEGIN
+  DECLARE _note_maximale INTEGER;
+  SET _note_maximale = (
+    SELECT ponderation FROM Evaluation 
+      WHERE id_evaluation = NEW.id_evaluation
+  );
+
+  IF NEW.note &gt; _note_maximale THEN
+    SET NEW.note = _note_maximale;
+  END IF;
+END $$
+
+DELIMITER ;
+</code></pre>
+<h3 id="documenter-un-declencheur">Documenter un déclencheur</h3>
+<p>Pour documenter un déclencheur, on utilise un commentaire de style JavaDOC</p>
+<pre><code>/**
+ * Description du TRIGGER
+ *
+ * @dependencies Table_dependante, table_dependante...
+ */
+</code></pre>
+<h3 id="demonstration">Démonstration</h3>
+<p>Si la date de passation d'une nouvelle évaluation est hors de la durée de la session, alors on lui affecte la valeur nulle.</p>
+<h3 id="-exercice-522-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/></svg></span> --- Exercice 5.2.2 ---</h3>
+<p>Ajoutez les déclencheurs permettant d'effectuer les traitements suivants</p>
+<p>A. Lorsqu'on supprime un enseignant, tous les programmes dont il est responsable sont modifiés pour que le responsable soit NULL (enlever la contrainte NOT NULL sur la colonne responsable)
+B. À la suppression d'une EvaluationEtudiant, alors on supprime le document associé (sens inverse du ON CASCADE) </p>
+<h2 id="conflits-et-limitations-des-declencheurs-et-des-fonctions">Conflits et limitations des déclencheurs et des fonctions</h2>
+<p>Les cas de figure suivant sont interdits :</p>
+<ul>
+<li>Une fonction ne peut pas s'appeler elle-même</li>
+<li>Un déclencheur ne peut pas être appelé sur une table en modification par un déclencheur</li>
+</ul>
+<p>Un déclencheur peut appeler une fonction et l'exécution d'une fonction pourrait activer un déclencheur.</p>
+<p><strong>Les appels implicits sont aussi interdits !</strong></p>
+<h3 id="exemple-de-schemas-dexecution-a-probleme">Exemple de schémas d'exécution à problème</h3>
+<p><img alt="" src="../images/5_fct_trigger.png" /></p>
+<h3 id="declencheurs-sur-la-meme-table">Déclencheurs sur la même table</h3>
+<p>Appeler un déclencheur BEFORE et un AFTER sur la même table.</p>
 <ol>
-<li>
-<p>Déterminer les données à sauvegarder?</p>
-</li>
-<li>
-<p>Qu’est-ce qui est critique?</p>
-<ul>
-<li>Grouper par groupe : critique pour survivre, important pour opérer, optimal pour le développement</li>
-</ul>
-</li>
-<li>
-<p>Qu’est-ce qui est suffisamment important pour investir dans sa sauvegarde?</p>
-<ul>
-<li>Dans cette question, évaluez le rapport quantité/coût. Faire une sauvegarde de Facebook (+/- 100 Po) est plus lourd qu’une sauvegarde de Wikipédia (+/- 10TB).</li>
-</ul>
-</li>
-<li>
-<p>Déterminer la fréquence des sauvegardes?</p>
-</li>
-<li>
-<p>Sauvegardes périodiques (quotidienne, hebdomadaire)</p>
-<ul>
-<li>Quelle quantité de travail on peut se permettre de perdre?</li>
-</ul>
-</li>
-<li>
-<p>Sauvegarde exceptionnelle</p>
-<ul>
-<li>Quand ces sauvegardes sont-elles requises?</li>
-</ul>
-</li>
-<li>
-<p>Choisir et mettre en place une stratégie</p>
-</li>
-<li>
-<p>Préparer deux serveurs locaux (2)</p>
-</li>
-<li>Préparer un serveur distance/souscrire à un service (1)</li>
-<li>Décrire un système d’organisation des sauvegardes<ul>
-<li>Nomenclature/emplacement logiciel</li>
-</ul>
-</li>
-<li>Mettre en place une routine de sauvegarde (périodique)</li>
-<li>
-<p>Mettre en place une procédure de sauvegarde exceptionnelle</p>
-</li>
-<li>
-<p>Tester (régulièrement) et assurer la maintenance</p>
-</li>
-<li>
-<p>Ne pas tenter la loi de Murphy/loi de l’emmerdement maximal</p>
-</li>
-<li>La journée que vous avez besoin de restaurer la sauvegarde, il y a intérêt à ce que ça fonctionne</li>
-<li>Tenez compte des modifications aux structures de données<ul>
-<li>Avec l’évolution du projet, la stratégie de sauvegarde doit évoluer</li>
-</ul>
-</li>
+<li>La table est verrouillée, le déclencheur BEFORE s'exécute, la table est libérée</li>
+<li>La requête s'exécute</li>
+<li>La table est verrouillée, le déclencheur AFTER s'exécute, la table est libérée</li>
 </ol>
-<h2 id="types-de-sauvegarde">Types de sauvegarde</h2>
-<ul>
-<li>Sauvegarde complète<ul>
-<li>Crée une copie complète de toutes les données</li>
-<li>Pour : facile à mettre en place et diminue les risques d’incohérence à la restauration</li>
-<li>Contre : demande beaucoup d’espace de stockage, car duplique l’information</li>
-</ul>
-</li>
-<li>Sauvegarde différentielle<ul>
-<li>Crée une copie seulement des changements</li>
-<li>Pour : ne duplique pas l’information de sauvegarde</li>
-<li>Contre : système de restauration plus complexe qui peut s’effondrer si l’historique est corrompu.</li>
-</ul>
-</li>
-</ul>
+<p>Donc une table peut définir jusqu'à 6 déclencheurs.</p>
+<h3 id="demonstration_1">Démonstration</h3>
+<p>Si la date de passation d'une évaluation est hors de la durée de la session, alors on lui affecte la valeur nulle.</p>
+<p>Gérez cette validation pour l'insertion et la modification.</p>
+<h3 id="-exercice-523-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/></svg></span> --- Exercice 5.2.3 ---</h3>
+<p>C. Si l'évaluation ajoutée cause la somme des pondérations du cours à excéder 100%, alors la pondération devient 0. Gérez cette validation lors de l'ajout et de la modification.</p>
+<h3 id="lire-la-documentation">Lire la documentation</h3>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Symbole</th>
+<th>Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">[ ]</td>
+<td>Indique un élément optionnel</td>
+</tr>
+<tr>
+<td style="text-align: center;">…</td>
+<td>Ellipse (permet de répéter un élément)</td>
+</tr>
+<tr>
+<td style="text-align: center;">MAJUSCULES</td>
+<td>Mot-clé du langage</td>
+</tr>
+<tr>
+<td style="text-align: center;">Italique</td>
+<td>Terme définit plus loin</td>
+</tr>
+<tr>
+<td style="text-align: center;">|</td>
+<td>OU</td>
+</tr>
+<tr>
+<td style="text-align: center;">{ }</td>
+<td>Un dans la liste est obligatoire</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<p><strong>Le texte contient des informations importantes sur ce qui est permis et le résultat des opérations.</strong></p>
 
 
 
