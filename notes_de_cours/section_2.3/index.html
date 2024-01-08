@@ -8,26 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://francois-mercier.github.io/cours-db1/">
+        <link rel="canonical" href="https://francois-mercier.github.io/cours-db1/notes_de_cours/section_2.3/">
       
       
+        <link rel="prev" href="../section_2.2/">
       
-        <link rel="next" href="notes_de_cours/section_1.1/">
+      
+        <link rel="next" href="../section_2.4/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.1">
     
     
       
-        <title>Cours Bases de donn&eacute;es 1</title>
+        <title>2.3 Opérateurs arithmétiques, chaînes et expressions régulières - Cours Bases de donn&eacute;es 1</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.45e1311d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.45e1311d.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#bases-de-donnees-1-420-2b4-vi-hiver-2024" class="md-skip">
+        <a href="#operateurs-arithmetiques-et-chaines-de-caracteres" class="md-skip">
           Aller au contenu
         </a>
       
@@ -88,7 +90,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="." title="Cours Bases de donn&amp;eacute;es 1" class="md-header__button md-logo" aria-label="Cours Bases de donn&eacute;es 1" data-md-component="logo">
+    <a href="../.." title="Cours Bases de donn&amp;eacute;es 1" class="md-header__button md-logo" aria-label="Cours Bases de donn&eacute;es 1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0s224 35.8 224 80zm-54.8 134.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432v-85.9z"/></svg>
@@ -108,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Accueil
+              2.3 Opérateurs arithmétiques, chaînes et expressions régulières
             
           </span>
         </div>
@@ -207,11 +209,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -230,7 +230,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="notes_de_cours/section_1.1/" class="md-tabs__link">
+        <a href="../section_1.1/" class="md-tabs__link">
           
   
   Section 1
@@ -244,11 +244,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="notes_de_cours/section_2.1/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../section_2.1/" class="md-tabs__link">
           
   
   Section 2
@@ -266,7 +268,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="notes_de_cours/section_3.1/" class="md-tabs__link">
+        <a href="../section_3.1/" class="md-tabs__link">
           
   
   Section 3
@@ -284,7 +286,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="notes_de_cours/section_4.1/" class="md-tabs__link">
+        <a href="../section_4.1/" class="md-tabs__link">
           
   
   Section 4
@@ -302,7 +304,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="notes_de_cours/section_5.1/" class="md-tabs__link">
+        <a href="../section_5.1/" class="md-tabs__link">
           
   
   Section 5
@@ -318,7 +320,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="calendrier/" class="md-tabs__link">
+      <a href="../../calendrier/" class="md-tabs__link">
         
   
     
@@ -360,7 +362,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Cours Bases de donn&amp;eacute;es 1" class="md-nav__button md-logo" aria-label="Cours Bases de donn&eacute;es 1" data-md-component="logo">
+    <a href="../.." title="Cours Bases de donn&amp;eacute;es 1" class="md-nav__button md-logo" aria-label="Cours Bases de donn&eacute;es 1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0s224 35.8 224 80zm-54.8 134.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432v-85.9z"/></svg>
@@ -387,30 +389,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Accueil
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -419,68 +401,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#environnement-de-travail" class="md-nav__link">
-    <span class="md-ellipsis">
-      Environnement de travail
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Environnement de travail">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ampps" class="md-nav__link">
-    <span class="md-ellipsis">
-      AMPPS
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mysql-workbench" class="md-nav__link">
-    <span class="md-ellipsis">
-      MySQL Workbench
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -532,7 +452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_1.1/" class="md-nav__link">
+      <a href="../section_1.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -553,7 +473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_1.2/" class="md-nav__link">
+      <a href="../section_1.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -574,7 +494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_1.3/" class="md-nav__link">
+      <a href="../section_1.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -595,7 +515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_1.4/" class="md-nav__link">
+      <a href="../section_1.4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -616,7 +536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_1.5/" class="md-nav__link">
+      <a href="../section_1.5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -641,8 +561,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -651,12 +573,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -670,7 +592,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Section 2
@@ -684,7 +606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_2.1/" class="md-nav__link">
+      <a href="../section_2.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -705,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_2.2/" class="md-nav__link">
+      <a href="../section_2.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -723,10 +645,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="notes_de_cours/section_2.3/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    2.3 Opérateurs arithmétiques, chaînes et expressions régulières
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -735,6 +677,173 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#operations-arithmetiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opérations arithmétiques
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recherche-sur-les-chaines-de-caracteres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recherche sur les chaînes de caractères
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recherche sur les chaînes de caractères">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-like" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple LIKE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expressions-regulieres-regex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expressions régulières (REGEX)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Expressions régulières (REGEX)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rechercher-un-caractere" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rechercher un caractère
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debut-et-fin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Début et fin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repetitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Répétitions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-exercice-231-" class="md-nav__link">
+    <span class="md-ellipsis">
+       --- Exercice 2.3.1 ---
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repetitions-suite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Répétitions (suite)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classes-de-caracteres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes de caractères
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-exercice-232-" class="md-nav__link">
+    <span class="md-ellipsis">
+       --- Exercice 2.3.2 ---
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classes-speciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes spéciales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classes-speciales-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes spéciales MySQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caractere-speciaux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caractère spéciaux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -747,7 +856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_2.4/" class="md-nav__link">
+      <a href="../section_2.4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -768,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_2.5/" class="md-nav__link">
+      <a href="../section_2.5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -789,7 +898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_2.6/" class="md-nav__link">
+      <a href="../section_2.6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -857,7 +966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_3.1/" class="md-nav__link">
+      <a href="../section_3.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -878,7 +987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_3.2/" class="md-nav__link">
+      <a href="../section_3.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -899,7 +1008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_3.3/" class="md-nav__link">
+      <a href="../section_3.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -967,7 +1076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_4.1/" class="md-nav__link">
+      <a href="../section_4.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -988,7 +1097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_4.2/" class="md-nav__link">
+      <a href="../section_4.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1009,7 +1118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_4.3/" class="md-nav__link">
+      <a href="../section_4.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1077,7 +1186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_5.1/" class="md-nav__link">
+      <a href="../section_5.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1098,7 +1207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_5.2/" class="md-nav__link">
+      <a href="../section_5.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1119,7 +1228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_5.3/" class="md-nav__link">
+      <a href="../section_5.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1147,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="calendrier/" class="md-nav__link">
+      <a href="../../calendrier/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1178,55 +1287,465 @@
   
 
 
-<h1 id="bases-de-donnees-1-420-2b4-vi-hiver-2024">Bases de données 1 (420-2B4-VI) - Hiver 2024</h1>
-<h2 id="introduction">Introduction</h2>
-<p>Vous trouverez ici les notes et exercices du cours. J'ajouterai du nouveau contenu continuellement.</p>
-<p><strong>Préalable à ce cours</strong> : 420-1D6-VI Programmation 1</p>
-<p><strong>Ce cours est préalable à</strong> :
-420-3B4-VI : Bases de données 2 (approfondissement de la conception et intégration à des applications logicielles/web)<br />
-420-3A5-VI : Développement web 2 (intégration des BD dans un contexte web)<br />
-420-3C4-VI : Piratage éthique (sécuriser les applications)<br />
-420-4C4-VI : Mégadonnées (efficacité des traitements sur de grands ensembles et base de données NoSQL)  </p>
-<p>Il est donc préalable, indirectement, à presque tous les cours de la 3e année.</p>
-<p><strong>Cheminement complet</strong>: <a href="https://informatique.apical.xyz/">https://informatique.apical.xyz/</a></p>
-<h2 id="environnement-de-travail">Environnement de travail</h2>
-<p>Afin d’utiliser MySQL vous devez installer deux logiciels :</p>
+<h1 id="operateurs-arithmetiques-et-chaines-de-caracteres">Opérateurs arithmétiques et chaînes de caractères</h1>
+<h2 id="operations-arithmetiques">Opérations arithmétiques</h2>
+<p>On peut effectuer des opérations arithmétiques lors des requêtes.</p>
+<table>
+<thead>
+<tr>
+<th>Opérateur</th>
+<th style="text-align: center;">Symbole</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Addition</td>
+<td style="text-align: center;">+</td>
+</tr>
+<tr>
+<td>Soustraction</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td>Multiplication</td>
+<td style="text-align: center;">*</td>
+</tr>
+<tr>
+<td>Division</td>
+<td style="text-align: center;">/</td>
+</tr>
+<tr>
+<td>Modulo</td>
+<td style="text-align: center;">%</td>
+</tr>
+</tbody>
+</table>
+<p>On veut sélectionner le nombre d’heures par semaine de chaque cours, sachant qu'une session dure 15 semaines.</p>
+<pre><code class="language-mysql">SELECT duree / 15 FROM Cours;
+</code></pre>
+<p>On peut utiliser des noms de colonne des deux côtés de l'opérateur.</p>
+<p><img alt="" src="../images/2_cours.png" /></p>
+<h2 id="recherche-sur-les-chaines-de-caracteres">Recherche sur les chaînes de caractères</h2>
+<p>Pour rechercher simplement sur des chaînes de caractères (CHAR, VARCHAR) on utilise l’opérateur LIKE et les <em>patterns de recherche</em>.</p>
+<p>Les patterns disposes de 3 caractères spéciaux :</p>
 <ul>
-<li>AMPPS, qui contient MySQL Server (installé aussi dans le cours de web 1)</li>
-<li>MySQL Workbench</li>
+<li><strong>%</strong> : correspond à 0, 1 ou plusieurs caractères</li>
+<li><strong>_</strong> : correspond à 1 unique caractère</li>
+<li><strong>\</strong> : permet d’échapper les caractères % ou _</li>
 </ul>
-<h3 id="ampps">AMPPS</h3>
-<p>AMPPS est une pile Apache (Apache, MySQL, Php, Perl et d’autres) disponible à <a href="https://ampps.com/">https://ampps.com/</a></p>
-<p><em>Note</em> : si vous avez une erreur en lien avec « Microsoft c++ redistributable », lisez les détails de l’erreur. S’il est indiqué qu’une autre version est déjà installée, c’est probablement une version plus récente, ce qui est sans conséquence.</p>
-<p>Une fois installé, vous n’avez qu’à le lancer pour voir apparaître cette petite fenêtre au bas à droite de votre écran. Le statut de MySQL devrait être vert (ça peut prendre quelques secondes après le démarrage pour passer du rouge au vert, c’est normal).</p>
-<p><img alt="AMPPS" src="images/ampps.png" /></p>
-<p>Note: si vous voulez, vous pouvez configurer AMPPS pour qu'il démarre automatiquement à l'ouverture de votre session Windows. Sinon vous devrez le démarrer manuellement.
- </p>
-<h3 id="mysql-workbench">MySQL Workbench</h3>
-<p>Téléchargez-le sur le site <a href="https://www.mysql.com/fr/products/workbench/">https://www.mysql.com/fr/products/workbench/</a></p>
-<p>À l’installation, choisissez « Client only ».</p>
-<p>Pour le lancer, il suffit de cliquer sur l’application. Vous devez d’abord démarrer MySQL Server. </p>
-<p>Une fois l’application lancée, vous devez ajouter une connexion en cliquant sur « + » (seulement au premier démarrage). </p>
-<p><img alt="" src="images/wb01.png" /></p>
-<p>Dans la fenêtre qui apparaît, entrez les infos suivantes :</p>
+<p>Rechercher sur un objet TEXT risque de prendre énormément de temps. C'est le type d'opération qu'on évite à moins d'y être contraint.</p>
+<p>Rechercher tous les mots qui commencent par <em>des</em>:</p>
 <ul>
-<li>
-<p>Connection Name : le nom de votre connexion. Vous pouvez mettre ce que vous voulez, tant que vous le retrouvez.</p>
-</li>
-<li>
-<p>Password : cliquez sur Store in Vault… et entrez le mot de passe : « mysql ».</p>
-</li>
-<li>
-<p>[optionnel] : cliquer sur le bouton Test Connection en bas à droite.</p>
-</li>
-<li>
-<p>Cliquer sur le bouton OK.</p>
-</li>
+<li>Pattern : des%</li>
 </ul>
-<p><img alt="" src="images/wb02.png" /></p>
-<p>Si tout se passe bien, vous verrez la fenêtre suivante:</p>
-<p><img alt="" src="images/wb03.png" /></p>
-<p>Vous allez pouvoir entrer des commandes SQL dans la zone indiquée. L’icône de disquette permet de sauvegarder vos scripts. L’éclair exécute tout le script tandis que l’éclair avec un curseur exécute que la requête dans laquelle votre curseur est situé.</p>
+<p>Rechercher des mots de 2 lettres terminant par e:</p>
+<ul>
+<li>Pattern : _e</li>
+</ul>
+<p>Rechercher des mots terminant par le symbole %:</p>
+<ul>
+<li>Pattern : %\%</li>
+</ul>
+<h3 id="exemple-like">Exemple LIKE</h3>
+<p>On veut sélectionner les pondérations et le titre de toutes les évaluation comportant le mot « final » ou « finale »</p>
+<pre><code class="language-mysql">SELECT ponderation, titre FROM Evaluation 
+  WHERE titre LIKE '%final%';
+</code></pre>
+<p>On peut utiliser des noms de colonne des deux côtés de l'opérateur.</p>
+<p><img alt="" src="../images/2_evaluation.png" /></p>
+<h2 id="expressions-regulieres-regex">Expressions régulières (REGEX)</h2>
+<p>Les patterns sont simples à utilisés, mais aussi limités. Pour faire une recherche plus avancée, on utilise les REGEX (<em>Regular Expression</em>).</p>
+<p>Pour introduire une REGEX en MySQL, on utilise la syntaxe suivante :</p>
+<pre><code class="language-mysql">SELECT colonne FROM Table WHERE colonne RLIKE 'regex';
+</code></pre>
+<h3 id="rechercher-un-caractere">Rechercher un caractère</h3>
+<p>À moins qu'il s'agisse d'un caractère spécial, indiquez une lettre dans une REGEX permet de chercher celle-ci, n'importe où dans la chaîne.</p>
+<table>
+<thead>
+<tr>
+<th>Chaîne</th>
+<th>Regex</th>
+<th>Trouvé</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>abc</td>
+<td>a</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>cba</td>
+<td>a</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>abc</td>
+<td>ab</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>cba</td>
+<td>ab</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>cba</td>
+<td>ba</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>abc</td>
+<td>d</td>
+<td>Non</td>
+</tr>
+</tbody>
+</table>
+<h3 id="debut-et-fin">Début et fin</h3>
+<p>Pour indiquer le début d'une chaîne, on utilise le symbole <strong>^</strong>, et pour la fin, le symbole <strong>$</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Chaîne</th>
+<th>Regex</th>
+<th>Trouvé</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>abc</td>
+<td>^a</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>cba</td>
+<td>a$</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>abc</td>
+<td>^bc</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>abc</td>
+<td>^ab$</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>abc</td>
+<td>ab$</td>
+<td>Non</td>
+</tr>
+</tbody>
+</table>
+<h3 id="repetitions">Répétitions</h3>
+<p>Les REGEX offrent 3 différents caractères spéciaux pour la répétition :
+* <strong>*</strong> : indique que le caractère peut s'y trouver 0, 1 ou plusieurs fois
+* <strong>?</strong> : indique que le caractère peut s'y trouver 0 ou 1 fois
+* <strong>+</strong> : indique que le caractère doit s'y trouver au moins une fois (1 ou plusieurs)</p>
+<table>
+<thead>
+<tr>
+<th>Chaîne</th>
+<th>Regex</th>
+<th>Trouvé</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>abc</td>
+<td>a*</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>cba</td>
+<td>a+</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>abc</td>
+<td>b*c</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>aac</td>
+<td>b*c</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>aac</td>
+<td>a?c</td>
+<td>Non</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Chaîne</th>
+<th>Regex</th>
+<th>Trouvé</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aac</td>
+<td>a+c</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>bbc</td>
+<td>a+c</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>aaaaaaaaaaaa</td>
+<td>a*</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>aaaaaaaaaaaa</td>
+<td>a?</td>
+<td>Non</td>
+</tr>
+<tr>
+<td>aaaaaaaaaaaa</td>
+<td>a+</td>
+<td>Oui</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-exercice-231-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/></svg></span> --- Exercice 2.3.1 ---</h3>
+<p>Écrivez les REGEX pour trouver les informations suivantes parmis les mots suivants :</p>
+<p>chat, chaton, chatte, carotte, chalet, valet, animal</p>
+<p>Utilisez le site https://regex101.com/ pour vous aider.</p>
+<p>A. Les mots contenant « chat » (3 mots)
+B. Les mots commençant par « ch » (4 mots)
+C. Les mots contenant un ou deux 2 « t » (6 mots)
+D. Les mots finissant par « et » ou « e » (4 mots)
+E. Les mots contenant « a » suivis de 1 ou plusieurs « t » (3 mots)</p>
+<h3 id="repetitions-suite">Répétitions (suite)</h3>
+<p>On peut aussi spécifier le nombre exacte de répétition recherché ou les mettre dans un intervalle. On utilise la notation <strong>{min, max}</strong> ou <strong>{nombre}</strong>. On peut omettre le max si l'on cherche au moins <em>x</em> caractères et omettre le min si l'on cherche au plus <em>x</em> caractères</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Intervalle</th>
+<th>Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">{1, 3}</td>
+<td>Entre 1 et 3 répétitions</td>
+</tr>
+<tr>
+<td style="text-align: center;">{4}</td>
+<td>Exactement 4 répétitions</td>
+</tr>
+<tr>
+<td style="text-align: center;">{5,}</td>
+<td>5 répétitions et plus</td>
+</tr>
+<tr>
+<td style="text-align: center;">{,2}</td>
+<td>Pas plus de 2 répétitions (équivalent à {0, 2})</td>
+</tr>
+<tr>
+<td style="text-align: center;">{3,1}</td>
+<td>Provoque une erreur</td>
+</tr>
+</tbody>
+</table>
+<h3 id="classes-de-caracteres">Classes de caractères</h3>
+<p>On peut sélectionner tous les caractères compris entre deux caractères (au sens du code ASCII), dans un ordre quelconque avec les classes de caractères. </p>
+<p>On indique une classe avec <strong>[<em>min</em>-<em>max</em>]</strong>. On peut juxtaposé des intervalles pour augmenter la portée de la classe.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Classe</th>
+<th>Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">[a-z]</td>
+<td>N'importe quelle lettre minuscule</td>
+</tr>
+<tr>
+<td style="text-align: center;">[02468]</td>
+<td>N'importe quel nombre pair</td>
+</tr>
+<tr>
+<td style="text-align: center;">[a-zA-Z]</td>
+<td>N'importe quelle lettre majuscule ou minuscule</td>
+</tr>
+<tr>
+<td style="text-align: center;">[a-z-]</td>
+<td>N'importe quelle lettre minuscule et le trait d'union (toujours à la fin !)</td>
+</tr>
+<tr>
+<td style="text-align: center;">[a-zA-Z0-9]</td>
+<td>N'importe quelle lettre ou nombre</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Énoncé</th>
+<th>REGEX</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Un numéro de téléphone</td>
+<td>[0-9]{3}-[0-9]{3}-[0-9]{4}</td>
+</tr>
+<tr>
+<td>Une séquence contenant entre 3 et 8 lettres</td>
+<td>[a-zA-Z]{3,8}</td>
+</tr>
+<tr>
+<td>Un mot de 6 lettres commençant par h</td>
+<td>^h[a-z]{5}$</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-exercice-232-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/></svg></span> --- Exercice 2.3.2 ---</h3>
+<p>Écrivez les REGEX pour trouver les informations suivantes parmis les mots suivants :
+chat, chaton, chatte, carotte, chalet, valet, animal</p>
+<p>Utilisez le site https://regex101.com/ pour vous aider.</p>
+<p>A. Les mots de 4 lettres (1 mot)
+B. Les mots débutant par « cha » et ayant au moins 5 lettres (3 mots)
+C. Les mots qui contiennent au moins 3 voyelles. (2 mots)</p>
+<h3 id="classes-speciales">Classes spéciales</h3>
+<p>Les REGEX définissent un certains nombres de classes et de caractères spéciaux.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Classe</th>
+<th>Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">\w</td>
+<td>Tout caractère de mot (lettre et nombres) [a-zA-Z0-9_]</td>
+</tr>
+<tr>
+<td style="text-align: center;">\d</td>
+<td>Tout nombre [0-9]</td>
+</tr>
+<tr>
+<td style="text-align: center;">\s</td>
+<td>Espaces [\n\r\t ]</td>
+</tr>
+<tr>
+<td style="text-align: center;">\W \D \S</td>
+<td>La négation de la classe associé à la minuscule</td>
+</tr>
+</tbody>
+</table>
+<h3 id="classes-speciales-mysql">Classes spéciales MySQL</h3>
+<p>Les REGEX dans MySQL définissent des classes spéciales qui leur sont propres. Pour les utiliser on les écrits entre crochets en utilisant la syntaxe suivante :</p>
+<pre><code class="language-sql">[:classe de caractere:]
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Nom de la classe</th>
+<th>Contenu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alnum</td>
+<td>Caractères alphanumériques (comme \w sauf _)</td>
+</tr>
+<tr>
+<td>alpha</td>
+<td>Caractères de l'alphabet</td>
+</tr>
+<tr>
+<td>space</td>
+<td>Caractères d'espacement (semblable à \s)</td>
+</tr>
+<tr>
+<td>cntrl</td>
+<td>Caractères de contrôles (comme tabulation ou retour à la ligne)</td>
+</tr>
+<tr>
+<td>digit</td>
+<td>Caractères numériques (comme \d)</td>
+</tr>
+<tr>
+<td>lower, upper</td>
+<td>Caractères alphabétiques minuscules ou majuscules</td>
+</tr>
+</tbody>
+</table>
+<p>Plus de  classes : https://dev.mysql.com/doc/refman/8.0/en/regexp.html#regexp-syntax</p>
+<h3 id="caractere-speciaux">Caractère spéciaux</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Classe</th>
+<th>Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">.</td>
+<td>N'importe quel caractère</td>
+</tr>
+<tr>
+<td style="text-align: center;">|</td>
+<td>Opérateur ou</td>
+</tr>
+<tr>
+<td style="text-align: center;">^</td>
+<td>Opérateur de négation</td>
+</tr>
+<tr>
+<td style="text-align: center;">-</td>
+<td>Trait d'union, doit toujours être à la fin d'une classe</td>
+</tr>
+</tbody>
+</table>
+<p>Par exemple <strong>[^ab]</strong> vérifie que ni « a » ni « b » apparaîssent.</p>
+<h3 id="options">Options</h3>
+<p>À la fin d'une REGEX on peut indiquer certaines options. Cela ne fonctionne pas en MySQL. Voici les options les plus communes.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Lettre</th>
+<th>Option</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">g</td>
+<td><em>Greedy</em> : retourne toutes les occurences où la REGEX est trouvée (Pas en SQL)</td>
+</tr>
+<tr>
+<td style="text-align: center;">U</td>
+<td><em>Ungreedy</em> : retourne uniquement la première occurence où la REGEX est trouvée (Pas en SQL)</td>
+</tr>
+<tr>
+<td style="text-align: center;">m</td>
+<td><em>Multiline</em> : ^ et $ indique le début et la fin d'une ligne</td>
+</tr>
+<tr>
+<td style="text-align: center;">i</td>
+<td><em>Case insensitive</em> : la recherche n'est pas sensible à la casse</td>
+</tr>
+<tr>
+<td style="text-align: center;">c</td>
+<td><em>Case sensitive</em> : la recherche est sensible à la casse</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -1273,10 +1792,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "content.code.copy", "toc.integrate"], "search": "assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "content.code.copy", "toc.integrate"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   </body>

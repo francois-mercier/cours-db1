@@ -8,26 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://francois-mercier.github.io/cours-db1/">
+        <link rel="canonical" href="https://francois-mercier.github.io/cours-db1/notes_de_cours/section_4.3/">
       
       
+        <link rel="prev" href="../section_4.2/">
       
-        <link rel="next" href="notes_de_cours/section_1.1/">
+      
+        <link rel="next" href="../section_5.1/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.1">
     
     
       
-        <title>Cours Bases de donn&eacute;es 1</title>
+        <title>4.3 Gestion des accès - Cours Bases de donn&eacute;es 1</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.45e1311d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.45e1311d.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#bases-de-donnees-1-420-2b4-vi-hiver-2024" class="md-skip">
+        <a href="#gestion-des-acces" class="md-skip">
           Aller au contenu
         </a>
       
@@ -88,7 +90,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="." title="Cours Bases de donn&amp;eacute;es 1" class="md-header__button md-logo" aria-label="Cours Bases de donn&eacute;es 1" data-md-component="logo">
+    <a href="../.." title="Cours Bases de donn&amp;eacute;es 1" class="md-header__button md-logo" aria-label="Cours Bases de donn&eacute;es 1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0s224 35.8 224 80zm-54.8 134.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432v-85.9z"/></svg>
@@ -108,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Accueil
+              4.3 Gestion des accès
             
           </span>
         </div>
@@ -207,11 +209,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -230,7 +230,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="notes_de_cours/section_1.1/" class="md-tabs__link">
+        <a href="../section_1.1/" class="md-tabs__link">
           
   
   Section 1
@@ -248,7 +248,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="notes_de_cours/section_2.1/" class="md-tabs__link">
+        <a href="../section_2.1/" class="md-tabs__link">
           
   
   Section 2
@@ -266,7 +266,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="notes_de_cours/section_3.1/" class="md-tabs__link">
+        <a href="../section_3.1/" class="md-tabs__link">
           
   
   Section 3
@@ -280,11 +280,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="notes_de_cours/section_4.1/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../section_4.1/" class="md-tabs__link">
           
   
   Section 4
@@ -302,7 +304,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="notes_de_cours/section_5.1/" class="md-tabs__link">
+        <a href="../section_5.1/" class="md-tabs__link">
           
   
   Section 5
@@ -318,7 +320,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="calendrier/" class="md-tabs__link">
+      <a href="../../calendrier/" class="md-tabs__link">
         
   
     
@@ -360,7 +362,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Cours Bases de donn&amp;eacute;es 1" class="md-nav__button md-logo" aria-label="Cours Bases de donn&eacute;es 1" data-md-component="logo">
+    <a href="../.." title="Cours Bases de donn&amp;eacute;es 1" class="md-nav__button md-logo" aria-label="Cours Bases de donn&eacute;es 1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0s224 35.8 224 80zm-54.8 134.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432v-85.9z"/></svg>
@@ -387,30 +389,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Accueil
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -419,68 +401,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#environnement-de-travail" class="md-nav__link">
-    <span class="md-ellipsis">
-      Environnement de travail
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Environnement de travail">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ampps" class="md-nav__link">
-    <span class="md-ellipsis">
-      AMPPS
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mysql-workbench" class="md-nav__link">
-    <span class="md-ellipsis">
-      MySQL Workbench
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -532,7 +452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_1.1/" class="md-nav__link">
+      <a href="../section_1.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -553,7 +473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_1.2/" class="md-nav__link">
+      <a href="../section_1.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -574,7 +494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_1.3/" class="md-nav__link">
+      <a href="../section_1.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -595,7 +515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_1.4/" class="md-nav__link">
+      <a href="../section_1.4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -616,7 +536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_1.5/" class="md-nav__link">
+      <a href="../section_1.5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -684,7 +604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_2.1/" class="md-nav__link">
+      <a href="../section_2.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -705,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_2.2/" class="md-nav__link">
+      <a href="../section_2.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -726,7 +646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_2.3/" class="md-nav__link">
+      <a href="../section_2.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -747,7 +667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_2.4/" class="md-nav__link">
+      <a href="../section_2.4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -768,7 +688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_2.5/" class="md-nav__link">
+      <a href="../section_2.5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -789,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_2.6/" class="md-nav__link">
+      <a href="../section_2.6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -857,7 +777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_3.1/" class="md-nav__link">
+      <a href="../section_3.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -878,7 +798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_3.2/" class="md-nav__link">
+      <a href="../section_3.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -899,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_3.3/" class="md-nav__link">
+      <a href="../section_3.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -924,8 +844,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -934,12 +856,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
@@ -953,7 +875,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Section 4
@@ -967,7 +889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_4.1/" class="md-nav__link">
+      <a href="../section_4.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -988,7 +910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_4.2/" class="md-nav__link">
+      <a href="../section_4.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1006,10 +928,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="notes_de_cours/section_4.3/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    4.3 Gestion des accès
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1018,6 +960,194 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pourquoi-gerer-les-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pourquoi gérer les rôles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crud-des-utilisateurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      CRUD des utilisateurs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CRUD des utilisateurs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modifier-un-utilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modifier un utilisateur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supprimer-un-utilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supprimer un utilisateur
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#niveaux-de-privilege" class="md-nav__link">
+    <span class="md-ellipsis">
+      Niveaux de privilège
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Niveaux de privilège">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conferer-un-privilege" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conférer un privilège
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#revoquer-un-privilege" class="md-nav__link">
+    <span class="md-ellipsis">
+      Révoquer un privilège
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#determiner-lutilisateur-connecte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Déterminer l'utilisateur connecté
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Déterminer l'utilisateur connecté">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-exercice-431-" class="md-nav__link">
+    <span class="md-ellipsis">
+       --- Exercice 4.3.1 ---
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les rôles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les rôles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definir-un-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      Définir un rôle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conferer-ou-revoquer-un-privilege-a-un-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conférer ou révoquer un privilège à un rôle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assigner-un-role-a-un-utilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assigner un rôle à un utilisateur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifier-le-role-affecte-un-utilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modifier le rôle affecté un utilisateur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autres-fonctions-utiles-pour-la-gestion-des-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autres fonctions utiles pour la gestion des rôles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-exercice-432-" class="md-nav__link">
+    <span class="md-ellipsis">
+       --- Exercice 4.3.2 ---
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1077,7 +1207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_5.1/" class="md-nav__link">
+      <a href="../section_5.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1098,7 +1228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_5.2/" class="md-nav__link">
+      <a href="../section_5.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1119,7 +1249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes_de_cours/section_5.3/" class="md-nav__link">
+      <a href="../section_5.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1147,7 +1277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="calendrier/" class="md-nav__link">
+      <a href="../../calendrier/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1178,55 +1308,168 @@
   
 
 
-<h1 id="bases-de-donnees-1-420-2b4-vi-hiver-2024">Bases de données 1 (420-2B4-VI) - Hiver 2024</h1>
-<h2 id="introduction">Introduction</h2>
-<p>Vous trouverez ici les notes et exercices du cours. J'ajouterai du nouveau contenu continuellement.</p>
-<p><strong>Préalable à ce cours</strong> : 420-1D6-VI Programmation 1</p>
-<p><strong>Ce cours est préalable à</strong> :
-420-3B4-VI : Bases de données 2 (approfondissement de la conception et intégration à des applications logicielles/web)<br />
-420-3A5-VI : Développement web 2 (intégration des BD dans un contexte web)<br />
-420-3C4-VI : Piratage éthique (sécuriser les applications)<br />
-420-4C4-VI : Mégadonnées (efficacité des traitements sur de grands ensembles et base de données NoSQL)  </p>
-<p>Il est donc préalable, indirectement, à presque tous les cours de la 3e année.</p>
-<p><strong>Cheminement complet</strong>: <a href="https://informatique.apical.xyz/">https://informatique.apical.xyz/</a></p>
-<h2 id="environnement-de-travail">Environnement de travail</h2>
-<p>Afin d’utiliser MySQL vous devez installer deux logiciels :</p>
+<h1 id="gestion-des-acces">Gestion des accès</h1>
+<p>CRUD des utilisateurs
+Conférer et révoquer des privilèges
+Créer des rôles</p>
+<h2 id="pourquoi-gerer-les-roles">Pourquoi gérer les rôles</h2>
+<p>On développe un site web avec les contraintes de sécurité suivantes.</p>
 <ul>
-<li>AMPPS, qui contient MySQL Server (installé aussi dans le cours de web 1)</li>
-<li>MySQL Workbench</li>
+<li>Les programmeurs peuvent modifier des tables, des déclencheurs et des enregistrements. </li>
+<li>L’administrateur de la BD peut ajouter des utilisateurs et accomplir toutes les opérations des développeurs</li>
+<li>Les visiteurs peuvent uniquement ajouter, lire, modifier, ou supprimer des enregistrements.</li>
 </ul>
-<h3 id="ampps">AMPPS</h3>
-<p>AMPPS est une pile Apache (Apache, MySQL, Php, Perl et d’autres) disponible à <a href="https://ampps.com/">https://ampps.com/</a></p>
-<p><em>Note</em> : si vous avez une erreur en lien avec « Microsoft c++ redistributable », lisez les détails de l’erreur. S’il est indiqué qu’une autre version est déjà installée, c’est probablement une version plus récente, ce qui est sans conséquence.</p>
-<p>Une fois installé, vous n’avez qu’à le lancer pour voir apparaître cette petite fenêtre au bas à droite de votre écran. Le statut de MySQL devrait être vert (ça peut prendre quelques secondes après le démarrage pour passer du rouge au vert, c’est normal).</p>
-<p><img alt="AMPPS" src="images/ampps.png" /></p>
-<p>Note: si vous voulez, vous pouvez configurer AMPPS pour qu'il démarre automatiquement à l'ouverture de votre session Windows. Sinon vous devrez le démarrer manuellement.
- </p>
-<h3 id="mysql-workbench">MySQL Workbench</h3>
-<p>Téléchargez-le sur le site <a href="https://www.mysql.com/fr/products/workbench/">https://www.mysql.com/fr/products/workbench/</a></p>
-<p>À l’installation, choisissez « Client only ».</p>
-<p>Pour le lancer, il suffit de cliquer sur l’application. Vous devez d’abord démarrer MySQL Server. </p>
-<p>Une fois l’application lancée, vous devez ajouter une connexion en cliquant sur « + » (seulement au premier démarrage). </p>
-<p><img alt="" src="images/wb01.png" /></p>
-<p>Dans la fenêtre qui apparaît, entrez les infos suivantes :</p>
-<ul>
-<li>
-<p>Connection Name : le nom de votre connexion. Vous pouvez mettre ce que vous voulez, tant que vous le retrouvez.</p>
-</li>
-<li>
-<p>Password : cliquez sur Store in Vault… et entrez le mot de passe : « mysql ».</p>
-</li>
-<li>
-<p>[optionnel] : cliquer sur le bouton Test Connection en bas à droite.</p>
-</li>
-<li>
-<p>Cliquer sur le bouton OK.</p>
-</li>
-</ul>
-<p><img alt="" src="images/wb02.png" /></p>
-<p>Si tout se passe bien, vous verrez la fenêtre suivante:</p>
-<p><img alt="" src="images/wb03.png" /></p>
-<p>Vous allez pouvoir entrer des commandes SQL dans la zone indiquée. L’icône de disquette permet de sauvegarder vos scripts. L’éclair exécute tout le script tandis que l’éclair avec un curseur exécute que la requête dans laquelle votre curseur est situé.</p>
+<p>De cette façon, si un mot de passe utilisé dans le site web est volé, l’accès à la BD est limité. </p>
+<h2 id="crud-des-utilisateurs">CRUD des utilisateurs</h2>
+<p>Pour ajouter un nouvel utilisateur, on utilise la syntaxe suivante:</p>
+<pre><code class="language-mysql">CREATE USER nom IDENTIFIED BY mot_de_passe;
+</code></pre>
+<p>Exemple:</p>
+<pre><code class="language-mysql">CREATE USER visiteur IDENTIFIED BY '12345’;
+</code></pre>
+<p>Il existe toujours un utilisateur de base : root@localhost</p>
+<h3 id="modifier-un-utilisateur">Modifier un utilisateur</h3>
+<p>Pour changer un mot de passe, la requête est:</p>
+<pre><code class="language-mysql">ALTER USER nom IDENTIFIED BY nouveau_mot_de_passe;
+</code></pre>
+<p>Exemple:</p>
+<pre><code class="language-mysql">ALTER USER visiteur IDENTIFIED BY '54321';
+</code></pre>
+<p>Pour renommer un utilisateur, la requête est :</p>
+<pre><code class="language-mysql">RENAME USER ancien_nom TO nouveau_nom;
+</code></pre>
+<p>Exemple :</p>
+<pre><code class="language-mysql">RENAME USER visiteur TO visiteurs;
+</code></pre>
+<h3 id="supprimer-un-utilisateur">Supprimer un utilisateur</h3>
+<p>Pour retirer un utilisateur, on utilise la requête:</p>
+<pre><code class="language-mysql">DROP USER nom;
+</code></pre>
+<p>Exemple :</p>
+<pre><code class="language-mysql">DROP USER visiteurs;
+</code></pre>
+<h2 id="niveaux-de-privilege">Niveaux de privilège</h2>
+<p>Les niveaux de privilèges accordent certains droits d’accès pour modifier des parties de la BD. Les niveaux (non exhaustif) sont</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ALL (tout)</td>
+<td>DELETE</td>
+<td>REFERENCES (crée des clés étrangères)</td>
+</tr>
+<tr>
+<td>ALTER</td>
+<td>DROP</td>
+<td>SELECT</td>
+</tr>
+<tr>
+<td>CREATE</td>
+<td>DROP ROLE</td>
+<td>SHOW DATABASES</td>
+</tr>
+<tr>
+<td>CREATE ROLE</td>
+<td>EXECUTE (routines)</td>
+<td>TRIGGER</td>
+</tr>
+<tr>
+<td>CREATE ROUTINE</td>
+<td>FILE</td>
+<td>UPDATE</td>
+</tr>
+<tr>
+<td>CREATE USER</td>
+<td>INSERT</td>
+<td>USAGE</td>
+</tr>
+</tbody>
+</table>
+<h3 id="conferer-un-privilege">Conférer un privilège</h3>
+<p>Pour assigner un privilège à un rôle, on utilise une requête GRANT.</p>
+<pre><code>GRANT priviliege1, privilege2 ON [* | table] TO nom_utilisateur;
+</code></pre>
+<p>On ajoute le privilège de lecture sur toutes les tables de la base de données ecole aux visiteurs.</p>
+<pre><code class="language-mysql">USE Ecole;
+GRANT SELECT ON * TO 'visiteurs’;
+</code></pre>
+<p>Pour ajouter le privilège d’écriture et de modification sur la table Etudiant</p>
+<pre><code class="language-mysql">GRANT INSERT, UPDATE ON Etudiant TO 'visiteurs';
+</code></pre>
+<h3 id="revoquer-un-privilege">Révoquer un privilège</h3>
+<p>La requête de retrait de privilège est REVOKE.</p>
+<pre><code class="language-mysql">REVOKE priviliege1, privilege2 ON [* | table] 
+  FROM nom_utilisateur;
+</code></pre>
+<p>Par exemple, on révoque le privilège d’ajout des visiteurs sur la table Etudiant.</p>
+<pre><code class="language-mysql">REVOKE UPDATE ON Etudiant FROM ‘visiteurs’;
+</code></pre>
+<h2 id="determiner-lutilisateur-connecte">Déterminer l'utilisateur connecté</h2>
+<p>La fonction USER() retourne l’utilisateur actuellement connecté à la base de données.</p>
+<p>Exemple:</p>
+<pre><code class="language-mysql">SELECT USER();
+</code></pre>
+<pre><code>| USER()         |
+|-|
+| root@localhost |
+</code></pre>
+<h3 id="-exercice-431-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/></svg></span> --- Exercice 4.3.1 ---</h3>
+<p>Créez un nouvel utilisateur qui possède tous les privilèges.</p>
+<p>Déconnectez-vous en fermant Workbench et reconnectez-vous avec le nouvel utilisateur.</p>
+<h2 id="les-roles">Les rôles</h2>
+<p>Que faire si on a 8 programmeurs qui ont chacun leur accès distinct (nom et mot de passe), mais qui doivent tous avoir le même niveau de privilège.</p>
+<p>Imaginez qu’on ajoute une table. Doit-on modifier les accès de tous les utilisateurs ?</p>
+<p>Ça serait plus simple d’avoir une structure contenant les privilèges.</p>
+<p><strong>Un rôle est une liste d’accès</strong>. Plutôt que de définir les accès par utilisateur, on peut leur assigner un rôle. </p>
+<p>Donc tous les utilisateurs avec les mêmes privilèges d’accès auront le même rôle. Cela facilite grandement le changement de privilèges.</p>
+<h3 id="definir-un-role">Définir un rôle</h3>
+<p>On utilise CREATE ROLE pour créer un nouveau rôle et DROP ROLE pour le supprimer.</p>
+<p>Il n'y a pas de requête pour changer le nom d'un rôle.</p>
+<pre><code class="language-mysql">CREATE ROLE nom_role;
+DROP ROLE nom_role;
+</code></pre>
+<h3 id="conferer-ou-revoquer-un-privilege-a-un-role">Conférer ou révoquer un privilège à un rôle</h3>
+<p>On remplace le nom d’utilisateur dans la requête GRANT ou REVOKE par le nom du rôle.</p>
+<pre><code class="language-mysql">GRANT privilege ON [*| Nom table] TO nom_role;
+REVOKE privilege ON [* | Nom table] FROM nom_role;
+</code></pre>
+<p>Par exemple, on permet au programmeur de créer des tables et des clés étrangères.</p>
+<pre><code class="language-mysql">GRANT CREATE TABLE, REFERENCES ON * TO programmeur;
+</code></pre>
+<h3 id="assigner-un-role-a-un-utilisateur">Assigner un rôle à un utilisateur</h3>
+<p>On peut affecter un rôle directement à la création</p>
+<pre><code class="language-mysql">CREATE USER nom IDENTIFIED BY mot de passe
+  DEFAULT ROLE role1, role2...;
+</code></pre>
+<p>Exemple:</p>
+<pre><code class="language-mysql">CREATE USER alice IDENTIFIED BY 'chat'
+  DEFAULT ROLE programmeur ;
+</code></pre>
+<h3 id="modifier-le-role-affecte-un-utilisateur">Modifier le rôle affecté un utilisateur</h3>
+<p>On peut modifier les rôles avec</p>
+<pre><code class="language-mysql">GRANT role1, role2 ... TO utilisateur1, utilisateur2...
+
+REVOKE role FROM utilisateur;
+</code></pre>
+<h3 id="autres-fonctions-utiles-pour-la-gestion-des-roles">Autres fonctions utiles pour la gestion des rôles</h3>
+<p>Afficher l'utilisateur connecté</p>
+<pre><code class="language-mysql">USER() 
+</code></pre>
+<p>Afficher tous les rôles de l’utilisateur connecté</p>
+<pre><code class="language-mysql">CURRENT_ROLE()
+</code></pre>
+<p>Afficher les privilèges</p>
+<pre><code class="language-mysql">SHOW GRANTS FOR role | utilisateur
+</code></pre>
+<h3 id="-exercice-432-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/></svg></span> --- Exercice 4.3.2 ---</h3>
+<p>Créer un rôle enseignant qui peut modifier les tables Évaluation et Évaluation_etudiant ainsi qu’un rôle responsable qui peut changer la table Cours, Inscription, Groupe, Session et Etudiant.</p>
+<p>Ajouter un utilisateur appelé Scott Summers qui est enseignant et Jean Grey qui est enseignante et responsable.</p>
 
 
 
@@ -1273,10 +1516,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "content.code.copy", "toc.integrate"], "search": "assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "content.code.copy", "toc.integrate"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   </body>

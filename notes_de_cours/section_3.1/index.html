@@ -11,10 +11,10 @@
         <link rel="canonical" href="https://francois-mercier.github.io/cours-db1/notes_de_cours/section_3.1/">
       
       
-        <link rel="prev" href="../section_2.1/">
+        <link rel="prev" href="../section_2.6/">
       
       
-        <link rel="next" href="../section_4.1/">
+        <link rel="next" href="../section_3.2/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>3.1 - Cours Bases de donn&eacute;es 1</title>
+        <title>3.1 Établir une stratégie de sauvegarde de la BD - Cours Bases de donn&eacute;es 1</title>
       
     
     
@@ -65,7 +65,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="deep-orange">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="teal">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapitre-3" class="md-skip">
+        <a href="#pourquoi-sauvegarder-une-bd" class="md-skip">
           Aller au contenu
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              3.1
+              3.1 Établir une stratégie de sauvegarde de la BD
             
           </span>
         </div>
@@ -123,7 +123,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="deep-orange"  aria-label="Passer en mode sombre"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="teal"  aria-label="Passer en mode sombre"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Passer en mode sombre" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
@@ -133,7 +133,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="yellow"  aria-label="Passer en mode clair"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="light-green"  aria-label="Passer en mode clair"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Passer en mode clair" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
@@ -312,6 +312,23 @@
         </a>
       </li>
     
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../calendrier/" class="md-tabs__link">
+        
+  
+    
+  
+  Calendrier
+
+      </a>
+    </li>
   
 
       
@@ -591,7 +608,112 @@
         
   
   <span class="md-ellipsis">
-    2.1
+    2.1 Créer, mettre à jour, supprimer des données
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../section_2.2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2 Sélection, filtrage et opérateurs logiques
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../section_2.3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3 Opérateurs arithmétiques, chaînes et expressions régulières
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../section_2.4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.4 Manipulation de dates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../section_2.5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.5 Jointures et agrégats
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../section_2.6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.6 Fonctions statistiques
   </span>
   
 
@@ -663,14 +785,12 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    3.1
+    3.1 Établir une stratégie de sauvegarde de la BD
   </span>
   
 
@@ -681,7 +801,7 @@
         
   
   <span class="md-ellipsis">
-    3.1
+    3.1 Établir une stratégie de sauvegarde de la BD
   </span>
   
 
@@ -693,32 +813,12 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table des matières
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#contenu" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contenu
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#etablir-une-strategie-de-sauvegarde-de-la-bd" class="md-nav__link">
-    <span class="md-ellipsis">
-      Établir une stratégie de sauvegarde de la BD
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#pourquoi-sauvegarder-une-bd" class="md-nav__link">
@@ -757,189 +857,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#etapes-dune-strategie-de-sauvegarde_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Étapes d’une stratégie de sauvegarde
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#etapes-dune-strategie-de-sauvegarde_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Étapes d’une stratégie de sauvegarde
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#etapes-dune-strategie-de-sauvegarde_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Étapes d’une stratégie de sauvegarde
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#types-de-sauvegarde" class="md-nav__link">
     <span class="md-ellipsis">
       Types de sauvegarde
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sauvegarder-et-restaurer-une-bd" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sauvegarder et restaurer une BD
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dumping" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dumping
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dumping_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dumping
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#charger-une-bd-a-partir-dun-fichier-de-sauvegarde" class="md-nav__link">
-    <span class="md-ellipsis">
-      Charger une BD à partir d’un fichier de sauvegarde
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#table-corrompue" class="md-nav__link">
-    <span class="md-ellipsis">
-      Table corrompue
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dumping-dans-un-fichier-texte" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dumping dans un fichier texte
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#le-format-csv" class="md-nav__link">
-    <span class="md-ellipsis">
-      Le format CSV
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#le-format-csv_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Le format CSV
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exporter-vers-csv" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exporter vers CSV
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gestion-de-droits" class="md-nav__link">
-    <span class="md-ellipsis">
-      Gestion de droits
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#charger-a-partir-dun-fichier-csv" class="md-nav__link">
-    <span class="md-ellipsis">
-      Charger à partir d'un fichier CSV
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#automatisation-des-sauvegardes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Automatisation des sauvegardes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#script-bat" class="md-nav__link">
-    <span class="md-ellipsis">
-      Script bat
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sauvegarder-la-base-de-donnees" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sauvegarder la base de données
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#appeler-le-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      Appeler le script
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#programmer-la-tache" class="md-nav__link">
-    <span class="md-ellipsis">
-      Programmer la tâche
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#programmer-une-tache" class="md-nav__link">
-    <span class="md-ellipsis">
-      Programmer une tâche
     </span>
   </a>
   
@@ -949,6 +869,48 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../section_3.2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.2 Sauvegarder et restaurer une BD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../section_3.3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.3 Automatisation des sauvegardes
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1012,7 +974,49 @@
         
   
   <span class="md-ellipsis">
-    4.1
+    4.1 Intégrité des données
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../section_4.2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.2 Confidentialité des données
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../section_4.3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.3 Gestion des accès
   </span>
   
 
@@ -1080,7 +1084,49 @@
         
   
   <span class="md-ellipsis">
-    5.1
+    5.1 Variables, conditions et boucles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../section_5.2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.2 Fonctions et déclencheurs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../section_5.3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.3 Procédures stockées et transactions
   </span>
   
 
@@ -1093,6 +1139,26 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../calendrier/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Calendrier
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1115,34 +1181,23 @@
   
 
 
-<h1 id="chapitre-3">Chapitre 3</h1>
-<p>Sauvegarder et restaurer la base de données</p>
-<h2 id="contenu">Contenu</h2>
-<ol>
-<li>Établir une stratégie de sauvegarde de la BD</li>
-<li>Sauvegarder et restaurer une BD</li>
-<li>Automatisation des sauvegardes</li>
-</ol>
-<hr />
-<h2 id="etablir-une-strategie-de-sauvegarde-de-la-bd">Établir une stratégie de sauvegarde de la BD</h2>
-<p>Pourquoi sauvegarder une BD?
-Stratégie 3-2-1
-Étapes d’une stratégie de sauvegarde</p>
-<hr />
+  <h1>3.1 Établir une stratégie de sauvegarde de la BD</h1>
+
+<p>Établir une stratégie de sauvegarde de la BD</p>
 <h2 id="pourquoi-sauvegarder-une-bd">Pourquoi sauvegarder une BD?</h2>
-<p>Pouvoir restaurer la BD dans les cas de :
-* Destruction accidentelle (DROP *)
-* Bris de serveur (usure/Ti-Guy qui a encore échappé son café)
-* Attaque de pirates visant à détruire notre BD
-* Manipulation erronée (ex. par du développement)
-* Récréer les données suite à changement d’environnement (mise à jour MySQL)
-* Avant un déploiement en production
-* Cataclysme naturel, incendie ou invasion d’extra-terrestres qui détruisent le serveur physique</p>
-<hr />
+<p>Pouvoir restaurer la BD dans les cas de :</p>
+<ul>
+<li>Destruction accidentelle (DROP *)</li>
+<li>Bris de serveur (usure/Ti-Guy qui a encore échappé son café)</li>
+<li>Attaque de pirates (ex.: rançongiciel)</li>
+<li>Manipulation erronée (ex. par du développement)</li>
+<li>Récréer les données suite à changement d’environnement (mise à jour MySQL)</li>
+<li>Pour un passage d'un environnement de tests à un déploiement en production</li>
+<li>Catastrophe naturelle, incendie, météorite ou invasion d’extra-terrestres <img alt="👽" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f47d.svg" title=":alien:" /></li>
+</ul>
 <h2 id="importance-de-la-sauvegarde">Importance de la sauvegarde</h2>
 <p>Une perte de données coûte en moyenne entre 4,4 millions au Canada (2021).</p>
 <p>Selon certains fournisseurs de stockage, jusqu’à la moitié des entreprises perdront des données au cours de leurs opérations.</p>
-<hr />
 <h2 id="la-strategie-3-2-1">La stratégie 3-2-1</h2>
 <p>Présentée comme un standard, la règle du 3-2-1 est la suivante:</p>
 <ul>
@@ -1150,7 +1205,6 @@ Stratégie 3-2-1
 <li>2 copies «onsite» (sur le même lieu physique)</li>
 <li>1 copie «offsite» (dans un emplacement physique différent)</li>
 </ul>
-<hr />
 <h2 id="etapes-dune-strategie-de-sauvegarde">Étapes d’une stratégie de sauvegarde</h2>
 <ol>
 <li>
@@ -1162,14 +1216,12 @@ Stratégie 3-2-1
 <li>Grouper par groupe : critique pour survivre, important pour opérer, optimal pour le développement</li>
 </ul>
 </li>
-<li>Qu’est-ce qui est suffisamment important pour investir dans sa sauvegarde?<ul>
+<li>
+<p>Qu’est-ce qui est suffisamment important pour investir dans sa sauvegarde?</p>
+<ul>
 <li>Dans cette question, évaluez le rapport quantité/coût. Faire une sauvegarde de Facebook (+/- 100 Po) est plus lourd qu’une sauvegarde de Wikipédia (+/- 10TB).</li>
 </ul>
 </li>
-</ol>
-<hr />
-<h2 id="etapes-dune-strategie-de-sauvegarde_1">Étapes d’une stratégie de sauvegarde</h2>
-<ol>
 <li>
 <p>Déterminer la fréquence des sauvegardes?</p>
 </li>
@@ -1179,14 +1231,12 @@ Stratégie 3-2-1
 <li>Quelle quantité de travail on peut se permettre de perdre?</li>
 </ul>
 </li>
-<li>Sauvegarde exceptionnelle<ul>
+<li>
+<p>Sauvegarde exceptionnelle</p>
+<ul>
 <li>Quand ces sauvegardes sont-elles requises?</li>
 </ul>
 </li>
-</ol>
-<hr />
-<h2 id="etapes-dune-strategie-de-sauvegarde_2">Étapes d’une stratégie de sauvegarde</h2>
-<ol>
 <li>
 <p>Choisir et mettre en place une stratégie</p>
 </li>
@@ -1199,11 +1249,9 @@ Stratégie 3-2-1
 </ul>
 </li>
 <li>Mettre en place une routine de sauvegarde (périodique)</li>
-<li>Mettre en place une procédure de sauvegarde exceptionnelle</li>
-</ol>
-<hr />
-<h2 id="etapes-dune-strategie-de-sauvegarde_3">Étapes d’une stratégie de sauvegarde</h2>
-<ol>
+<li>
+<p>Mettre en place une procédure de sauvegarde exceptionnelle</p>
+</li>
 <li>
 <p>Tester (régulièrement) et assurer la maintenance</p>
 </li>
@@ -1216,7 +1264,6 @@ Stratégie 3-2-1
 </ul>
 </li>
 </ol>
-<hr />
 <h2 id="types-de-sauvegarde">Types de sauvegarde</h2>
 <ul>
 <li>Sauvegarde complète<ul>
@@ -1232,160 +1279,6 @@ Stratégie 3-2-1
 </ul>
 </li>
 </ul>
-<hr />
-<h2 id="sauvegarder-et-restaurer-une-bd">Sauvegarder et restaurer une BD</h2>
-<p>Dumping
-Charger une sauvegarde
-Dumping dans un format texte
-Charger des données d’un format texte</p>
-<hr />
-<h2 id="dumping">Dumping</h2>
-<p>Le «dumping» consiste à générer le code SQL pour recréer complètement la base de données (CREATE DATABASE, TABLE et INSERT INTO).</p>
-<p>Ce fichier comporte de nombreuses instructions SQL supplémentaires pour assurer que les données sont restaurées normalement.</p>
-<hr />
-<h2 id="dumping_1">Dumping</h2>
-<p>Dans une invite de commande située là où votre exécutable MySQL est placé, entrez la commande suivante (Windows)</p>
-<pre><code class="language-console">.\mysqldump.exe --databases nom1 nom2 … &gt; chemin/fichier.sql –unom_utilisateur –p
-</code></pre>
-<p>Exemple :</p>
-<pre><code class="language-console">.\mysqldump.exe --databases ecole … &gt; ../ecole_backup.sql –uroot –p
-```` 
-
-Puis saisissez le mot de passe du compte.
-
----
-
-## Dumping
-
-Dans le répertoire parent, vous trouverez le fichier ecole_backup.sql.
-
-Pour exporter toutes les bases de données, on remplace 
-«--databases nom1» par «--all-databases»
-
-On peut omettre l’option databases si l’on en exporte qu’une
-
-```console
-.\mysqldump.exe nom_db &gt; chemin/fichier.sql –unom_utilisateur –p
-</code></pre>
-<hr />
-<h2 id="charger-une-bd-a-partir-dun-fichier-de-sauvegarde">Charger une BD à partir d’un fichier de sauvegarde</h2>
-<p>Pour charger la BD, c’est simple : il suffit d’exécuter le script mysql!</p>
-<p>Soit à travers Workbench ou avec l'invite de commandes</p>
-<pre><code class="language-console">mysql &lt; fichier.sql
-</code></pre>
-<hr />
-<h2 id="table-corrompue">Table corrompue</h2>
-<p>Une instruction permet de récupérer les données d’une table dont le fichier de sauvegarde serait corrompu.</p>
-<pre><code class="language-mysql">REPAIR TABLE Nom_table EXTENDED;
-</code></pre>
-<p>https://dev.mysql.com/doc/refman/8.0/en/repair-table.html</p>
-<hr />
-<h2 id="dumping-dans-un-fichier-texte">Dumping dans un fichier texte</h2>
-<p>Il est possible d’exporter le contenu des tables dans des fichiers de format texte afin de les lire avec d’autres logiciels.</p>
-<p>On trouve notamment le format <em>Comma Separeted Values</em> lisible par <em>Excel</em>. </p>
-<hr />
-<h2 id="le-format-csv">Le format CSV</h2>
-<p>Le format CSV vient avec un standard français et anglais (avec un simple logiciel comme Notepad++ et une toute petite REGEX, vous pouvez facilement effectuer la conversion)</p>
-<ul>
-<li>Standard anglais : séparateur de colonne «,»</li>
-<li>Standard français : séparateur de colonne «;»</li>
-</ul>
-<p>Séparateur de ligne : (\r)\n (retour de ligne)
-Encapsulation des chaînes de caractère " "</p>
-<hr />
-<h2 id="le-format-csv_1">Le format CSV</h2>
-<table>
-<thead>
-<tr>
-<th>id_personne</th>
-<th>nom</th>
-<th>prenom</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2</td>
-<td>Shutt</td>
-<td>Steve</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Stastny</td>
-<td>Peter</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Dryden</td>
-<td>Ken</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Format anglais</strong>
-Id_personne,nom,prenom
-2,Shutt,Steve
-5,Stastny,Peter
-7,Dryden,Ken</p>
-<p><strong>Format français</strong>
-Id_personne;nom;prenom
-2;Shutt;Steve
-5;Stastny;Peter
-7;Dryden;Ken</p>
-<hr />
-<h2 id="exporter-vers-csv">Exporter vers CSV</h2>
-<p>Par défaut, l’exportation sépare les colonnes par une tabulation.</p>
-<pre><code class="language-mysql">SELECT colonnes INTO OUTFILE 'nom_fichier'
-    FIELDS TERMINATED BY ',' 
-    OPTIONALLY ENCLOSED BY '&quot;'
-    LINES TERMINATED BY '\n'
-    FROM nom_table;
-</code></pre>
-<p>Une instruction existe aussi à partir de l’invite de commande.</p>
-<hr />
-<h2 id="gestion-de-droits">Gestion de droits</h2>
-<p>Par défaut (et pour d’évidentes raisons de sécurité), MySQL limite les endroits où il est possible d’exporter un fichier texte.</p>
-<p>Dans votre fichier my.ini, il faut ajouter l’instruction suivante </p>
-<p>[mysqld]
-secure_file_priv = ""</p>
-<p>N’oubliez de redémarrez mysql après.</p>
-<hr />
-<h2 id="charger-a-partir-dun-fichier-csv">Charger à partir d'un fichier CSV</h2>
-<p>Pour lire un fichier CSV, on utilise l’instruction suivante:</p>
-<pre><code class="language-mysql">LOAD DATA INFILE 'nom_fichier' 
-    INTO TABLE Nom_table
-    FIELDS TERMINATED BY ',' 
-    FIELDS ENCLOSED BY '&quot;'
-    LINES TERMINATED BY '\r\n';
-</code></pre>
-<p>Une instruction existe aussi à partir de l’invite de commande.</p>
-<hr />
-<h2 id="automatisation-des-sauvegardes">Automatisation des sauvegardes</h2>
-<p>Créer le script bat
-Programmer la tâche</p>
-<hr />
-<h2 id="script-bat">Script bat</h2>
-<p>Le script bat permet de programmer un script s’exécutant dans l’invite de commande. C’est à peu près l’équivalent Windows des scripts bash des environnements UNIX.</p>
-<hr />
-<h2 id="sauvegarder-la-base-de-donnees">Sauvegarder la base de données</h2>
-<p>:: declaration variable
-SET "date=%DATE:/=-%"</p>
-<p>:: instructions
-ECHO ================
-ECHO Sauvegarde auto
-ECHO ================
-I:\Programmes\Ampps\mysql\bin\mysqldump.exe --all-databases &gt; C:\Users\Alexandre\Desktop\backup_%date%.sql -uroot -pmysql
-ECHO Sauvegarde realisee avec succes</p>
-<hr />
-<h2 id="appeler-le-script">Appeler le script</h2>
-<p>Maintenant, plus qu’à double cliquer sur le script bat pour qu’il s’exécute.</p>
-<p><img alt="" src="../images/bat_1.png" /></p>
-<hr />
-<h2 id="programmer-la-tache">Programmer la tâche</h2>
-<p>Avec le planificateur de tâche Windows (Task Scheduler), vous pouvez indiquer à Windows de démarrer une tâche à un moment donné.</p>
-<p>Une tâche peut consister à exécuter un script bat par exemple.</p>
-<p>Le planificateur se trouve dans « Outils d’administration Windows » </p>
-<hr />
-<h2 id="programmer-une-tache">Programmer une tâche</h2>
-<p><img alt="" src="../images/bat_2.png" /></p>
 
 
 
