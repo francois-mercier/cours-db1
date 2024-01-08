@@ -1241,14 +1241,15 @@
 <h2 id="interagir-avec-une-bd">Interagir avec une BD</h2>
 <p>Afin d'interagir avec une BD on a besoin minimalement de deux langages :</p>
 <ul>
-<li>Un langage de définition des données (LDD)</li>
-<li>Un langage de manipulation des données (LMD)</li>
+<li>Un langage de définition des données (LDD) permettant entre autres de créer et modifier les tables et leur structure.</li>
+<li>Un langage de manipulation des données (LMD) permettant entre autres d'ajouter, modifier ou supprimer des lignes dans des tables.</li>
 </ul>
 <p>En surplus on peut utiliser un langage de contrôle de transaction, un de contrôle des données, un de gestion des accès et plusieurs autres...</p>
-<p>Heureusement, le langage de programmation <em>Structured Query Language</em> (Langage de requêtes structurées) abrégé par <strong>SQL</strong> regroupe ces besoins.</p>
-<p>Le langage SQL (parfois prononcé "SEE-QWEL") permet de créer et manipuler des BD ainsi que de gérer certains aspects relatifs aux transactions et aux autorisations.</p>
+<p>Heureusement, le langage de programmation <em>Structured Query Language</em> (Langage de requêtes structurées) abrégé par <strong>SQL</strong> regroupe <strong>tous ces besoins</strong>.</p>
+<p>Le langage SQL (prononcé parfois "SEE-QWEL" par les anglophones) permet de créer et manipuler des BD ainsi que de gérer certains aspects relatifs aux transactions et aux autorisations.</p>
 <h2 id="origine-du-langage">Origine du langage</h2>
-<p>La plupart des langages de programmation impératifs que vous avez vu (C#, PHP, javascript ...) sont basés sur la théorie de l'algorithmie. SQL provient de la théorie des ensembles, il faut donc penser un peu différement en abordant les problèmes de BD.</p>
+<p>La toute première version du langage SQL a été développée chez IBM en 1970. En 1979, la compagnie Oracle présenta une version commercialement disponible au grand public. SQL fut rapidement imité et adopté par d'autres fournisseurs.</p>
+<p>La plupart des langages de programmation impératifs que vous avez vu (C#, PHP, javascript ...) sont basés sur la théorie de l'algorithmie. Mais SQL provient de la théorie des ensembles. C'est un langage DÉCLARATIF qui permet de décrire le résultat escompté, <em>sans décrire la manière de l'obtenir</em>. Les SGBD (systèmes de gestion de bases de données) tel que SQL sont équipés d'optimiseurs de requêtes - des mécanismes qui déterminent automatiquement la manière optimale d'effectuer les opérations, notamment par une estimation de la complexité algorithmique. (Source: <a href="https://fr.wikipedia.org/wiki/Structured_Query_Language">https://fr.wikipedia.org/wiki/Structured_Query_Language</a>)</p>
 
 
 
