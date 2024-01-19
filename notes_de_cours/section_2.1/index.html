@@ -1382,7 +1382,7 @@
 </ul>
 <h2 id="inserer-un-enregistrement">Insérer un enregistrement</h2>
 <p>La requête d’insertion est la suivante :</p>
-<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Nom_table</span><span class="w"> </span><span class="p">(</span><span class="n">nom_colonne1</span><span class="p">,</span><span class="w"> </span><span class="n">nom_colonne2</span><span class="p">,...)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">nom_table</span><span class="w"> </span><span class="p">(</span><span class="n">nom_colonne1</span><span class="p">,</span><span class="w"> </span><span class="n">nom_colonne2</span><span class="p">,...)</span><span class="w"> </span>
 <span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="n">valeur_colonne1</span><span class="p">,</span><span class="w"> </span><span class="n">valeur_colonne2</span><span class="p">,...);</span>
 </code></pre></div>
 <p>Par exemple, la requête suivante ajoute un étudiant dans la table Étudiant.</p>
@@ -1490,7 +1490,7 @@ cours {
 </code></pre></div>
 <h3 id="omettre-une-colonne">Omettre une colonne</h3>
 <p>Si lors de l’ajout d’un enregistrement une colonne ne possède pas de valeur par défaut et qu’aucune valeur n’est précisée, alors la valeur spéciale <strong>NULL</strong> est utilisée.</p>
-<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Cours</span><span class="w"> </span><span class="p">(</span><span class="n">nom</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Base de données 1&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">cours</span><span class="w"> </span><span class="p">(</span><span class="n">nom</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Base de données 1&#39;</span><span class="p">);</span>
 </code></pre></div>
 <p>Ici le sigle et l'enseignant de l’enregistrement sont <strong>NULL</strong> :</p>
 <table>
