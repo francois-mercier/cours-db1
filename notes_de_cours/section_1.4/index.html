@@ -1432,7 +1432,7 @@ etudiants {
 <div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">etudiants</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="k">code</span><span class="w"> </span><span class="kt">INTEGER</span><span class="p">,</span><span class="w"> </span>
 <span class="w">    </span><span class="n">nom</span><span class="w"> </span><span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span><span class="w"> </span>
-<span class="w">    </span><span class="n">annee_admission</span><span class="w"> </span><span class="kt">YEAR</span><span class="p">);</span>
+<span class="w">    </span><span class="n">annee_admission</span><span class="w"> </span><span class="kt">YEAR</span><span class="p">));</span>
 </code></pre></div>
 <h2 id="afficher-les-tables">Afficher les tables</h2>
 <p>Pour afficher toutes les tables de la BD active, on utilise l'instruction :</p>
@@ -1500,7 +1500,7 @@ La requête pour créer la table cours serait donc:</p>
 <div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">cours</span><span class="w"> </span><span class="p">(</span><span class="w">  </span>
 <span class="w">    </span><span class="n">cours_id</span><span class="w"> </span><span class="kt">INTEGER</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="k">AUTO_INCREMENT</span><span class="p">,</span><span class="w">  </span>
 <span class="w">    </span><span class="n">duree</span><span class="w"> </span><span class="kt">TINYINT</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w">  </span>
-<span class="w">    </span><span class="n">nom</span><span class="w"> </span><span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+<span class="w">    </span><span class="n">nom</span><span class="w"> </span><span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">));</span>
 </code></pre></div>
 <h2 id="modifier-une-table">Modifier une table</h2>
 <p>Pour modifier une table, trois opérations sont possibles : ajouter une colonne, modifier une colonne, supprimer une colonne.</p>
