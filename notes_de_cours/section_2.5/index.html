@@ -1446,11 +1446,6 @@
 
 
 <h1 id="jointures-et-agregats">Jointures et agrégats</h1>
-<p>Jointures internes
-Jointures naturelles
-Atelier
-Agrégats de données
-Atelier</p>
 <h2 id="probleme">Problème</h2>
 <p>Pour chaque programme, on veut afficher le nom du programme et le nom de la personne responsable. On aurait un résultat du format suivant</p>
 <table>
@@ -1488,11 +1483,13 @@ Atelier</p>
         NUMERIC(8) responsable FK
     }</code></pre>
 <h2 id="jointures">Jointures</h2>
-<p>Une jointure permet de « joindre » deux tables ensemble pour en créer une seule. Ici la table résultant n'est pas une « vraie » table au sens où elle n'est pas enregistrer dans la base de données.</p>
-<p>Il existe 3 types de jointures :
-- Jointures internes et naturelles (vues en BD1)
-- Jointures à gauche et à droite (vues en BD2)
-- Jointures externes ou complètes (vues en BD2)</p>
+<p>Une jointure permet de « joindre » deux tables ensemble pour en créer une seule. Ici la table résultant n'est pas une « vraie » table au sens où elle n'est pas enregistrée dans la base de données.</p>
+<p>Il existe 3 types de jointures :</p>
+<ul>
+<li>Jointures internes et naturelles (vues en BD1)</li>
+<li>Jointures à gauche et à droite (vues en BD2)</li>
+<li>Jointures externes ou complètes (vues en BD2)</li>
+</ul>
 <h3 id="jointures-internes">Jointures internes</h3>
 <p>Une jointure interne permet de récupérer les informations en croisant les informations de plusieurs tables. </p>
 <p>On peut voir la jointure interne comme une intersection d'ensembles basé sur l'égalité d'une paire de colonnes.</p>
@@ -1627,7 +1624,7 @@ B. Sélectionnez l'année admission et le nom de l'étudiant pour chaque étudia
 <span class="nf">count</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">colonne</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="-exercice-257-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/></svg></span> --- Exercice 2.5.7 ---</h2>
-<p>Sélectionnez les sigle des cours ayant plus de 2 évaluations lorsqu'ils se sont donnés. Chaque sigle doit apparaître qu'une seule fois.</p>
+<p>Sélectionnez les sigles des cours ayant plus de 2 évaluations lorsqu'ils se sont donnés. Chaque sigle doit apparaître qu'une seule fois.</p>
 
 
 
