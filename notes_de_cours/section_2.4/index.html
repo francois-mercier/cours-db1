@@ -892,33 +892,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#curiosite-de-date" class="md-nav__link">
-    <span class="md-ellipsis">
-      Curiosité de date
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#correction-doctobre-1582" class="md-nav__link">
-    <span class="md-ellipsis">
-      Correction d'octobre 1582
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#calendrier-gregorien-proleptique" class="md-nav__link">
-    <span class="md-ellipsis">
-      Calendrier Grégorien proleptique
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1403,7 +1376,7 @@ etudiants {
 <h2 id="extraire-des-informations-de-la-datetemps">Extraire des informations de la date/temps</h2>
 <p>On peut avoir besoin d’extraire certains éléments des types DATE, TIME ou DATETIME.</p>
 <p>Une fonction existe pour chaque type. La fonction extract permet d’extraire plusieurs informations à la fois.</p>
-<p><a href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_extract">https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_extract</a></p>
+<p>https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_extract</p>
 <p>Exemple : vendredi 2021-02-05 11:04:19</p>
 <table>
 <thead>
@@ -1568,20 +1541,49 @@ etudiants {
 <p>Les deux arguments doivent être du même type.</p>
 <h3 id="exemple-de-difference-de-dates">Exemple de différence de dates</h3>
 <p>Par exemple, on peut exprimer la longueur d'une session en terme de jours, mais cela n'est pas toujours parlant.</p>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">semestre</span><span class="p">,</span><span class="w"> </span><span class="n">annee</span><span class="p">,</span><span class="w"> </span>
-<span class="w">    </span><span class="n">datediff</span><span class="p">(</span><span class="n">fin_session</span><span class="p">,</span><span class="w"> </span><span class="n">debut_session</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">nombre_jours</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">session_code</span><span class="p">,</span><span class="w"> </span><span class="n">session_saison</span><span class="p">,</span><span class="w"> </span><span class="n">datediff</span><span class="p">(</span><span class="n">date_fin</span><span class="p">,</span><span class="w"> </span><span class="n">date_debut</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">nombre_jours</span><span class="w"> </span>
 <span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">sessions</span><span class="p">;</span>
 </code></pre></div>
-<p><img alt="" src="../images/2_duree_session.png" /></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">session_code</th>
+<th style="text-align: center;">session_saison</th>
+<th style="text-align: center;">nombre_jours</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">A20</td>
+<td style="text-align: center;">Automne</td>
+<td style="text-align: center;">125</td>
+</tr>
+<tr>
+<td style="text-align: center;">A21</td>
+<td style="text-align: center;">Automne</td>
+<td style="text-align: center;">125</td>
+</tr>
+<tr>
+<td style="text-align: center;">H21</td>
+<td style="text-align: center;">Hiver</td>
+<td style="text-align: center;">125</td>
+</tr>
+</tbody>
+</table>
 <h2 id="construire-une-date-a-partir-dun-nombre-de-jour">Construire une date à partir d'un nombre de jour</h2>
 <p>La fonction <strong>from_days</strong> permet de construire la date à partir d'un nombre de jours.</p>
 <p>Toutefois, cette fonction ne devrait pas être utilisée si le résultat est hors des limites habituels des dates.</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">from_days</span><span class="p">(</span><span class="mi">739342</span><span class="p">);</span><span class="w"> </span><span class="o">#</span><span class="w"> </span><span class="n">Retourne</span><span class="w"> </span><span class="mi">2024</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">01</span>
+</code></pre></div>
+<p>L'opération inverse est possible avec la fonction <strong>to_days</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">to_days</span><span class="p">(</span><span class="s1">&#39;2024-04-01&#39;</span><span class="p">);</span><span class="w"> </span><span class="o">#</span><span class="w"> </span><span class="n">Retourne</span><span class="w"> </span><span class="mi">739342</span>
+</code></pre></div>
 <h2 id="difference-de-datetime">Différence de DATETIME ?</h2>
 <p>Il n’y a pas de fonction qui retourne l’addition ou différence de <strong>DATETIME</strong>. La partie de date et du temps doivent être traités séparément.</p>
 <h2 id="addition-de-temps">Addition de temps</h2>
 <p>Pour ajouter du temps à un type <strong>TIME</strong> on utilise la fonction addtime.</p>
 <p>Cette fonction ajoute deux types time ensemble.</p>
-<div class="highlight"><pre><span></span><code><span class="nf">addtime</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;00:02:15&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;00:03:18&#39;</span><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="nf">addtime</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;00:02:15&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;00:03:18&#39;</span><span class="p">)</span><span class="w"> </span>
 <span class="c1">-- retourne 0 h 5 m 33 s</span>
 </code></pre></div>
 <h2 id="addition-de-date">Addition de date</h2>
@@ -1598,10 +1600,11 @@ https://dev.mysql.com/doc/refman/8.0/en/expressions.html#temporal-intervals</p>
 <p>Pour soustraire un intervalle à un type DATE ou DATETIME, on peut utiliser la fonction subdate.</p>
 <p>Cette fonction s’utilise exactement comme adddate.</p>
 <h3 id="-exercice-241-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/></svg></span> --- Exercice 2.4.1 ---</h3>
-<p>On veut le titre des documents qui :<br />
+<p>Utiliser <a href="https://cegepvicto.sharepoint.com/:u:/s/Section_29858/EboMlEfusRtDkBxuETW6syYBs0EcWcOZg3idULAEfeUqNA?e=k8U1rV">ecole2.sql</a> pour répondre aux questions suivantes.  </p>
+<p>On veut le titre des documents des évaluations des étudiants qui :<br />
 A. ont été remis au mois de mai<br />
 B. ont été remis dans les deux dernières années  </p>
-<p>On veut le semestre et l'année des sessions qui :<br />
+<p>On veut la saison le code de session des sessions qui :<br />
 C. Durent plus de 17 semaines  </p>
 <h2 id="manipulation-de-timestamp">Manipulation de timestamp</h2>
 <p>Deux fonctions permettent la manipulation des timestamps:</p>
@@ -1618,18 +1621,7 @@ C. Durent plus de 17 semaines  </p>
 </code></pre></div>
 <h2 id="gestion-des-fuseaux-horaires">Gestion des fuseaux horaires</h2>
 <p>MySQL offre plusieurs fonctions pour gérer des informations de différents fuseaux horaires.</p>
-<p>Toutes les fonctions de manipulation du temps sont décrites ici:</p>
-<p>https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html</p>
-<h2 id="curiosite-de-date">Curiosité de date</h2>
-<p>Il y a longtemps, le calendrier Julien (de Jules César) a été introduit avec une semaine  jours et des cycles annuels basés sur le Soleil. Malheureusement, avec l'exactitude des méthodes de mesure de l'époque, l'année julienne devait être corrigée.</p>
-<p>En 1582, le monde occidental a passé au calendrier Grégorien (demande du pape Grégoire XIII). qui régularise les années et les durées des jours en introduisant les années bisextiles (sur un cycle de 400 ans).</p>
-<p>Par contre, le passage a demandé un ajustement particulier...</p>
-<h2 id="correction-doctobre-1582">Correction d'octobre 1582</h2>
-<p>Voici le calendrier du mois d'octobre 1582. Les 10 jours supprimés sont entre autre les 9 années bissextile en trop entre le sixième et le seizième siècle (500, 600, 700, 900, 1000, 1100, 1300, 1400 et 1500). </p>
-<p><img alt="" src="../images/2_julien_gregorien.png" /></p>
-<h2 id="calendrier-gregorien-proleptique">Calendrier Grégorien proleptique</h2>
-<p>Un tel calendrier est un calendrier Grégorien rétropoler à partir d'aujourd'hui. Les dates retirées dans la correction sont inclues dans le calendrier Grégorien proleptique. </p>
-<p>Il s'agit de ce calendrier que MySQL utilise, donc les dates retirées sont valides (exemple 8 octobre 1582), même si elles n'ont jamais réellement existées. </p>
+<p>Toutes les fonctions de manipulation du temps sont décrites <a href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html">dans ce lien</a>.</p>
 
 
 
