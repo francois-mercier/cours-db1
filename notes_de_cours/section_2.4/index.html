@@ -1376,7 +1376,7 @@ etudiants {
 <h2 id="extraire-des-informations-de-la-datetemps">Extraire des informations de la date/temps</h2>
 <p>On peut avoir besoin d’extraire certains éléments des types DATE, TIME ou DATETIME.</p>
 <p>Une fonction existe pour chaque type. La fonction extract permet d’extraire plusieurs informations à la fois.</p>
-<p>https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_extract</p>
+<p><a href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_extract">https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_extract</a></p>
 <p>Exemple : vendredi 2021-02-05 11:04:19</p>
 <table>
 <thead>
@@ -1591,7 +1591,7 @@ etudiants {
 <div class="highlight"><pre><span></span><code><span class="nb">INTERVAL</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="n">UNITE</span>
 </code></pre></div>
 <p>Les unités possibles sont YEAR, MONTH, WEEK, DAY, HOUR, MINUTE, SECOND 
-https://dev.mysql.com/doc/refman/8.0/en/expressions.html#temporal-intervals</p>
+<a href="https://dev.mysql.com/doc/refman/8.0/en/expressions.html#temporal-intervals">https://dev.mysql.com/doc/refman/8.0/en/expressions.html#temporal-intervals</a></p>
 <p>Pour ajouter une journée à la date du 15 janvier 2022.</p>
 <div class="highlight"><pre><span></span><code><span class="n">adddate</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;2022-01-15&#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">DAY</span><span class="p">)</span><span class="w"> </span>
 <span class="c1">-- retourne 2022-01-16</span>
@@ -1601,11 +1601,11 @@ https://dev.mysql.com/doc/refman/8.0/en/expressions.html#temporal-intervals</p>
 <p>Cette fonction s’utilise exactement comme adddate.</p>
 <h3 id="-exercice-241-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/></svg></span> --- Exercice 2.4.1 ---</h3>
 <p>Utiliser <a href="https://cegepvicto.sharepoint.com/:u:/s/Section_29858/EboMlEfusRtDkBxuETW6syYBs0EcWcOZg3idULAEfeUqNA?e=k8U1rV">ecole2.sql</a> pour répondre aux questions suivantes.  </p>
-<p>On veut le titre des documents des évaluations des étudiants qui :<br />
-A. ont été remis au mois de mai<br />
+<p>On veut le <em>nom des documents</em> des <em>évaluations des étudiants</em> qui:  </p>
+<p>A. ont été remis au mois de mai<br />
 B. ont été remis dans les deux dernières années  </p>
-<p>On veut la saison le code de session des sessions qui :<br />
-C. Durent plus de 17 semaines  </p>
+<p>On veut le <em>code de session</em> et <em>la saison</em> des <em>sessions</em> qui:  </p>
+<p>C. Durent plus de 17 semaines  </p>
 <h2 id="manipulation-de-timestamp">Manipulation de timestamp</h2>
 <p>Deux fonctions permettent la manipulation des timestamps:</p>
 <ul>
