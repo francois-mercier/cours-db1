@@ -1624,7 +1624,7 @@
 <span class="k">REVOKE</span><span class="w"> </span><span class="n">privilege</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="err">[</span><span class="o">*</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Nom</span><span class="w"> </span><span class="k">table</span><span class="err">]</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">nom_role</span><span class="p">;</span>
 </code></pre></div>
 <p>Ex.: ici, on permet au rôle <em>programmeur</em> de créer des tables et des clés étrangères:</p>
-<div class="highlight"><pre><span></span><code><span class="k">GRANT</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="p">,</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">programmeur</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">GRANT</span><span class="w"> </span><span class="k">CREATE</span><span class="p">,</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">programmeur</span><span class="p">;</span>
 </code></pre></div>
 <h3 id="assigner-un-role-a-un-utilisateur">Assigner un rôle à un utilisateur</h3>
 <p>On peut affecter un rôle directement à la création:</p>
