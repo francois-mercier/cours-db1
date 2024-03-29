@@ -1234,18 +1234,54 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#variables-locales_1" class="md-nav__link">
+  <a href="#operations" class="md-nav__link">
     <span class="md-ellipsis">
-      Variables locales
+      Opérations
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#operations" class="md-nav__link">
+  <a href="#conditions-et-boucles" class="md-nav__link">
     <span class="md-ellipsis">
-      Opérations
+      Conditions et boucles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traitements-alternatifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Traitements alternatifs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instruction-par-cas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instruction par cas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-de-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple de CASE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instructions-repetees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions répétées
     </span>
   </a>
   
@@ -1420,7 +1456,6 @@
 <div class="highlight"><pre><span></span><code><span class="k">DECLARE</span><span class="w"> </span><span class="n">_nombre</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span>
 </code></pre></div></p>
 <p>Le <strong>DEFAULT</strong> valeur peut être omis pour ne pas affecter de valeurs lors de la déclaration. On les modifie également en utilisant l’instruction <strong>SET</strong> ou un <strong>SELECT</strong>.</p>
-<h2 id="variables-locales_1">Variables locales</h2>
 <p>Toutes les instructions <strong>DECLARE</strong> doivent être au début du bloc <strong>BEGIN</strong>.</p>
 <p><strong>Pour reconnaître les variables locales des colonnes, toutes les variables locales doivent être préfixées de _ (standard de code)</strong></p>
 <h2 id="operations">Opérations</h2>
@@ -1429,7 +1464,7 @@
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">etudiants</span><span class="w"> </span>
 <span class="w">  </span><span class="k">WHERE</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">@</span><span class="n">code</span><span class="p">;</span>
 </code></pre></div>
-<h1 id="conditions-et-boucles">Conditions et boucles</h1>
+<h2 id="conditions-et-boucles">Conditions et boucles</h2>
 <p>L’instruction conditionnelle de base à la syntaxe suivante</p>
 <div class="highlight"><pre><span></span><code><span class="k">IF</span><span class="w"> </span><span class="n">condition</span><span class="w"> </span><span class="k">THEN</span>
 <span class="w">    </span><span class="n">traitements</span><span class="err">…</span>

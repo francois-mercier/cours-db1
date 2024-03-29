@@ -1244,7 +1244,8 @@
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Types de fonction">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#caractere-deterministe" class="md-nav__link">
@@ -1261,6 +1262,11 @@
       Contenu
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1616,36 +1622,37 @@
 <h3 id="types-de-fonction">Types de fonction</h3>
 <p>Plusieurs types de caractéristiques de fonctions existent dans MySQL. On en distingue principalement 2 :</p>
 <ul>
-<li>Caractère déterministe</li>
-<li>Contenu de la fonction (Type de requête qu'elle contient)</li>
+<li>Caractère déterministe (ou non)</li>
+<li>Contenu de la fonction (4 types de requêtes qu'elle peut contenir)</li>
 </ul>
-<h3 id="caractere-deterministe">Caractère déterministe</h3>
+<h4 id="caractere-deterministe">Caractère déterministe</h4>
 <p>Indique si la valeur de retour est déterminée seulement selon les paramètres ou non.</p>
 <p>2 valeurs possibles :</p>
 <ul>
 <li>DETERMINISTIC</li>
 <li>NOT DETERMINISTIC (NOW, RAND...)</li>
 </ul>
-<h3 id="contenu">Contenu</h3>
+<h4 id="contenu">Contenu</h4>
 <p>4 valeurs représentent le contenu d’une fonction :</p>
-<p><strong>NO SQL</strong> : ne contient pas d’instruction SQL
-<strong>CONTAINS SQL</strong> : contient des instructions SQL
-<strong>READS SQL DATA</strong> : contient une opération SELECT
-<strong>MODIFIES SQL DATA</strong> : contient une opération <em>INSERT</em>, <em>UPDATE</em> ou <em>DELETE</em></p>
+<ul>
+<li><strong>NO SQL</strong> : ne contient pas d’instruction SQL</li>
+<li><strong>CONTAINS SQL</strong> : contient des instructions SQL</li>
+<li><strong>READS SQL DATA</strong> : contient une opération SELECT</li>
+<li><strong>MODIFIES SQL DATA</strong> : contient une opération <em>INSERT</em>, <em>UPDATE</em> ou <em>DELETE</em></li>
+</ul>
 <p>On indique toujours une seule caractéristique de contenu. (<em>MODIFIES</em> implique <em>READS</em>). </p>
 <h3 id="exigence-minimale">Exigence minimale</h3>
-<p>Dans vos fonctions, vous devez préciser explicitement au moins une caractéristique de déterministe ou de contenu.</p>
+<p>Dans vos fonctions, vous devez préciser explicitement au moins une caractéristique de déterminisme ou de contenu.</p>
 <p><strong>Pour le cours, il faut préciser les deux caractéristiques en tout temps</strong></p>
-<p><em>Par défaut</em> :
-Déterminisme : <strong>NOT DETERMINISTIC</strong>
+<p><em>Par défaut</em> :<br />
+Déterminisme : <strong>NOT DETERMINISTIC</strong><br />
 Valeur : <strong>CONTAINS SQL</strong></p>
-<p>Vous pouvez en préciser une de chaque type.</p>
 <h3 id="cas-des-fonctions-non-deterministe">Cas des fonctions non déterministe</h3>
 <p><em>ERREUR 1418</em> : This function has none of DETERMINISTIC, NO SQL, or READS SQL DATA in its declaration and binary logging is enabled (you <em>might</em> want to use the less safe log_bin_trust_function_creators variable).</p>
 <p>Pour éviter cette erreur, on peut exécuter la ligne suivante AVANT de créer la fonction :</p>
 <div class="highlight"><pre><span></span><code><span class="k">SET</span><span class="w"> </span><span class="k">GLOBAL</span><span class="w"> </span><span class="n">log_bin_trust_function_creators</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 </code></pre></div>
-<p>Référence : https://stackoverflow.com/questions/26015160/deterministic-no-sql-or-reads-sql-data-in-its-declaration-and-binary-logging-i</p>
+<p>Référence : <a href="https://stackoverflow.com/questions/26015160/deterministic-no-sql-or-reads-sql-data-in-its-declaration-and-binary-logging-i">https://stackoverflow.com/questions/26015160/deterministic-no-sql-or-reads-sql-data-in-its-declaration-and-binary-logging-i</a></p>
 <h3 id="declarer-une-fonction">Déclarer une fonction</h3>
 <div class="highlight"><pre><span></span><code><span class="k">DELIMITER</span><span class="w"> </span><span class="err">$$</span>
 
