@@ -1804,14 +1804,14 @@ Quand on veut s’assurer que la donnée soit bien insérée avant de faire le t
 </tbody>
 </table>
 <h3 id="exemple">Exemple</h3>
-<p>Si l’on essaie d’ajouter une note plus grande que la note maximale d’évaluation, alors on affecte la note maximale</p>
+<p>On veut créer un déclencheur qui fait que si l’on essaie d’ajouter une note plus grande que la note maximale d’évaluation, alors on affecte la note maximale</p>
 <div class="highlight"><pre><span></span><code><span class="k">DELIMITER</span><span class="w"> </span><span class="err">$$</span>
-<span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">respect_note_maximale</span><span class="w"> </span><span class="k">BEFORE</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Evaluation_etudiant</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">respect_note_maximale</span><span class="w"> </span><span class="k">BEFORE</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">evaluations_etudiants</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
 <span class="k">BEGIN</span>
 <span class="w">  </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">_note_maximale</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">;</span>
 <span class="w">  </span><span class="k">SET</span><span class="w"> </span><span class="n">_note_maximale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">ponderation</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">evaluations</span><span class="w"> </span>
-<span class="w">      </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id_evaluation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">id_evaluation</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">note_max</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">evaluations</span>
+<span class="w">      </span><span class="k">WHERE</span><span class="w"> </span><span class="n">evaluation_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">evaluation_id</span>
 <span class="w">  </span><span class="p">);</span>
 
 <span class="w">  </span><span class="k">IF</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">note</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">_note_maximale</span><span class="w"> </span><span class="k">THEN</span>
