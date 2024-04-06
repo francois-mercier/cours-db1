@@ -1786,7 +1786,7 @@ Pour exécuter la fonction</p>
 <p><strong>BEFORE</strong> :
 Quand il faut changer une valeur à insérer ou à modifier.</p>
 <p><strong>AFTER</strong> :
-Quand on veut s’assurer que la donnée soit bien insérée avant de faire le traitement (ex. n’a pas déclenché un check erroné). </p>
+Quand on veut s’assurer que la donnée soit bien insérée avant de faire un autre traitement, ou simplement faire un traitement après un autre.</p>
 <h3 id="acceder-a-lenregistrement-modifie">Accéder à l'enregistrement modifié</h3>
 <p>On peut utiliser les références <strong>OLD</strong> et <strong>NEW</strong> pour accéder à l'enregistrement qui fait l'objet d'un déclencheur.</p>
 <table>
@@ -1816,18 +1816,19 @@ Quand on veut s’assurer que la donnée soit bien insérée avant de faire le t
 </tbody>
 </table>
 <h3 id="exemple">Exemple</h3>
-<p>Si l’on essaie d’ajouter une note plus grande que la note maximale d’évaluation, alors on affecte la note maximale</p>
+<p>On veut empêcher un prof de faire l'erreur d'ajouter une note plus haute que la note maximale de l'évaluations.<br />
+On veut donc faire en sorte que si <strong>ajoute</strong> dans <strong>evaluations_etudiants</strong> une note plus grande que la note maximale d’évaluation (note_max de la table evaluations), alors on affecte la note maximale.</p>
 <div class="highlight"><pre><span></span><code><span class="k">DELIMITER</span><span class="w"> </span><span class="err">$$</span>
 <span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">respect_note_maximale</span><span class="w"> </span><span class="k">BEFORE</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Evaluation_etudiant</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
 <span class="k">BEGIN</span>
 <span class="w">  </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">_note_maximale</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">;</span>
 <span class="w">  </span><span class="k">SET</span><span class="w"> </span><span class="n">_note_maximale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">ponderation</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">evaluations</span><span class="w"> </span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">note_max</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">evaluations</span><span class="w"> </span>
 <span class="w">      </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id_evaluation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">id_evaluation</span>
 <span class="w">  </span><span class="p">);</span>
 
-<span class="w">  </span><span class="k">IF</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">note</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">_note_maximale</span><span class="w"> </span><span class="k">THEN</span>
-<span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">note</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_note_maximale</span><span class="p">;</span>
+<span class="w">  </span><span class="k">IF</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">note_max</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">_note_maximale</span><span class="w"> </span><span class="k">THEN</span>
+<span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">note_max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_note_maximale</span><span class="p">;</span>
 <span class="w">  </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
 <span class="k">END</span><span class="w"> </span><span class="err">$$</span>
 
