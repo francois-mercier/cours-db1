@@ -1456,15 +1456,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#demonstration_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Démonstration
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1819,7 +1810,7 @@ Quand on veut s’assurer que la donnée soit bien insérée avant de faire un a
 <p>On veut empêcher un prof de faire l'erreur d'ajouter une note plus haute que la note maximale de l'évaluations.<br />
 On veut donc faire en sorte que si <strong>ajoute</strong> dans <strong>evaluations_etudiants</strong> une note plus grande que la note maximale d’évaluation (note_max de la table evaluations), alors on affecte la note maximale.</p>
 <div class="highlight"><pre><span></span><code><span class="k">DELIMITER</span><span class="w"> </span><span class="err">$$</span>
-<span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">respect_note_maximale</span><span class="w"> </span><span class="k">BEFORE</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Evaluation_etudiant</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">respect_note_maximale</span><span class="w"> </span><span class="k">BEFORE</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">evaluations_etudiants</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
 <span class="k">BEGIN</span>
 <span class="w">  </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">_note_maximale</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">;</span>
 <span class="w">  </span><span class="k">SET</span><span class="w"> </span><span class="n">_note_maximale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
@@ -1866,9 +1857,6 @@ B. Après la création d'une évaluation, on crée une ligne de evaluations_etud
 </ol>
 <p>Donc une table peut définir jusqu'à 6 déclencheurs</p>
 <p><img alt="" src="../images/six-triggers.png" /></p>
-<h3 id="demonstration_1">Démonstration</h3>
-<p>Si la date de remise d'une nouvelle évaluation_etudiant est hors de la durée de la session, alors on lui affecte la valeur nulle.</p>
-<p>Gérez cette validation pour l'insertion et la modification.</p>
 <h2 id="empecher-un-ajout-via-un-declencheur">Empêcher un ajout via un déclencheur</h2>
 <p>Pour empêcher un ajout, on peut utiliser la commande <strong>SIGNAL SQLSTATE</strong>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">SIGNAL</span><span class="w"> </span><span class="k">SQLSTATE</span><span class="w"> </span><span class="s1">&#39;45000&#39;</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="k">MESSAGE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Message erreur&#39;</span><span class="p">;</span>
