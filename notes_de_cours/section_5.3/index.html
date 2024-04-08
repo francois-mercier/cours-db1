@@ -1783,7 +1783,7 @@ où <strong>_code</strong> et <strong>_message</strong> sont des variables local
 <span class="w">  </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">_message</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">;</span>
 <span class="w">  </span><span class="p">...</span>
 
-<span class="w">  </span><span class="c1">-- On répère ce bloc pour chaque type d&#39;erreur à traiter</span>
+<span class="w">  </span><span class="c1">-- On répère ce bloc pour chaque type d&#39;erreur à traiter (remplacer 00000 par le code désiré)</span>
 <span class="w">  </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">EXIT</span><span class="w"> </span><span class="k">HANDLER</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="mi">00000</span>
 <span class="w">  </span><span class="k">BEGIN</span>
 <span class="w">    </span><span class="k">GET</span><span class="w"> </span><span class="k">DIAGNOSTICS</span><span class="w"> </span><span class="n">CONDITION</span><span class="w"> </span><span class="mi">1</span>
@@ -1795,11 +1795,21 @@ où <strong>_code</strong> et <strong>_message</strong> sont des variables local
 <span class="w">  </span><span class="p">...</span>
 </code></pre></div>
 <h3 id="-exercice-532-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/></svg></span> --- Exercice 5.3.2 ---</h3>
-<p>Reprenez votre exercice 5.3.1 A), mais en cas d'erreur, faites en sorte que l'exécution s'arrête et que la valeur retournée (le numéro de groupe) soit -1.</p>
+<p>A. Reprenez votre exercice 5.3.1 A), mais en cas d'erreur, faites en sorte que l'exécution s'arrête et que la valeur retournée (le numéro de groupe) soit -1.</p>
 <ul>
 <li>Utilisez "DECLARE EXIT HANDLER FOR SQLEXCEPTION" pour attraper tout type d'exception.</li>
 <li>Pour tester, vous pouvez par exemple ajouter NOT NULL comme contraite du groupes.cours_id, et appeler votre procédure avec un sigle qui n'existe pas.</li>
 </ul>
+<p>B. Créez une procédure pour noter un étudiant (donc créer une ligne dans la table <em>evaluations_etudiants</em>). Cette procédure doit accepter un code étudiant, l'id de groupe (que l'on suppose avoir obtenu par un autre moyen), le nom de l'évaluation et bien sûr la note. </p>
+<ul>
+<li>
+<p>Votre procédure doit permettre d'assigner une note, peu importe s'il existe déjà ou non une note dans <em>evaluations_etudiants</em>. </p>
+</li>
+<li>
+<p>Gérez l'erreur qui pourrait survenir si l'évaluation en tant que telle n'existe pas dans la table <em>evaluations</em>.</p>
+</li>
+</ul>
+<p><strong>Paramètres</strong> : code_etudiant, id_groupe, nom_evaluation, note.</p>
 <h2 id="transactions">Transactions</h2>
 <h3 id="mise-en-situation">Mise en situation</h3>
 <p>Timmy, dévoué programmeur, crée un script qui importe, dans notre système École, les notes de tous les étudiants à une évaluation. Afin d'éviter d'insérer de mauvaises données, Timmy applique la règle suivante : si l'une des notes ne peut pas être ajoutée (par exemple pour une violation de contrainte), alors aucune note n'est ajoutée.</p>
@@ -1878,18 +1888,8 @@ où <strong>_code</strong> et <strong>_message</strong> sont des variables local
 <li>La procédure crée le vol et ajoute le capitaine en tant que membre d'équipage. En cas d'erreur, aucune donnée ne doit être créée.</li>
 </ul>
 <h3 id="-exercice-533-"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/></svg></span> --- Exercice 5.3.3 ---</h3>
-<p>A. Créez une procédure pour noter un étudiant (donc créer une ligne dans la table <em>evaluations_etudiants</em>). Cette procédure doit accepter un code étudiant, l'id de groupe (que l'on suppose avoir obtenu par un autre moyen), le nom de l'évaluation et bien sûr la note. </p>
-<ul>
-<li>
-<p>Votre procédure doit permettre d'assigner une note, peu importe s'il existe déjà ou non une note dans <em>evaluations_etudiants</em>. </p>
-</li>
-<li>
-<p>Gérez l'erreur qui pourrait survenir si l'évaluation en tant que telle n'existe pas (dans la table <em>evaluations</em>).</p>
-</li>
-</ul>
-<p><strong>Paramètres</strong> : code_etudiant, id_groupe, nom_evaluation, note.</p>
-<p>B. Vous devez ajouter 3 nouveaux enseignants dans le système École. Voici les données de ceux-ci.</p>
-<p>Effectuez l'opération en utilisant les transactions. Si l'un d'entre eux ne peut pas être ajouté, alors aucune ne doit l'être.</p>
+<p>Vous devez ajouter 3 nouveaux enseignants dans le système École. Voici les données de ceux-ci.</p>
+<p>Effectuez l'opération manuellement en utilisant les transactions. Si jamais l'un d'entre eux ne peut pas être ajouté, vous devez pouvoir revenir en arrière.</p>
 <table>
 <thead>
 <tr>
@@ -1903,19 +1903,19 @@ où <strong>_code</strong> et <strong>_message</strong> sont des variables local
 <tr>
 <td>7645</td>
 <td>Diana de Themyscira</td>
-<td>111 222 333</td>
+<td>111222333</td>
 <td>15</td>
 </tr>
 <tr>
 <td>7654</td>
 <td>Jason Todd</td>
-<td>987 654 321</td>
+<td>987654321</td>
 <td>1</td>
 </tr>
 <tr>
 <td>6574</td>
 <td>Barry Allen</td>
-<td>555 777 333</td>
+<td>555777333</td>
 <td>8</td>
 </tr>
 </tbody>
