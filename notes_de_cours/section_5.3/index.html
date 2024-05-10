@@ -1721,7 +1721,7 @@
 <p>Le SGBD lance des sigaux lorsqu'une erreur interne se produit. Il est possible de lancer un signal avec un code d'erreur personnalisé.</p>
 <div class="highlight"><pre><span></span><code><span class="n">SIGNAL</span><span class="w"> </span><span class="k">SQLSTATE</span><span class="w"> </span><span class="s1">&#39;code 5 chiffres&#39;</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="k">MESSAGE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Message erreur&#39;</span><span class="p">;</span>
 </code></pre></div>
-<p>Par exemple, pour lancer un signal perosnnalisé et tout arrêter, on utilisera le code 45000 ainsi:</p>
+<p>Par exemple, pour lancer un signal personnalisé et tout arrêter, on utilisera le code 45000 ainsi:</p>
 <div class="highlight"><pre><span></span><code><span class="n">SIGNAL</span><span class="w"> </span><span class="k">SQLSTATE</span><span class="w"> </span><span class="s1">&#39;45000&#39;</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="k">MESSAGE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Message erreur&#39;</span><span class="p">;</span>
 </code></pre></div>
 <h3 id="gestion-des-signaux-et-des-transactions">Gestion des signaux et des transactions</h3>
